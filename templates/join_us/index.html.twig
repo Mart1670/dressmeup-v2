@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DressMeUp - Rejoignez-nous !{% endblock %}
+
+{% block body %}
+
+<div class="d-flex justify-content-around" style="background-color: rgb(235, 234, 237); padding-top:20px;">
+
+    <img src="/assets/img/constructionfinal_2.svg" alt="En construction">
+    <div class="d-flex justify-content-center align-items-center flex-column">
+        <h1 class= text-align: center>Coming soon!</h1>
+        <p class="text-center">Nous sommes désolés, cette page en cours<br>de construction ! Elle sera disponible dans la<br>prochaine version. Revenez bientôt.</p>
+        <a id="btnGoto" class="button cta-mixandmatch" href='{{ path('app_home')}}#anchor-mix'>Aller sur le générateur de style</a> 
+    </div>
+
+    {# Annonce en attente
+    <h1><center>Rejoignez-nous!</center></h1>
+
+    <p>Souhaitez-vous rejoindre les "Daily Outfitters", notre team de designers et développeurs passionnés ?</p>
+    <ul>
+        <li><h4>Administrateur de messagerie (H/F)</h4>
+        <p>Afin de mettre en place un serveur de messagerie et pour l'inscription de nos abonnés à notre newsletter, nous recherchons un Administrateur Réseaux de messagerie (H/F).<br>
+        La maîtrise d'un service de messagerie supporté est exigée.<br>
+        Localité : Paris 10è.<br>
+        35 Heures par semaine.<br>
+        Salaire selon profil et expérience + Titres restaurant.<br>
+        Une tenue accordée est appréciée 😉<br>
+        Télétravail à définir.<br>
+        Envoyez-nous votre candidature à recrutement_do@mail.com</p></li>
+    </ul>#}
+</div>
+{% endblock %}

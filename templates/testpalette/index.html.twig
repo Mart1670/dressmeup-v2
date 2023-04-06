@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TestpaletteController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ '/Users/moussaillon/Desktop/DressMeUp/skeleton/src/Controller/TestpaletteController.php'|file_link(0) }}">src/Controller/TestpaletteController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/Users/moussaillon/Desktop/DressMeUp/skeleton/templates/testpalette/index.html.twig'|file_link(0) }}">templates/testpalette/index.html.twig</a></code></li>
+    </ul>
+</div>
+    <main>
+        <h1>Upload de fichiers via drag and drop</h1>
+        <form id="form1" name="monForm" method="post" action="upload.php" enctype="multipart/form-data">
+            <div class="bloc">
+                <label>Choisissez vos images :</label>
+            </div>
+                <input type="file" name="monFichier" id="file" accept="image/*" required multiple style="display:none" />
+            </div>
+            <div>
+                <input type="file" name="monFichier" id="choisir">
+            </div>
+        </form>
+        <br>
+        <div>
+            <button id="BtnPipette" type="button">Pipette</button>
+        </div>
+        <div id="boxcolor">
+            <div id="couleur1"></div>
+            <span id="nomCouleur1"></span>
+        </div>
+        <br>
+        {# <div id="text">
+            <p>Cliquer ou glisser pour ajouter un fichier</p>
+        </div> #}
+        <div id="divcanvas">
+            <canvas id="canvas" width="800px" height="800px"></canvas>
+        </div>
+       
+    </main>
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/assets/js/dragAndDrop.js"></script>
+    <script src="/assets/js/pipette.js"></script>
+{% endblock %}

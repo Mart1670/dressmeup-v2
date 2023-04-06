@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DressMeUp - Profil{% endblock %}
+ 
+{% block body %}
+
+
+        <link rel="stylesheet" href="{{asset('/assets/css/profil.css')}}">
+       
+       
+         
+       
+
+
+ <!-- PROFILE -->
+   
+      <div class="container">
+        <form id="user">
+          <div id="partieL">
+            <div id="avatar">
+              <img class="photo" src="./assets/img/profile-picture.jpg" alt="photo de profile">
+              <button type="submit"> Modifier</button>
+            </div>
+
+
+            <label> Nom </label>
+            <input type="text" id="name" value="Camille"></input>
+
+            <label> Bio </label>
+            <textarea id="biographie">Fan de jeux vidéos et de cinéma. J'aime sortir avec des amis pour découvrir des nouveaux restaurants et faire des apréros jeux de société. J'essaie de me maintenir en forme.</textarea>
+          </div>
+
+          <div id="partieR">
+            <h1> Bienvenue Camille </h1>
+            <label> E-mail </label>
+            <input type="text" id="mail" value="camillelelouche@yahoo.fr"></input>
+
+            <label> Date de naissance </label>
+            <input type="date" id="birthdate" value="1990-07-03"></input>
+
+            <div id="genre">
+              <legend>Genre</legend>
+              <div>
+                <input type="radio" id="il" name="genre" checked="checked">
+                <label>Il</label>
+              </div>
+              <div>
+                <input type="radio" id="elle" name="genre">
+                <label>Elle</label>
+              </div>
+              <div>
+                <input type="radio" id="iel" name="genre">
+                <label>Iel</label>
+              </div>
+            </div>
+
+              <button id="valider" type="submit"> Sauvegarder </button>
+          </div>
+        </form>
+      </div>
+    
+{% endblock %}

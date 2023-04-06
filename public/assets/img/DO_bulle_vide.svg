@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 960 560" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,480,280)">
+        <g id="Union.svg" transform="matrix(1,0,0,1,-403.5,-218.5)">
+            <g>
+                <path d="M798,1L1,1L1,341L49.65,341L43.337,426.547L211.507,341L798,341L798,1Z" style="fill:rgb(252,251,254);"/>
+                <path d="M1,1L1,0L0,0L0,1L1,1ZM798,1L799,1L799,0L798,0L798,1ZM1,341L0,341L0,342L1,342L1,341ZM49.65,341L50.647,341.074L50.727,340L49.65,340L49.65,341ZM43.337,426.547L42.34,426.473L42.209,428.242L43.791,427.438L43.337,426.547ZM211.507,341L211.507,340L211.267,340L211.053,340.109L211.507,341ZM798,341L798,342L799,342L799,341L798,341ZM1,2L798,2L798,0L1,0L1,2ZM2,341L2,1L0,1L0,341L2,341ZM49.65,340L1,340L1,342L49.65,342L49.65,340ZM44.335,426.62L50.647,341.074L48.653,340.926L42.34,426.473L44.335,426.62ZM211.053,340.109L42.884,425.656L43.791,427.438L211.96,341.891L211.053,340.109ZM798,340L211.507,340L211.507,342L798,342L798,340ZM797,1L797,341L799,341L799,1L797,1Z" style="fill-rule:nonzero;"/>
+            </g>
+        </g>
+        <g id="Union.svg1" serif:id="Union.svg">
+        </g>
+    </g>
+</svg>

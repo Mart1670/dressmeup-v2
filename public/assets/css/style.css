@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root{
+    --bg-gradient : linear-gradient(15deg, rgba(97, 64, 86, 1), rgba(104, 99, 136, 1));
+    --ice : rgba(249, 249, 249, 1);
+    --black-transparent : rgba(0, 0, 0, 0.5);
+    --light-yellow : rgba(255, 229, 136, 1);
+}
+
+/* font-family: 'Changa', sans-serif;
+font-family: 'Changa One', cursive; */
+
+body{
+    background: var(--bg-gradient);
+    background-clip: border-box;
+    color: var(--ice);
+    font-family: 'Changa', cursive;
+    line-height: 100%;
+    font-weight: 400;
+    margin: 0px;
+}
+
+/*********************************/
+/***      HEADER & NAVBAR      ***/
+/*********************************/
+
+header{
+    background-color: var(--black-transparent);
+    padding: 20px;
+}
+
+header #navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+header #navbar>div i{
+    font-size: 30px;
+    padding-right: 5px;
+}
+
+header nav>a, header nav>div{
+    margin-block: 5px;
+}
+
+header nav *:not(nav div a){
+    display: block;
+    margin-inline: auto;
+    width: fit-content;
+}
+
+header nav a{
+    text-decoration: none;
+    color: var(--ice);
+}
+
+header nav a:hover{
+    color: var(--light-yellow);
+}
+
+header nav #user-connect *{
+    padding-inline: 2px;
+}
+
+/*********************************/
+/***    END HEADER & NAVBAR    ***/
+/*********************************/
+
+main .container{
+    padding-inline: 20px;
+}
+
+h2{
+    font-size: 16px;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,258 @@
+{# {% extends 'base.html.twig' %} #}
+
+{# {% block title %}DressMeUp - Accueil{% endblock %} #}
+
+{% block body %}
+<style>
+	table, thead, td, tbody, tr{ 
+		border : 2px solid black;
+	}
+	table{
+		display : inline-block;
+		margin : 0px 50px;
+	}
+</style>
+
+{# <table>
+	<thead>
+		<td>
+			Type
+		</td>
+		<td>
+			Couleur
+		</td>
+		<td>
+			Nom couleur
+		</td>
+	</thead>
+	<tbody>
+		{% for tab in hauts %}
+		<tr>
+			<td>
+				{{tab['type']}}
+			</td>
+			<td style="background-color:{{tab['color'][0]}}">
+				{{tab['color'][0]}}
+			</td>
+			<td>
+				{{tab['colorName'][0]}}
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+<table>
+	<thead>
+		<td>
+			Type
+		</td>
+		<td>
+			Couleur
+		</td>
+		<td>
+			Nom couleur
+		</td>
+	</thead>
+	<tbody>
+		{% for tab in bas %}
+		<tr>
+			<td>
+				{{tab['type']}}
+			</td>
+			<td style="background-color:{{tab['color'][0]}}">
+				{{tab['color'][0]}}
+			</td>
+			<td>
+				{{tab['colorName'][0]}}
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+<table>
+	<thead>
+		<td>
+			Palette N°
+		</td>
+		<td colspan=5>
+			Couleurs
+		</td>
+	</thead>
+	<tbody>
+		{% for tab in palettes %}
+		<tr>
+			<td>
+				{{tab['id']}}
+			</td>
+			<td style="background-color:{{tab['color1']}}">
+				{{tab['color1']}}
+			</td>
+			<td style="background-color:{{tab['color2']}}">
+				{{tab['color2']}}
+			</td>
+			<td style="background-color:{{tab['color3']}}">
+				{{tab['color3']}}
+			</td>
+			<td style="background-color:{{tab['color4']}}">
+				{{tab['color4']}}
+			</td>
+			<td style="background-color:{{tab['color5']}}">
+				{{tab['color4']}}
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table> #}
+
+<table>
+	<thead>
+		<td>
+			Combinaison N°
+		</td>
+		<td>
+			Combinaison
+		</td>
+		<td>
+			Id Haut
+		</td>
+		<td>
+			Couleur Haut
+		</td>
+		<td>
+			Nom Couleur Haut
+		</td>
+		<td>
+			Image Haut
+		</td>
+		<td>
+			Alt Haut
+		</td>
+		<td>
+			Id Bas
+		</td>
+		<td>
+			Couleur Bas
+		</td>
+		<td>
+			Nom Couleur Bas
+		</td>
+		<td>
+			Image Bas
+		</td>
+		<td>
+			Alt Bas
+		</td>
+		<td>
+			Id Palette
+		</td>
+		<td>
+			Couleur Palette 1
+		</td>
+		<td>
+			Delta Couleur Palette 1
+		</td>
+		<td>
+			Couleur Palette 2
+		</td>
+		<td>
+			Delta Couleur Palette 2
+		</td>
+		<td>
+			Couleur Palette 3
+		</td>
+		<td>
+			Delta Couleur Palette 3
+		</td>
+		<td>
+			Couleur Palette 4
+		</td>
+		<td>
+			Delta Couleur Palette 4
+		</td>
+		<td>
+			Couleur Palette 5
+		</td>
+		<td>
+			Delta Couleur Palette 5
+		</td>
+	</thead>
+	<tbody>
+		{% for tab in combinaisons %}
+		<tr>
+			<td>
+				{{tab['index']}}
+			</td>
+			<td>
+				{{tab['combinaison']}}
+			</td>
+			<td>
+				{{tab['idHaut']}}
+			</td>
+			<td style="background-color:{{tab['colorHaut']}}">
+				{{tab['colorHaut']}}
+			</td>
+			<td>
+				{{tab['colorNameHaut']}}
+			</td>
+			<td>
+				{{tab['imageHaut']}}
+			</td>
+			<td>
+				{{tab['altHaut']}}
+			</td>
+			<td>
+				{{tab['idBas']}}
+			</td>
+			<td style="background-color:{{tab['colorBas']}}">
+				{{tab['colorBas']}}
+			</td>
+			<td>
+				{{tab['colorNameBas']}}
+			</td>
+			<td>
+				{{tab['imageBas']}}
+			</td>
+			<td>
+				{{tab['altBas']}}
+			</td>
+			<td>
+				{{tab['idPalette']}}
+			</td>
+			<td style="background-color:{{tab['color1']}}">
+				{{tab['color1']}}
+			</td>
+			<td>
+				{{tab['deltaColor1']}}
+			</td>
+			<td style="background-color:{{tab['color2']}}">
+				{{tab['color2']}}
+			</td>
+			<td>
+				{{tab['deltaColor2']}}
+			</td>
+			<td style="background-color:{{tab['color3']}}">
+				{{tab['color3']}}
+			</td>
+			<td>
+				{{tab['deltaColor3']}}
+			</td>
+			<td style="background-color:{{tab['color4']}}">
+				{{tab['color4']}}
+			</td>
+			<td>
+				{{tab['deltaColor4']}}
+			</td>
+			<td style="background-color:{{tab['color5']}}">
+				{{tab['color5']}}
+			</td>
+			<td>
+				{{tab['deltaColor5']}}
+			</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}
