@@ -148,56 +148,54 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
             <h2 id=\"anchor-mix\">Découvre mes idées de style pour toi</h2>
           </div>
               
-            <div>
-                <div>
-                  <!-- BOUTON GÉNÉRATEUR -->
-                  ";
+          <div id=\"display-generator\">
+              <div>
+                <!-- BOUTON GÉNÉRATEUR -->
+                ";
         // line 87
         if (((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 87, $this->source); })()), "user", [], "any", false, false, false, 87) != null) && (twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 87, $this->source); })()), "user", [], "any", false, false, false, 87), "vetements", [], "any", false, false, false, 87)) > 0))) {
             // line 88
-            echo "                    <button id=\"mixmatch\" type=\"button\" class=\"cta-mixandmatch\">Mix and Match</button>
-                  ";
+            echo "                  <button id=\"mixmatch\" type=\"button\" class=\"cta-mixandmatch\">Mix and Match</button>
+                ";
         } else {
             // line 90
-            echo "                    <button id=\"mixmatch\" type=\"button\" class=\"cta-mixandmatch\" data-bs-toggle=\"modal\"
-                      data-bs-target=\"#exampleModal\">Mix and Match</button>
-                  ";
+            echo "                  <button id=\"mixmatch\" type=\"button\" class=\"cta-mixandmatch\" data-bs-toggle=\"modal\"
+                    data-bs-target=\"#exampleModal\">Mix and Match</button>
+                ";
         }
         // line 93
-        echo "                   
-                  <div>
-                    <div id=\"hautGenerator1\" class=\"main-generator bg-haut\"></div>
-                    <div id=\"basGenerator1\" class=\"main-generator bg-bas\"></div>
-                  </div>  
-
-                  <!-- ----------------------------------------------- -->
-                  <!-- MODALE PREMIER LANCEMENT GENERATEUR -->
-                  <!-- ----------------------------------------------- -->
-
-                  ";
-        // line 104
         echo "                  
+                <div>
+                  <div id=\"hautGenerator1\" class=\"main-generator bg-haut\"></div>
+                  <div id=\"basGenerator1\" class=\"main-generator bg-bas\"></div>
+                </div>  
 
-                  <!-- FIN MODALE PREMIER LANCEMENT GENERATEUR -->
+                <!-- ----------------------------------------------- -->
+                <!-- MODALE PREMIER LANCEMENT GENERATEUR -->
+                <!-- ----------------------------------------------- -->
 
-                  <p>Sélection:</p>
-                  <div class=\"tag-selected text-center\">
-                    <ul>
-                      <li id=\"oneTagHumeur\">Excité</li>
-                      <li id=\"oneTagAmbiance\">Travail</li>
-                    </ul>
-                  </div>
-                  <!-- javascript ou php ? Étiquette humeur et programme journée, choisis au préalable -->
-                  <button id=\"reset\" type=\"button\" class=\"dressinglink\">Réinitialiser</button>
-                  <button type=\"button\" class=\"dressinglink\"><a href=\"";
+                ";
+        // line 104
+        echo "                
+
+                <!-- FIN MODALE PREMIER LANCEMENT GENERATEUR -->
+
+                <p>Sélection:</p>
+                <div class=\"tag-selected text-center\">
+                  <ul>
+                    <li id=\"oneTagHumeur\">Excité</li>
+                    <li id=\"oneTagAmbiance\">Travail</li>
+                  </ul>
+                </div>
+                <!-- javascript ou php ? Étiquette humeur et programme journée, choisis au préalable -->
+                <button id=\"reset\" type=\"button\" class=\"dressinglink\">Réinitialiser</button>
+                <button type=\"button\" class=\"dressinglink\"><a href=\"";
         // line 117
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dressing");
         echo "\">Aller sur mon dressing</a></button>
-                </div>
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       <!-- FIN SECTION : GENERATEUR -->
@@ -338,11 +336,11 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
         </div>
       </section>
       <script src=\"";
-        // line 262
+        // line 260
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/slide.js"), "html", null, true);
         echo "\"></script>
       <script src=\"";
-        // line 263
+        // line 261
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/mix&match.js"), "html", null, true);
         echo "\"></script>
 
@@ -365,7 +363,7 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
 
     public function getDebugInfo()
     {
-        return array (  346 => 263,  342 => 262,  194 => 117,  179 => 104,  167 => 93,  162 => 90,  158 => 88,  156 => 87,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  344 => 261,  340 => 260,  194 => 117,  179 => 104,  167 => 93,  162 => 90,  158 => 88,  156 => 87,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -453,45 +451,43 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
             <h2 id=\"anchor-mix\">Découvre mes idées de style pour toi</h2>
           </div>
               
-            <div>
-                <div>
-                  <!-- BOUTON GÉNÉRATEUR -->
-                  {% if(app.user != null and app.user.vetements|length > 0) %}
-                    <button id=\"mixmatch\" type=\"button\" class=\"cta-mixandmatch\">Mix and Match</button>
-                  {% else %}
-                    <button id=\"mixmatch\" type=\"button\" class=\"cta-mixandmatch\" data-bs-toggle=\"modal\"
-                      data-bs-target=\"#exampleModal\">Mix and Match</button>
-                  {% endif %}
-                   
-                  <div>
-                    <div id=\"hautGenerator1\" class=\"main-generator bg-haut\"></div>
-                    <div id=\"basGenerator1\" class=\"main-generator bg-bas\"></div>
-                  </div>  
-
-                  <!-- ----------------------------------------------- -->
-                  <!-- MODALE PREMIER LANCEMENT GENERATEUR -->
-                  <!-- ----------------------------------------------- -->
-
-                  {# {{ include('modals/modal-home.html.twig') }} #}
+          <div id=\"display-generator\">
+              <div>
+                <!-- BOUTON GÉNÉRATEUR -->
+                {% if(app.user != null and app.user.vetements|length > 0) %}
+                  <button id=\"mixmatch\" type=\"button\" class=\"cta-mixandmatch\">Mix and Match</button>
+                {% else %}
+                  <button id=\"mixmatch\" type=\"button\" class=\"cta-mixandmatch\" data-bs-toggle=\"modal\"
+                    data-bs-target=\"#exampleModal\">Mix and Match</button>
+                {% endif %}
                   
+                <div>
+                  <div id=\"hautGenerator1\" class=\"main-generator bg-haut\"></div>
+                  <div id=\"basGenerator1\" class=\"main-generator bg-bas\"></div>
+                </div>  
 
-                  <!-- FIN MODALE PREMIER LANCEMENT GENERATEUR -->
+                <!-- ----------------------------------------------- -->
+                <!-- MODALE PREMIER LANCEMENT GENERATEUR -->
+                <!-- ----------------------------------------------- -->
 
-                  <p>Sélection:</p>
-                  <div class=\"tag-selected text-center\">
-                    <ul>
-                      <li id=\"oneTagHumeur\">Excité</li>
-                      <li id=\"oneTagAmbiance\">Travail</li>
-                    </ul>
-                  </div>
-                  <!-- javascript ou php ? Étiquette humeur et programme journée, choisis au préalable -->
-                  <button id=\"reset\" type=\"button\" class=\"dressinglink\">Réinitialiser</button>
-                  <button type=\"button\" class=\"dressinglink\"><a href=\"{{ path('app_dressing')}}\">Aller sur mon dressing</a></button>
+                {# {{ include('modals/modal-home.html.twig') }} #}
+                
+
+                <!-- FIN MODALE PREMIER LANCEMENT GENERATEUR -->
+
+                <p>Sélection:</p>
+                <div class=\"tag-selected text-center\">
+                  <ul>
+                    <li id=\"oneTagHumeur\">Excité</li>
+                    <li id=\"oneTagAmbiance\">Travail</li>
+                  </ul>
                 </div>
+                <!-- javascript ou php ? Étiquette humeur et programme journée, choisis au préalable -->
+                <button id=\"reset\" type=\"button\" class=\"dressinglink\">Réinitialiser</button>
+                <button type=\"button\" class=\"dressinglink\"><a href=\"{{ path('app_dressing')}}\">Aller sur mon dressing</a></button>
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       <!-- FIN SECTION : GENERATEUR -->

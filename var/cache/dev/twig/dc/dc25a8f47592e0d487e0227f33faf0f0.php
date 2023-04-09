@@ -84,30 +84,31 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 11
-        echo "
-        <h1>Mon dressing</h1>
-        <h4>Sélectionne ta catégorie</h4>
-        <div id=\"type-selection\">
-                <input type=\"radio\" name=\"type\" id=\"haut\" autocomplete=\"off\" list>
-                <label for=\"haut\">Haut</label>
-                <input type=\"radio\" name=\"type\" id=\"bas\" autocomplete=\"off\">
-                <label for=\"bas\">Bas</label>
-        </div>
-        <a href=\"";
+        echo "        <section id=\"dressing\">
+            <h1>Mon dressing</h1>
+            <h4>Sélectionne ta catégorie</h4>
+            <div id=\"type-selection\">
+                    <input type=\"radio\" name=\"type\" id=\"haut\" autocomplete=\"off\" list>
+                    <label for=\"haut\">Haut</label>
+                    <input type=\"radio\" name=\"type\" id=\"bas\" autocomplete=\"off\">
+                    <label for=\"bas\">Bas</label>
+            </div>
+            <a href=\"";
         // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_vetement");
         echo "\">
-            <div class=\"add\">
-                <img src=\"/assets/img/add-icon.svg\" alt=\"Ajouter un vêtement\" srcset=\"\">
-            </div>
-        </a>
+                <div class=\"add\">
+                    <img src=\"/assets/img/add-icon.svg\" alt=\"Ajouter un vêtement\" srcset=\"\">
+                </div>
+            </a>
+        </section>
         <section id=\"dressing-content\" data-type=\"Haut\">
             
         </section>
         
         
        ";
-        // line 31
+        // line 32
         echo "
 
 
@@ -117,14 +118,14 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
 
     }
 
-    // line 35
+    // line 36
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 36
+        // line 37
         echo "    <script src=\"assets/js/loadDressing.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/switchDressing.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/deleteOneCloth.js\" type=\"text/javascript\"></script>
@@ -146,7 +147,7 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
 
     public function getDebugInfo()
     {
-        return array (  128 => 36,  121 => 35,  111 => 31,  98 => 20,  87 => 11,  80 => 10,  68 => 5,  55 => 3,  38 => 1,);
+        return array (  129 => 37,  122 => 36,  112 => 32,  98 => 20,  87 => 11,  80 => 10,  68 => 5,  55 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -161,20 +162,21 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
 {% endblock %}
 
 {% block body %}
-
-        <h1>Mon dressing</h1>
-        <h4>Sélectionne ta catégorie</h4>
-        <div id=\"type-selection\">
-                <input type=\"radio\" name=\"type\" id=\"haut\" autocomplete=\"off\" list>
-                <label for=\"haut\">Haut</label>
-                <input type=\"radio\" name=\"type\" id=\"bas\" autocomplete=\"off\">
-                <label for=\"bas\">Bas</label>
-        </div>
-        <a href=\"{{ path('app_vetement')}}\">
-            <div class=\"add\">
-                <img src=\"/assets/img/add-icon.svg\" alt=\"Ajouter un vêtement\" srcset=\"\">
+        <section id=\"dressing\">
+            <h1>Mon dressing</h1>
+            <h4>Sélectionne ta catégorie</h4>
+            <div id=\"type-selection\">
+                    <input type=\"radio\" name=\"type\" id=\"haut\" autocomplete=\"off\" list>
+                    <label for=\"haut\">Haut</label>
+                    <input type=\"radio\" name=\"type\" id=\"bas\" autocomplete=\"off\">
+                    <label for=\"bas\">Bas</label>
             </div>
-        </a>
+            <a href=\"{{ path('app_vetement')}}\">
+                <div class=\"add\">
+                    <img src=\"/assets/img/add-icon.svg\" alt=\"Ajouter un vêtement\" srcset=\"\">
+                </div>
+            </a>
+        </section>
         <section id=\"dressing-content\" data-type=\"Haut\">
             
         </section>

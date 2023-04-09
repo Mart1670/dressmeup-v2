@@ -124,11 +124,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
         //RÉINITIALISATION DES CHAMPS 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        tagVetement.textContent = "Choisis le type de vêtement";
+        tagVetement.textContent = "Type de vêtement";
         let nomCouleur1 = document.getElementById("colorName1");
         //let nomCouleur2 = document.getElementById("colorName2");
-        nomCouleur1.innerHTML = `Couleur 1<span id="color1" class="color-mark" style="background-color:#00FA9A"></span>`;
+        nomCouleur1.innerHTML = `<p class="card-color card-data">Couleur 1</p><span id="color1" class="card-data"></span>`;
         //nomCouleur2.innerHTML = `Couleur 2<span id="color2" class="color-mark" style="background-color:#00FA9A"></span>`;
+        dragText.textContent = "Sélectionner la photo du vêtement à ajouter";
         //console.log('cancel ok');
     }
     //DÉCLANCHEMENT AU CLIC

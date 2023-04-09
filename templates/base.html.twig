@@ -32,7 +32,7 @@
 					<img src="/assets/img/Logo_final.svg" alt="Dress Me Up logo" width="80" height="50">
 				</a>
 				<div>
-					<i class="fa-solid fa-bars"></i>
+					<i id="burger-menu" class="fa-solid fa-bars"></i>
 				</div>
 			</div>
 			<nav>
@@ -40,10 +40,19 @@
 				<a href="{{ path('app_dressing')}}">Dressing</a>
 				<a href="/">Blog</a>
 				<a href="{{ path('app_about')}}">Concept</a>
+				<a href="/#anchor-mix">Mix & Match</a>
 				<div id="user-connect">
-					<i class="fa-solid fa-circle-user"></i><a href="/">Se Connecter</a>
+					{% if (app.user == null) %}
+						<a href="{{ path('app_login')}}"><i class="fa-solid fa-circle-user"></i> Se Connecter</a>
+					{% else %}
+						<a href="{{ path('app_user')}}"><i class="fa-solid fa-circle-user"></i> {{ app.user.firstname }} {{ app.user.name }}</a>
+					{% endif %}
 				</div>
-				<a href="/">Mix & Match</a>
+				{% if (app.user != null) %}
+				<div>
+					<a href="{{ path('app_logout')}}"> Se deconnecter </a>
+				</div>
+				{% endif %}
 			</nav>
 		</header>
 		<main>
@@ -93,6 +102,8 @@
           </section>
 		</footer>
   </body>
+  <script src="{{ asset('assets/js/navbar.js') }}"></script>
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
+
 {% endblock %}

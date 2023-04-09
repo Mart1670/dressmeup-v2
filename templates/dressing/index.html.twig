@@ -8,20 +8,21 @@
 {% endblock %}
 
 {% block body %}
-
-        <h1>Mon dressing</h1>
-        <h4>Sélectionne ta catégorie</h4>
-        <div id="type-selection">
-                <input type="radio" name="type" id="haut" autocomplete="off" list>
-                <label for="haut">Haut</label>
-                <input type="radio" name="type" id="bas" autocomplete="off">
-                <label for="bas">Bas</label>
-        </div>
-        <a href="{{ path('app_vetement')}}">
-            <div class="add">
-                <img src="/assets/img/add-icon.svg" alt="Ajouter un vêtement" srcset="">
+        <section id="dressing">
+            <h1>Mon dressing</h1>
+            <h4>Sélectionne ta catégorie</h4>
+            <div id="type-selection">
+                    <input type="radio" name="type" id="haut" autocomplete="off" list>
+                    <label for="haut">Haut</label>
+                    <input type="radio" name="type" id="bas" autocomplete="off">
+                    <label for="bas">Bas</label>
             </div>
-        </a>
+            <a href="{{ path('app_vetement')}}">
+                <div class="add">
+                    <img src="/assets/img/add-icon.svg" alt="Ajouter un vêtement" srcset="">
+                </div>
+            </a>
+        </section>
         <section id="dressing-content" data-type="Haut">
             
         </section>

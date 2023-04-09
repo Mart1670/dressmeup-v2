@@ -72,9 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
             })
             .then(function (body) {
                 nomCouleur.innerHTML = `
-                ${body.colorname}<span
-                id="color1"
-                class="color-mark" style="background-color:${hexa}"></span>
+                <p class="card-color card-data">${body.colorname}</p><span id="color1" class="card-data" style="background-color:${hexa}"></span>
                 `
                 nameColor.value = body.colorname;
                 vetementColor1.value = hexa;

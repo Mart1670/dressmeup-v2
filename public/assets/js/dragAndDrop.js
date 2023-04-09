@@ -4,6 +4,7 @@
 let canvasWidth = 300;
 let canvasHeight = 500;
 let file = 'file';
+var dragText = document.querySelector("#pic-area p");
 
 //CANVAS
 const canvas = document.getElementById("canvas");
@@ -53,6 +54,7 @@ function preview(event) {
     let ratio = image.width / image.height;
     canvasHeight = canvasWidth / ratio;
     canvas.height = canvasHeight;
+    dragText.innerHTML = "";
     ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, canvasWidth, canvasHeight);
     analyze(ctx);
     

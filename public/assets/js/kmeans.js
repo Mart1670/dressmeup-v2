@@ -182,10 +182,10 @@ function analyze(ctx) {
             })
             .then(function (body) {
                 pt1.innerHTML = `
-                ${body.colorname}<span
-                id="color1"
-                class="color-mark" style="background-color:${colors[1]}"></span>
-                `
+                    <p class="card-color card-data">${body.colorname}</p><span
+                    id="color1" class="card-data"
+                    class="color-mark" style="background-color:${colors[1]}"></span>
+                    `
                 nameColor.value = body.colorname;
                 vetementColor1.value = colors[1];
             });

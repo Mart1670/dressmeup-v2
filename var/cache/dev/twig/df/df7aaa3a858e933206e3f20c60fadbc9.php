@@ -86,46 +86,50 @@ class __TwigTemplate_77b9a72b581e9265d4e1d9bf1d79b4e2 extends Template
    
       <div class=\"container\">
         <form id=\"user\">
-          <div id=\"partieL\">
+            <h1> Bienvenue Camille </h1>
             <div id=\"avatar\">
-              <img class=\"photo\" src=\"./assets/img/profile-picture.jpg\" alt=\"photo de profile\">
-              <button type=\"submit\"> Modifier</button>
+              <img class=\"photo\" src=\"./assets/user_avatar/profile-picture.jpg\" alt=\"photo de profile\">
+              ";
+        // line 23
+        echo "            </div>
+
+            <div class=\"user-data\">
+              <label> Nom </label>
+              <input type=\"text\" id=\"name\" class=\"form-field\" value=\"Camille\"></input>
             </div>
 
+            <div class=\"user-data\">
+              <label> E-mail </label>
+              <input type=\"text\" id=\"mail\" class=\"form-field\" value=\"camillelelouche@yahoo.fr\"></input>
+            </div>
 
-            <label> Nom </label>
-            <input type=\"text\" id=\"name\" value=\"Camille\"></input>
-
-            <label> Bio </label>
-            <textarea id=\"biographie\">Fan de jeux vidéos et de cinéma. J'aime sortir avec des amis pour découvrir des nouveaux restaurants et faire des apréros jeux de société. J'essaie de me maintenir en forme.</textarea>
-          </div>
-
-          <div id=\"partieR\">
-            <h1> Bienvenue Camille </h1>
-            <label> E-mail </label>
-            <input type=\"text\" id=\"mail\" value=\"camillelelouche@yahoo.fr\"></input>
-
-            <label> Date de naissance </label>
-            <input type=\"date\" id=\"birthdate\" value=\"1990-07-03\"></input>
+            <div class=\"user-data\">
+              <label> Date de naissance </label>
+              <input type=\"date\" id=\"birthdate\" class=\"form-field\" value=\"1990-07-03\"></input>
+            </div>
 
             <div id=\"genre\">
               <legend>Genre</legend>
               <div>
-                <input type=\"radio\" id=\"il\" name=\"genre\" checked=\"checked\">
-                <label>Il</label>
-              </div>
-              <div>
-                <input type=\"radio\" id=\"elle\" name=\"genre\">
-                <label>Elle</label>
-              </div>
-              <div>
-                <input type=\"radio\" id=\"iel\" name=\"genre\">
-                <label>Iel</label>
+                <div>
+                  <input type=\"radio\" id=\"il\" name=\"genre\" checked=\"checked\">
+                  <label>Il</label>
+                </div>
+                <div>
+                  <input type=\"radio\" id=\"elle\" name=\"genre\">
+                  <label>Elle</label>
+                </div>
               </div>
             </div>
 
-              <button id=\"valider\" type=\"submit\"> Sauvegarder </button>
-          </div>
+            <div  class=\"user-data\">
+              <label> Bio </label>
+              <textarea id=\"biographie\" class=\"form-field\">Fan de jeux vidéos et de cinéma. J'aime sortir avec des amis pour découvrir des nouveaux restaurants et faire des apréros jeux de société. J'essaie de me maintenir en forme.</textarea>
+            </div>
+
+            <div id=\"submit-button\">
+              <button id=\"valider\" type=\"submit\"> Enregistrer </button>
+            </div>
         </form>
       </div>
     
@@ -147,7 +151,7 @@ class __TwigTemplate_77b9a72b581e9265d4e1d9bf1d79b4e2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  94 => 23,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -170,46 +174,49 @@ class __TwigTemplate_77b9a72b581e9265d4e1d9bf1d79b4e2 extends Template
    
       <div class=\"container\">
         <form id=\"user\">
-          <div id=\"partieL\">
+            <h1> Bienvenue Camille </h1>
             <div id=\"avatar\">
-              <img class=\"photo\" src=\"./assets/img/profile-picture.jpg\" alt=\"photo de profile\">
-              <button type=\"submit\"> Modifier</button>
+              <img class=\"photo\" src=\"./assets/user_avatar/profile-picture.jpg\" alt=\"photo de profile\">
+              {# <button type=\"submit\"> Modifier</button> #}
             </div>
 
+            <div class=\"user-data\">
+              <label> Nom </label>
+              <input type=\"text\" id=\"name\" class=\"form-field\" value=\"Camille\"></input>
+            </div>
 
-            <label> Nom </label>
-            <input type=\"text\" id=\"name\" value=\"Camille\"></input>
+            <div class=\"user-data\">
+              <label> E-mail </label>
+              <input type=\"text\" id=\"mail\" class=\"form-field\" value=\"camillelelouche@yahoo.fr\"></input>
+            </div>
 
-            <label> Bio </label>
-            <textarea id=\"biographie\">Fan de jeux vidéos et de cinéma. J'aime sortir avec des amis pour découvrir des nouveaux restaurants et faire des apréros jeux de société. J'essaie de me maintenir en forme.</textarea>
-          </div>
-
-          <div id=\"partieR\">
-            <h1> Bienvenue Camille </h1>
-            <label> E-mail </label>
-            <input type=\"text\" id=\"mail\" value=\"camillelelouche@yahoo.fr\"></input>
-
-            <label> Date de naissance </label>
-            <input type=\"date\" id=\"birthdate\" value=\"1990-07-03\"></input>
+            <div class=\"user-data\">
+              <label> Date de naissance </label>
+              <input type=\"date\" id=\"birthdate\" class=\"form-field\" value=\"1990-07-03\"></input>
+            </div>
 
             <div id=\"genre\">
               <legend>Genre</legend>
               <div>
-                <input type=\"radio\" id=\"il\" name=\"genre\" checked=\"checked\">
-                <label>Il</label>
-              </div>
-              <div>
-                <input type=\"radio\" id=\"elle\" name=\"genre\">
-                <label>Elle</label>
-              </div>
-              <div>
-                <input type=\"radio\" id=\"iel\" name=\"genre\">
-                <label>Iel</label>
+                <div>
+                  <input type=\"radio\" id=\"il\" name=\"genre\" checked=\"checked\">
+                  <label>Il</label>
+                </div>
+                <div>
+                  <input type=\"radio\" id=\"elle\" name=\"genre\">
+                  <label>Elle</label>
+                </div>
               </div>
             </div>
 
-              <button id=\"valider\" type=\"submit\"> Sauvegarder </button>
-          </div>
+            <div  class=\"user-data\">
+              <label> Bio </label>
+              <textarea id=\"biographie\" class=\"form-field\">Fan de jeux vidéos et de cinéma. J'aime sortir avec des amis pour découvrir des nouveaux restaurants et faire des apréros jeux de société. J'essaie de me maintenir en forme.</textarea>
+            </div>
+
+            <div id=\"submit-button\">
+              <button id=\"valider\" type=\"submit\"> Enregistrer </button>
+            </div>
         </form>
       </div>
     

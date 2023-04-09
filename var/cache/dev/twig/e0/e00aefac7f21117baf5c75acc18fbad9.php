@@ -81,7 +81,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t\t\t\t<img src=\"/assets/img/Logo_final.svg\" alt=\"Dress Me Up logo\" width=\"80\" height=\"50\">
 \t\t\t\t</a>
 \t\t\t\t<div>
-\t\t\t\t\t<i class=\"fa-solid fa-bars\"></i>
+\t\t\t\t\t<i id=\"burger-menu\" class=\"fa-solid fa-bars\"></i>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t<nav>
@@ -95,22 +95,54 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
         // line 42
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_about");
         echo "\">Concept</a>
+\t\t\t\t<a href=\"/#anchor-mix\">Mix & Match</a>
 \t\t\t\t<div id=\"user-connect\">
-\t\t\t\t\t<i class=\"fa-solid fa-circle-user\"></i><a href=\"/\">Se Connecter</a>
+\t\t\t\t\t";
+        // line 45
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 45, $this->source); })()), "user", [], "any", false, false, false, 45) == null)) {
+            // line 46
+            echo "\t\t\t\t\t\t<a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            echo "\"><i class=\"fa-solid fa-circle-user\"></i> Se Connecter</a>
+\t\t\t\t\t";
+        } else {
+            // line 48
+            echo "\t\t\t\t\t\t<a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user");
+            echo "\"><i class=\"fa-solid fa-circle-user\"></i> ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 48, $this->source); })()), "user", [], "any", false, false, false, 48), "firstname", [], "any", false, false, false, 48), "html", null, true);
+            echo " ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 48, $this->source); })()), "user", [], "any", false, false, false, 48), "name", [], "any", false, false, false, 48), "html", null, true);
+            echo "</a>
+\t\t\t\t\t";
+        }
+        // line 50
+        echo "\t\t\t\t</div>
+\t\t\t\t";
+        // line 51
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 51, $this->source); })()), "user", [], "any", false, false, false, 51) != null)) {
+            // line 52
+            echo "\t\t\t\t<div>
+\t\t\t\t\t<a href=\"";
+            // line 53
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\"> Se deconnecter </a>
 \t\t\t\t</div>
-\t\t\t\t<a href=\"/\">Mix & Match</a>
-\t\t\t</nav>
+\t\t\t\t";
+        }
+        // line 56
+        echo "\t\t\t</nav>
 \t\t</header>
 \t\t<main>
 \t\t\t";
-        // line 50
+        // line 59
         $this->displayBlock('body', $context, $blocks);
-        // line 51
+        // line 60
         echo "\t\t</main>
 \t\t<footer>
 \t\t\t<section id=\"newsletter\">
 \t\t\t\t<form class=\"hide-submit\" action=\"";
-        // line 54
+        // line 63
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_formulaire");
         echo "\">
 \t\t\t\t\t<h4>Inscris toi à notre newsletter pour recevoir
@@ -126,23 +158,23 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t\t</section>
 \t\t\t<nav id=\"navbarfooter\" class=\"col-sm-12 justify-content-between\">
 \t\t\t\t<a href=\"";
-        // line 67
+        // line 76
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_legal");
         echo "\">Mentions légales</a>
 \t\t\t\t<a href=\"";
-        // line 68
+        // line 77
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_join_us");
         echo "\">Nous rejoindre</a>
 \t\t\t\t<a href=\"";
-        // line 69
+        // line 78
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_accessibility");
         echo "\">Accessibilité</a>
 \t\t\t\t<a href=\"";
-        // line 70
+        // line 79
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_terms_of_use");
         echo "\">CGU</a>
 \t\t\t\t<a href=\"";
-        // line 71
+        // line 80
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_privacy");
         echo "\">Politique de confidentialité</a>
 \t\t\t</nav>
@@ -169,8 +201,12 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
           </section>
 \t\t</footer>
   </body>
+  <script src=\"";
+        // line 105
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/navbar.js"), "html", null, true);
+        echo "\"></script>
 ";
-        // line 96
+        // line 106
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -208,7 +244,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 
     }
 
-    // line 50
+    // line 59
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -220,17 +256,18 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 
     }
 
-    // line 96
+    // line 106
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 97
+        // line 107
         echo "    ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_script_tags')->getCallable()("app"), "html", null, true);
         echo "
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -249,7 +286,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 
     public function getDebugInfo()
     {
-        return array (  231 => 97,  224 => 96,  212 => 50,  202 => 25,  195 => 24,  188 => 12,  181 => 11,  174 => 96,  146 => 71,  142 => 70,  138 => 69,  134 => 68,  130 => 67,  114 => 54,  109 => 51,  107 => 50,  96 => 42,  91 => 40,  76 => 27,  74 => 24,  68 => 22,  58 => 13,  56 => 11,  44 => 1,);
+        return array (  267 => 107,  260 => 106,  248 => 59,  238 => 25,  231 => 24,  224 => 12,  217 => 11,  210 => 106,  206 => 105,  178 => 80,  174 => 79,  170 => 78,  166 => 77,  162 => 76,  146 => 63,  141 => 60,  139 => 59,  134 => 56,  128 => 53,  125 => 52,  123 => 51,  120 => 50,  110 => 48,  104 => 46,  102 => 45,  96 => 42,  91 => 40,  76 => 27,  74 => 24,  68 => 22,  58 => 13,  56 => 11,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -288,7 +325,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t\t\t\t<img src=\"/assets/img/Logo_final.svg\" alt=\"Dress Me Up logo\" width=\"80\" height=\"50\">
 \t\t\t\t</a>
 \t\t\t\t<div>
-\t\t\t\t\t<i class=\"fa-solid fa-bars\"></i>
+\t\t\t\t\t<i id=\"burger-menu\" class=\"fa-solid fa-bars\"></i>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t<nav>
@@ -296,10 +333,19 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t\t\t<a href=\"{{ path('app_dressing')}}\">Dressing</a>
 \t\t\t\t<a href=\"/\">Blog</a>
 \t\t\t\t<a href=\"{{ path('app_about')}}\">Concept</a>
+\t\t\t\t<a href=\"/#anchor-mix\">Mix & Match</a>
 \t\t\t\t<div id=\"user-connect\">
-\t\t\t\t\t<i class=\"fa-solid fa-circle-user\"></i><a href=\"/\">Se Connecter</a>
+\t\t\t\t\t{% if (app.user == null) %}
+\t\t\t\t\t\t<a href=\"{{ path('app_login')}}\"><i class=\"fa-solid fa-circle-user\"></i> Se Connecter</a>
+\t\t\t\t\t{% else %}
+\t\t\t\t\t\t<a href=\"{{ path('app_user')}}\"><i class=\"fa-solid fa-circle-user\"></i> {{ app.user.firstname }} {{ app.user.name }}</a>
+\t\t\t\t\t{% endif %}
 \t\t\t\t</div>
-\t\t\t\t<a href=\"/\">Mix & Match</a>
+\t\t\t\t{% if (app.user != null) %}
+\t\t\t\t<div>
+\t\t\t\t\t<a href=\"{{ path('app_logout')}}\"> Se deconnecter </a>
+\t\t\t\t</div>
+\t\t\t\t{% endif %}
 \t\t\t</nav>
 \t\t</header>
 \t\t<main>
@@ -349,8 +395,10 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
           </section>
 \t\t</footer>
   </body>
+  <script src=\"{{ asset('assets/js/navbar.js') }}\"></script>
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
+
 {% endblock %}
 ", "base.html.twig", "C:\\Users\\mart1\\Documents\\GitHub\\dressmeup-v2\\templates\\base.html.twig");
     }
