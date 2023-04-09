@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //VARIABLES DU MIX AND MATCH
     let BtnmMat = document.getElementById('mixmatch');
+    console.log(BtnmMat);
     let CardDoute = document.getElementById('doute');
     let CardDchance = document.getElementById('chance');
     let hautGenerator = document.getElementById('hautGenerator1');
@@ -23,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let cardBas3 = document.getElementById('cardBas3');
 
     //RECUPERATION DES li POUR AFFICHAGE DES INFORMATIONS DU VÊTEMENT
-    let li = document.querySelectorAll('#cards-style li');
+    let li = document.querySelectorAll('.card-data');
     console.log(li);
 
     //CLIC 
@@ -64,10 +65,12 @@ window.addEventListener('DOMContentLoaded', () => {
                      <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
                     `;
                     li[0].textContent = `${body.combinaisons[random]['styleHaut']}`;
-                    li[1].innerHTML = `${body.combinaisons[random]['colorNameHaut']}<span class="color-mark" style="background-color:${body.combinaisons[random]['colorHaut']}"></span>`;
+                    li[1].textContent = `${body.combinaisons[random]['colorNameHaut']}`;
+                    li[2].style.backgroundColor = `${body.combinaisons[random]['colorHaut']}`;
 
-                    li[3].textContent = `${body.combinaisons[random]['styleBas']}`;
-                    li[4].innerHTML = `${body.combinaisons[random]['colorNameBas']}<span class="color-mark" style="background-color:${body.combinaisons[random]['colorBas']}"></span>`;
+                    li[5].textContent = `${body.combinaisons[random]['styleBas']}`;
+                    li[6].textContent = `${body.combinaisons[random]['colorNameBas']}`;
+                    li[7].style.backgroundColor = `${body.combinaisons[random]['colorBas']}`;
 
                     //COMBINAISON DE LA DEUXIÈME CARTE + AFFICHAGE
                 } else if (clic == 2) {
@@ -76,10 +79,10 @@ window.addEventListener('DOMContentLoaded', () => {
                     randomTab.push(random);
 
                     hautGenerator.innerHTML = `
-                        <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
+                    <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
                     `;
                     basGenerator.innerHTML = `
-                        <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
+                    <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
                     `;
                     cardHaut2.innerHTML = `
                     <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
@@ -87,11 +90,13 @@ window.addEventListener('DOMContentLoaded', () => {
                     cardBas2.innerHTML = `
                      <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
                     `;
-                    li[6].textContent = `${body.combinaisons[random]['styleHaut']}`;
-                    li[7].innerHTML = `${body.combinaisons[random]['colorNameHaut']}<span class="color-mark" style="background-color:${body.combinaisons[random]['colorHaut']}"></span>`;
+                    li[10].textContent = `${body.combinaisons[random]['styleHaut']}`;
+                    li[11].textContent = `${body.combinaisons[random]['colorNameHaut']}`;
+                    li[12].style.backgroundColor = `${body.combinaisons[random]['colorHaut']}`;
 
-                    li[9].textContent = `${body.combinaisons[random]['styleBas']}`;
-                    li[10].innerHTML = `${body.combinaisons[random]['colorNameBas']}<span class="color-mark" style="background-color:${body.combinaisons[random]['colorBas']}"></span>`;
+                    li[15].textContent = `${body.combinaisons[random]['styleBas']}`;
+                    li[16].textContent = `${body.combinaisons[random]['colorNameBas']}`;
+                    li[17].style.backgroundColor = `${body.combinaisons[random]['colorBas']}`;
 
                     //COMBINAISON DE LA TROISIÈME CARTE + AFFICHAGE
                 } else if (clic == 3) {
@@ -99,22 +104,24 @@ window.addEventListener('DOMContentLoaded', () => {
                     randomTab.push(random);
 
                     hautGenerator.innerHTML = `
-                        <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
+                    <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
                     `;
                     basGenerator.innerHTML = `
-                        <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
+                    <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
                     `;
                     cardHaut3.innerHTML = `
                     <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
-                `;
+                    `;
                     cardBas3.innerHTML = `
                      <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
-                 `;
-                    li[12].textContent = `${body.combinaisons[random]['styleHaut']}`;
-                    li[13].innerHTML = `${body.combinaisons[random]['colorNameHaut']}<span class="color-mark" style="background-color:${body.combinaisons[random]['colorHaut']}"></span>`;
+                    `;
+                    li[20].textContent = `${body.combinaisons[random]['styleHaut']}`;
+                    li[21].textContent = `${body.combinaisons[random]['colorNameHaut']}`;
+                    li[22].style.backgroundColor = `${body.combinaisons[random]['colorHaut']}`;
 
-                    li[15].textContent = `${body.combinaisons[random]['styleBas']}`;
-                    li[16].innerHTML = `${body.combinaisons[random]['colorNameBas']}<span class="color-mark" style="background-color:${body.combinaisons[random]['colorBas']}"></span>`;
+                    li[25].textContent = `${body.combinaisons[random]['styleBas']}`;
+                    li[26].textContent = `${body.combinaisons[random]['colorNameBas']}`;
+                    li[27].style.backgroundColor = `${body.combinaisons[random]['colorBas']}`;
                 }
             })
 
@@ -130,34 +137,34 @@ window.addEventListener('DOMContentLoaded', () => {
         cardHaut1.innerHTML = '';
         cardBas1.innerHTML = '';
         randomTab =[];
-        li[0].textContent = `Tee-Shirt`;
-        li[1].innerHTML = `
-            Première couleur<span class="color-mark" style="background-color:#00FA9A"></span>
-        `;
-        li[3].textContent = `Pantalon`;
-        li[4].innerHTML = `
-            Première couleur<span class="color-mark" style="background-color:#00FA9A"></span>
-         `;
+        li[0].textContent = `Type de vêtement`;
+        li[1].textContent = `Couleur 1`;
+        li[2].style.backgroundColor = `#CA7A83`;
+
+        li[5].textContent = `Type de vêtement`;
+        li[6].textContent = `Couleur 1`;
+        li[7].style.backgroundColor = `#CA7A83`;
+
         cardHaut2.innerHTML = '';
         cardBas2.innerHTML = '';
-        li[6].textContent = `Tee-Shirt`;
-        li[7].innerHTML = `
-            Première couleur<span class="color-mark" style="background-color:#00FA9A"></span>
-        `;
-        li[9].textContent = `Pantalon`;
-        li[10].innerHTML = `
-            Première couleur<span class="color-mark" style="background-color:#00FA9A"></span>
-         `;
+        li[10].textContent = `Type de vêtement`;
+        li[11].textContent = `Couleur 1`;
+        li[12].style.backgroundColor = `#CA7A83`;
+
+        li[15].textContent = `Type de vêtement`;
+        li[16].textContent = `Couleur 1`;
+        li[17].style.backgroundColor = `#CA7A83`;
+
         cardHaut3.innerHTML = '';
         cardBas3.innerHTML = '';
-        li[12].textContent = `Tee-Shirt`;
-        li[13].innerHTML = `
-            Première couleur<span class="color-mark" style="background-color:#00FA9A"></span>
-        `;
-        li[15].textContent = `Pantalon`;
-        li[16].innerHTML = `
-            Première couleur<span class="color-mark" style="background-color:#00FA9A"></span>
-        `;
+        li[20].textContent = `Type de vêtement`;
+        li[21].textContent = `Couleur 1`;
+        li[22].style.backgroundColor = `#CA7A83`;
+
+        li[25].textContent = `Type de vêtement`;
+        li[26].textContent = `Couleur 1`;
+        li[27].style.backgroundColor = `#CA7A83`;
+
         clic = 0;
     }
 

@@ -71,10 +71,6 @@ class __TwigTemplate_02f4b22a327ab196402afa66e20b5aa0 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 6
-        echo "    <link rel=\"stylesheet\" href=\"/assets/css/modal.css\">
-    <link rel=\"stylesheet\" href=\"/assets/css/canvas.css\">
-";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -89,178 +85,30 @@ class __TwigTemplate_02f4b22a327ab196402afa66e20b5aa0 extends Template
 
         // line 11
         echo "
- <header>
-        <h1 class=\"text-center dressing_title mt-5\">Mon dressing</h1>
-        </header>
-
-        <h4 class=\"text-center\">Sélectionne ta catégorie</h4>
-
-        <!-- ------------------------------ -->
-        <!-- TOGGLE -->
-        <!-- ------------------------------ -->
-
-        <section class=\"container text-center toggle_box\">
-            <div class=\"row\">
-                <div class=\"col-12 col-sm-4\">
-                    <img class=\"fiche_vet img-fluid\" src=\"./assets/img/tee-shirt-square.svg\" alt=\"pictogramme de tee-shirt\">
-                    <p class=\"fiche_vet\">Haut</p>
-                </div>
-
-                <div class=\"col-12 col-sm-4 form-check form-switch toggle_pos\">
-                    <input type=\"checkbox\" class=\"toggle-switch\" role=\"switch\" id=\"flexSwitchCheckChecked\">
-                    <label for=\"flexSwitchCheckChecked\"></label>
-                </div>
-
-                <div class=\"col-12 col-sm-4\">
-                    <img class=\"fiche_vet img-fluid\" src=\"./assets/img/pants_square.svg\" alt=\"pictogramme de pantalon\">
-                    <p>Bas</p>
-                </div>
-
+        <h1>Mon dressing</h1>
+        <h4>Sélectionne ta catégorie</h4>
+        <div id=\"type-selection\">
+                <input type=\"radio\" name=\"type\" id=\"haut\" autocomplete=\"off\" list>
+                <label for=\"haut\">Haut</label>
+                <input type=\"radio\" name=\"type\" id=\"bas\" autocomplete=\"off\">
+                <label for=\"bas\">Bas</label>
+        </div>
+        <a href=\"";
+        // line 20
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dressing_add");
+        echo "\">
+            <div class=\"add\">
+                <img src=\"/assets/img/add-icon.svg\" alt=\"Ajouter un vêtement\" srcset=\"\">
             </div>
+        </a>
+        <section id=\"dressing-content\" data-type=\"Haut\">
+            
         </section>
-
-        <!-- ------------------------------- -->
-        <!-- DRESSING TAGS ET AJOUT DE PHOTO -->
-        <!-- ------------------------------- -->
-
-        <!-- TAGS DRESSING -->
-
-        <section class=\"container-fluid border-top border-bottom border-2 border-dark 2px\">
-            <div class=\"row\">
-
-                <div class=\"col-12 col-sm-6 p-3 border-end border-2 border-dark grey_square\">
-                    <ul id=\"styleVetements\" class=\"d-inline-flex flex-wrap vetement_form_type\">
-                        <li class=\"tag_vet me-3 btn\">Tee-shirt</li>
-                        <li class=\"tag_vet me-3 btn\">Sweat-shirt</li>
-                        <li class=\"tag_vet me-3 btn\">Maille</li>
-                        <li class=\"tag_vet me-3 btn\">Chemise</li>
-                        <li class=\"tag_vet me-3 btn\">Gilet</li>
-                        <li class=\"tag_vet me-3 btn\">Veste</li>
-                    </ul>
-                </div>
-
-                <!-- ---------------- -->
-                <!-- TAGS AJOUT PHOTO -->
-                <!-- ---------------- -->
-
-
-                <div class=\"col-12 col-sm-6 p-3 text-center yellow_square\" >
-                    <h3>Ajoute ton vêtement ici</h3>
-                    <img id=\"addCloth\"data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\" class=\"mb-3 the_shadow\" src=\"./assets/img/icon_add.svg\" alt=\"image bouton pour ajouter un vêtement\">
-                    <p>Glisse ta photo ici pour l'importer</p>
-                </div>
-                 
-            </div>
-        </section>
-
-
-        <!-- ---------------- -->
-        <!-- CARDS DRESSING -->
-        <!-- ---------------- -->
-
-        <section class=\"container\">
-            <div id=\"dressingContent\" class=\"row\" data-type=\"Haut\">
-                
-                 <!-- CARD 1 -->
-
-                 <div class=\"card col p-0 m-0 card-dress\">
-                    <div>
-                        <img class=\"card-img-top photo_cloth img-fluid border-bottom border-2 border-dark\" src=\"./assets/img/teeshirt_orange.jpg\" alt=\"tee-shirt orange\">
-                    </div>
-                    <div class=\"col-10 mt-3\">
-                        <ul class=\"tag-vetement card-dress \">
-                            <li class=\"\">Tee-shirt</li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span>
-                            </li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span></li>
-                        </ul>
-                    </div>
-
-                
-
-                <!-- CARD 2 -->
-
-                <div class=\"card col p-0 m-0 card-dress\">
-                    <div>
-                        <img class=\"card-img-top photo_cloth img-fluid border-bottom border-2 border-dark\" src=\"./assets/img/teeshirt_bleu.jpg\" alt=\"tee shirt bleu\">
-                    </div>
-                    <div class=\"col-10 mt-3\">
-                        <ul class=\"tag-vetement card-dress \">
-                            <li class=\"\">Tee-shirt</li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span>
-                            </li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span></li>
-                        </ul>
-                    </div>
-
-                </div>
-                <!-- CARD 3 -->
-
-                <div class=\"card col p-0 m-0 card-dress\">
-                    <div>
-                        <img class=\"card-img-top photo_cloth img-fluid border-bottom border-2 border-dark\" src=\"./assets/img/teeshirt_marron.jpg\" alt=\"tee-shirt marron\">
-                    </div>
-                    <div class=\"col-10 mt-3\">
-                        <ul class=\"tag-vetement card-dress \">
-                            <li class=\"\">Tee-shirt</li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span>
-                            </li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span></li>
-                        </ul>
-                    </div>
-
-                </div>
-                <!-- CARD 4 -->
-
-                <div class=\"card col p-0 m-0 card-dress\">
-                    <div>
-                        <img class=\"card-img-top photo_cloth img-fluid border-bottom border-2 border-dark\" src=\"./assets/img/teeshirt_orange.jpg\" alt=\"tee shirt teeshirt_orange\">
-                    </div>
-                    <div class=\"col-10 mt-3\">
-                        <ul class=\"tag-vetement card-dress \">
-                            <li class=\"\">Tee-shirt</li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span>
-                            </li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <!-- CARD 5 -->
-
-                <div class=\"card col p-0 m-0 card-dress\">
-                    <div>
-                        <img class=\"card-img-top photo_cloth img-fluid border-bottom border-2 border-dark\" src=\"./assets/img/teeshirt_rouge.jpg\" alt=\"tee shirt rouge\">
-                    </div>
-                    <div class=\"col-10 mt-3\">
-                        <ul class=\"tag-vetement card-dress \">
-                            <li class=\"\">Tee-shirt</li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span>
-                            </li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span></li>
-                        </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        ";
-        // line 179
-        echo twig_include($this->env, $context, "/modals/modal-dressing.html.twig");
+        
+        
+       ";
+        // line 31
         echo "
-
 
 
 ";
@@ -269,23 +117,17 @@ class __TwigTemplate_02f4b22a327ab196402afa66e20b5aa0 extends Template
 
     }
 
-    // line 184
+    // line 35
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 185
+        // line 36
         echo "    <script src=\"assets/js/loadDressing.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/pipette.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/dragAndDrop.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/kmeans.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/colorName.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/switchDressing.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/deleteOneCloth.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/modal.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/formAuto.js\" type=\"text/javascript\"></script>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -304,7 +146,7 @@ class __TwigTemplate_02f4b22a327ab196402afa66e20b5aa0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  280 => 185,  273 => 184,  261 => 179,  91 => 11,  84 => 10,  75 => 6,  68 => 5,  55 => 3,  38 => 1,);
+        return array (  128 => 36,  121 => 35,  111 => 31,  98 => 20,  87 => 11,  80 => 10,  68 => 5,  55 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -314,195 +156,40 @@ class __TwigTemplate_02f4b22a327ab196402afa66e20b5aa0 extends Template
 {% block title %}DressMeUp - Dressing{% endblock %}
 
 {% block stylesheets %}
-    <link rel=\"stylesheet\" href=\"/assets/css/modal.css\">
-    <link rel=\"stylesheet\" href=\"/assets/css/canvas.css\">
+{#     <link rel=\"stylesheet\" href=\"/assets/css/modal.css\">
+    <link rel=\"stylesheet\" href=\"/assets/css/canvas.css\"> #}
 {% endblock %}
 
 {% block body %}
 
- <header>
-        <h1 class=\"text-center dressing_title mt-5\">Mon dressing</h1>
-        </header>
-
-        <h4 class=\"text-center\">Sélectionne ta catégorie</h4>
-
-        <!-- ------------------------------ -->
-        <!-- TOGGLE -->
-        <!-- ------------------------------ -->
-
-        <section class=\"container text-center toggle_box\">
-            <div class=\"row\">
-                <div class=\"col-12 col-sm-4\">
-                    <img class=\"fiche_vet img-fluid\" src=\"./assets/img/tee-shirt-square.svg\" alt=\"pictogramme de tee-shirt\">
-                    <p class=\"fiche_vet\">Haut</p>
-                </div>
-
-                <div class=\"col-12 col-sm-4 form-check form-switch toggle_pos\">
-                    <input type=\"checkbox\" class=\"toggle-switch\" role=\"switch\" id=\"flexSwitchCheckChecked\">
-                    <label for=\"flexSwitchCheckChecked\"></label>
-                </div>
-
-                <div class=\"col-12 col-sm-4\">
-                    <img class=\"fiche_vet img-fluid\" src=\"./assets/img/pants_square.svg\" alt=\"pictogramme de pantalon\">
-                    <p>Bas</p>
-                </div>
-
+        <h1>Mon dressing</h1>
+        <h4>Sélectionne ta catégorie</h4>
+        <div id=\"type-selection\">
+                <input type=\"radio\" name=\"type\" id=\"haut\" autocomplete=\"off\" list>
+                <label for=\"haut\">Haut</label>
+                <input type=\"radio\" name=\"type\" id=\"bas\" autocomplete=\"off\">
+                <label for=\"bas\">Bas</label>
+        </div>
+        <a href=\"{{ path('app_dressing_add')}}\">
+            <div class=\"add\">
+                <img src=\"/assets/img/add-icon.svg\" alt=\"Ajouter un vêtement\" srcset=\"\">
             </div>
+        </a>
+        <section id=\"dressing-content\" data-type=\"Haut\">
+            
         </section>
-
-        <!-- ------------------------------- -->
-        <!-- DRESSING TAGS ET AJOUT DE PHOTO -->
-        <!-- ------------------------------- -->
-
-        <!-- TAGS DRESSING -->
-
-        <section class=\"container-fluid border-top border-bottom border-2 border-dark 2px\">
-            <div class=\"row\">
-
-                <div class=\"col-12 col-sm-6 p-3 border-end border-2 border-dark grey_square\">
-                    <ul id=\"styleVetements\" class=\"d-inline-flex flex-wrap vetement_form_type\">
-                        <li class=\"tag_vet me-3 btn\">Tee-shirt</li>
-                        <li class=\"tag_vet me-3 btn\">Sweat-shirt</li>
-                        <li class=\"tag_vet me-3 btn\">Maille</li>
-                        <li class=\"tag_vet me-3 btn\">Chemise</li>
-                        <li class=\"tag_vet me-3 btn\">Gilet</li>
-                        <li class=\"tag_vet me-3 btn\">Veste</li>
-                    </ul>
-                </div>
-
-                <!-- ---------------- -->
-                <!-- TAGS AJOUT PHOTO -->
-                <!-- ---------------- -->
-
-
-                <div class=\"col-12 col-sm-6 p-3 text-center yellow_square\" >
-                    <h3>Ajoute ton vêtement ici</h3>
-                    <img id=\"addCloth\"data-bs-toggle=\"modal\" data-bs-target=\"#exampleModal\" class=\"mb-3 the_shadow\" src=\"./assets/img/icon_add.svg\" alt=\"image bouton pour ajouter un vêtement\">
-                    <p>Glisse ta photo ici pour l'importer</p>
-                </div>
-                 
-            </div>
-        </section>
-
-
-        <!-- ---------------- -->
-        <!-- CARDS DRESSING -->
-        <!-- ---------------- -->
-
-        <section class=\"container\">
-            <div id=\"dressingContent\" class=\"row\" data-type=\"Haut\">
-                
-                 <!-- CARD 1 -->
-
-                 <div class=\"card col p-0 m-0 card-dress\">
-                    <div>
-                        <img class=\"card-img-top photo_cloth img-fluid border-bottom border-2 border-dark\" src=\"./assets/img/teeshirt_orange.jpg\" alt=\"tee-shirt orange\">
-                    </div>
-                    <div class=\"col-10 mt-3\">
-                        <ul class=\"tag-vetement card-dress \">
-                            <li class=\"\">Tee-shirt</li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span>
-                            </li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span></li>
-                        </ul>
-                    </div>
-
-                
-
-                <!-- CARD 2 -->
-
-                <div class=\"card col p-0 m-0 card-dress\">
-                    <div>
-                        <img class=\"card-img-top photo_cloth img-fluid border-bottom border-2 border-dark\" src=\"./assets/img/teeshirt_bleu.jpg\" alt=\"tee shirt bleu\">
-                    </div>
-                    <div class=\"col-10 mt-3\">
-                        <ul class=\"tag-vetement card-dress \">
-                            <li class=\"\">Tee-shirt</li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span>
-                            </li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span></li>
-                        </ul>
-                    </div>
-
-                </div>
-                <!-- CARD 3 -->
-
-                <div class=\"card col p-0 m-0 card-dress\">
-                    <div>
-                        <img class=\"card-img-top photo_cloth img-fluid border-bottom border-2 border-dark\" src=\"./assets/img/teeshirt_marron.jpg\" alt=\"tee-shirt marron\">
-                    </div>
-                    <div class=\"col-10 mt-3\">
-                        <ul class=\"tag-vetement card-dress \">
-                            <li class=\"\">Tee-shirt</li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span>
-                            </li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span></li>
-                        </ul>
-                    </div>
-
-                </div>
-                <!-- CARD 4 -->
-
-                <div class=\"card col p-0 m-0 card-dress\">
-                    <div>
-                        <img class=\"card-img-top photo_cloth img-fluid border-bottom border-2 border-dark\" src=\"./assets/img/teeshirt_orange.jpg\" alt=\"tee shirt teeshirt_orange\">
-                    </div>
-                    <div class=\"col-10 mt-3\">
-                        <ul class=\"tag-vetement card-dress \">
-                            <li class=\"\">Tee-shirt</li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span>
-                            </li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span></li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <!-- CARD 5 -->
-
-                <div class=\"card col p-0 m-0 card-dress\">
-                    <div>
-                        <img class=\"card-img-top photo_cloth img-fluid border-bottom border-2 border-dark\" src=\"./assets/img/teeshirt_rouge.jpg\" alt=\"tee shirt rouge\">
-                    </div>
-                    <div class=\"col-10 mt-3\">
-                        <ul class=\"tag-vetement card-dress \">
-                            <li class=\"\">Tee-shirt</li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span>
-                            </li>
-                            <li class=\"d-flex justify-content-between align-items-stretch\">Green Yellow<span
-                                    class=\"color-mark\" style=\"background-color:#00FA9A\"></span></li>
-                        </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        {{ include('/modals/modal-dressing.html.twig') }}
+        
+        
+       {#  {{ include('/modals/modal-dressing.html.twig') }} #}
 
 
 
 {% endblock %}
 {% block javascripts %}
     <script src=\"assets/js/loadDressing.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/pipette.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/dragAndDrop.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/kmeans.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/colorName.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/switchDressing.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/deleteOneCloth.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/modal.js\" type=\"text/javascript\"></script>
-    <script src=\"assets/js/formAuto.js\" type=\"text/javascript\"></script>
 {% endblock %}
-", "dressing/index.html.twig", "C:\\Users\\mart1\\Documents\\GitHub\\dressmeup\\templates\\dressing\\index.html.twig");
+", "dressing/index.html.twig", "C:\\Users\\mart1\\Documents\\GitHub\\dressmeup-v2\\templates\\dressing\\index.html.twig");
     }
 }

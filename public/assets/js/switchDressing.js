@@ -3,30 +3,30 @@
 //ASSURE LE BON DÉROULEMENT DU SCRIPT 
 window.addEventListener('DOMContentLoaded', () => {
 
-    toggleBtn = document.querySelector('.toggle-switch');
+    toggleBtn = document.querySelectorAll('#type-selection label');
     ul = document.getElementById('styleVetements');
-    dressingContent = document.getElementById('dressingContent');
-    imgSrc = document.querySelectorAll('#dressingContent img');
+    dressingContent = document.getElementById('dressing-content');
+    imgSrc = document.querySelectorAll('#dressing-content img');
     // console.log(imgSrc);
-    type = "Bas";
+    type = "Haut";
 
     //FONCTION SWITCH LES VÊTEMENTS HAUTS ET BAS AVEC RÉCUPÉRATION DES INFOS EN BASE DE DONNÉE + AFFICHAGES
-    function switchDressingContent() {
-        //console.log('ok');
-        if (type == "Haut") {
-            dressingContent.dataset['type'] = "Bas";
-            type = "Bas";
-        } else if (type == "Bas"){
-            dressingContent.dataset['type'] = "Haut";
-            type = "Haut";
+    function switchDressingContent(e) {
+        console.log(e);
+        if(e.currentTarget != null){
+            dressingContent.dataset['type'] = e.currentTarget.textContent;
+            type = e.currentTarget.textContent;
         }
+        console.log(type);
 
         loadDressingContent(type);
     }
 
     //DÉCLENCHEMENT DE LA FONCTION AU CLIQUE
-    toggleBtn.addEventListener('click', switchDressingContent);
+    for(i = 0; i<toggleBtn.length; i++){
+        toggleBtn[i].addEventListener('click', switchDressingContent);
+    }
     
     //DECLENCHEMENT DE LA FONCTION AU PREMIER CHARGEMENT DE LA PAGE
-    switchDressingContent();
+    switchDressingContent(type);
 });

@@ -29,24 +29,31 @@ function loadDressingContent(type){
             for (i = 0; i < body.listeVetements.length; i++) {
                 // console.log(body.listeVetements[i]['colorName'][0]);
                 dressingContent.innerHTML += `
-                    <div class="card col-3 p-0 m-0 card-dress">
+                <div class="cards">
+                <div class="delete" data-index="${(body.listeVetements[i]['id'])}" onclick="deleteOneCloth(${(body.listeVetements[i]['id'])})">
+                    <img src="/assets/img/delete-icon.svg" alt="Supprimer un vêtement" srcset="">
+                </div>
+                <div class="cards-style">
                     <div>
-                    <img class="card-img-top photo_cloth img-fluid border-bottom border-2 border-dark" src="./assets/user_img/${(body.listeVetements[i]['image'])}"alt="${(body.listeVetements[i]['alt'])}">
+                        <img src="./assets/user_img/${(body.listeVetements[i]['image'])}" alt="${(body.listeVetements[i]['alt'])}">
                     </div>
-                    <div class="col-12 mt-3">
-                    <ul class="tag-vetement card-dress ">
-                    <li class="">${(body.listeVetements[i]['style'])}</li>
-                    <li class="d-flex justify-content-between align-items-stretch">${(body.listeVetements[i]['colorName'][0])}<span
-                    class="color-mark" style="background-color:${(body.listeVetements[i]['color'][0])}"></span>
-                    </li>
-                    <li class="d-none d-flex justify-content-between align-items-stretch">Green Yellow<span
-                    class="color-mark" style="background-color:#00FA9A"></span></li>
-                    </ul>
-                    <div>
-                    <span class="deleteOneCloth" data-index="${(body.listeVetements[i]['id'])}" onclick="deleteOneCloth(${(body.listeVetements[i]['id'])})">Supprimer</span>
+                    <div class="info-vetement">
+                        <div>
+                            <div>
+                                <p class="card-type card-data">${(body.listeVetements[i]['style'])}</p>
+                            </div>
+                            <div>
+                            <div>
+                                <p class="card-color card-data">${(body.listeVetements[i]['colorName'][0])}</p><span class="span-color1 card-data" style="background-color:${(body.listeVetements[i]['color'][0])}"></span>
+                            </div>
+                            <div>
+                                <p class="card-color card-data">Couleur 2</p><span class="span-color2 card-data"></span>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
                     </div>
-                    </div>
-                    </div>`;
+                </div>`
             };
         })
 }

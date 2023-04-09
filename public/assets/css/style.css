@@ -6,8 +6,15 @@
 :root{
     --bg-gradient : linear-gradient(15deg, rgba(97, 64, 86, 1), rgba(104, 99, 136, 1));
     --ice : rgba(249, 249, 249, 1);
+    --ice-transparent:rgba(249, 249, 249, 0.35);
     --black-transparent : rgba(0, 0, 0, 0.5);
     --light-yellow : rgba(255, 229, 136, 1);
+    --light-black : rgba(25, 25, 25, 1);
+    --light-black-transparent : rgba(25, 25, 25, 0.35);
+    --red-strawberry : rgba(202, 122, 131, 1);
+    --green-yes : rgba(157, 210, 148, 1);
+    --light-pink : rgba(234, 233, 249, 1);
+    --grey : rgba(217, 217, 217, 1);
 }
 
 /* font-family: 'Changa', sans-serif;
@@ -76,7 +83,426 @@ main .container{
     padding-inline: 20px;
 }
 
-h2{
+main h1{
+    text-align: center;
+}
+
+/*********************************/
+/***      HOME GENERATOR       ***/
+/*********************************/
+
+main h2{
     font-size: 16px;
     letter-spacing: 1px;
+    text-align: center;
 }
+
+main h4{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+main .tag{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"] + label, button{
+    background-color: var(--ice);
+    border-radius: 50px;
+    color: var(--light-black);
+    padding-inline: 10px;
+    padding-block: 5px;
+    margin: 5px;
+    font-size: 14px;
+    box-shadow: 4px 4px 0px 0px var(--light-black);
+}
+
+input[type="radio"]:checked + label{
+    background-color: var(--light-yellow);
+}
+
+.cta-mixandmatch{
+    display: block;
+    font-family: 'Changa', cursive;
+    font-weight: 700;
+    background-color: var(--light-yellow);
+    border-radius: 50px;
+    color: var(--light-black);
+    padding-inline: 20px;
+    padding-block: 2px;
+    border: none;
+    margin-inline: auto;
+    font-size: 14px;
+}
+
+main .main-generator{
+    background-color: var(--ice-transparent);
+    display: block;
+    max-width: 300px;
+    height: 400px;
+    border-radius: 50px;
+    margin-inline: auto;
+    margin-block: 20px;
+    background-size: 75%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+main .main-generator img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+main .bg-haut{
+    background-image: url("../img/shirt.svg");
+}
+
+main .bg-bas{
+    background-image: url("../img/pant.svg");
+}
+
+#generateur button{
+    display: block;
+    font-family: 'Changa', cursive;
+    color: var(--light-black);
+    padding-inline: 20px;
+    padding-block: 2px;
+    border: none;
+    margin-inline: auto;
+    margin-block: 10px;
+}
+
+#generateur button:hover{
+    background-color: var(--light-yellow);
+}
+
+#generateur button a{
+    text-decoration: none;
+    color: var(--light-black);
+}
+
+/*********************************/
+/***       END GENERATOR       ***/
+/*********************************/
+
+/*********************************/
+/***           CARDS           ***/
+/*********************************/
+
+.cards-style{
+    max-width: 300px;
+    border-radius: 50px;
+    background-color: var(--ice-transparent);
+    margin: auto;
+    overflow: hidden;
+}
+
+.card-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-style h5{
+    font-weight: 700;
+    font-size: larger;
+    margin-block: 20px;
+}
+
+.cards-style .main-generator{
+    border-radius: 0px;
+    margin-block: 0px;
+}
+
+.info-vetement{
+    font-size: 14px;
+    color: var(--light-black);
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-vetement>div{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.info-vetement>div>div>div{
+    display: flex;
+    align-items: center;
+}
+
+.card-type{
+    text-align: center;
+}
+
+.card-color{
+    padding-left: 10px;
+}
+
+.info-vetement p{
+    display: inline-block;
+    background-color: var(--light-pink);
+    border-radius: 25px;
+    box-shadow: inset 0px 4px 4px 0px var(--light-black-transparent);
+    width: 130px;
+    height: 30px;
+    align-self: center;
+    margin-block: 10px;
+    padding-block: 8px;
+}
+
+.info-vetement span{
+    border-radius: 25px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-left: -30px;
+}
+
+.span-color1{
+    background-color: var(--red-strawberry);
+}
+
+.span-color2{
+    background-color: var(--green-yes);
+}
+
+#dot-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 20px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: var(--ice);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active {
+    background-color: var(--ice);
+}
+
+.active::before {
+    content:'';
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    border: solid 2px var(--ice);
+    border-radius: 50%;
+    translate: -4px -4px;
+}
+
+/*********************************/
+/***         END CARDS         ***/
+/*********************************/
+
+/*********************************/
+/***         DRESSING          ***/
+/*********************************/
+
+#type-selection{
+    display: flex;
+    justify-content: center;
+
+}
+
+#dressing-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#dressing-content .cards{
+    margin-top: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.add{
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: var(--ice-transparent);            
+    background-size: 50%;
+    background-position: center;
+    margin-inline: auto;
+    margin-top: 20px;
+}
+
+.delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    z-index: 1;
+}
+
+.delete:hover{
+    cursor: pointer;
+}
+
+.delete img{
+    width: 70%;
+    height: 70%;
+    z-index: 0;
+}
+
+.cards{
+    margin-block: 10px;
+}
+
+.cards-style img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*********************************/
+/***       END DRESSING        ***/
+/*********************************/
+
+/*********************************/
+/***          FOOTER           ***/
+/*********************************/
+
+footer{
+    /* display: flex;
+    justify-content: center; */
+    background-color: var(--black-transparent);
+    padding-inline: 20px;
+}
+
+footer form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h4{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+footer form.hide-submit input[type="submit"] {
+    display: none;
+}
+
+footer form.hide-submit i{
+    color: var(--light-black);
+    background-color: var(--light-yellow);
+    border-radius: 25px;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-left: -30px;
+    padding: 6px;
+}
+
+footer form.hide-submit i:hover {
+    cursor: pointer;
+}
+
+.form-field{
+    border:none;
+    display: inline-block;
+    background-color: var(--light-pink);
+    border-radius: 25px;
+    box-shadow: inset 0px 4px 4px 0px var(--light-black-transparent);
+    width: 100%;
+    height: 30px;
+    margin-block: 10px;
+    padding-block: 8px;
+    padding-left: 10px;
+}
+
+#navbarfooter{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:self-end;
+    height: 100px;
+    width: 100%;
+}
+
+#navbarfooter a{
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: var(--ice);
+    width: 40%;
+    border-left: solid 0px var(--light-yellow);
+    padding-left: 3px;
+}
+
+#navbarfooter a:hover{
+    border-left: solid 3px var(--light-yellow);
+    color: var(--light-yellow);
+}
+
+#networks-links{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    flex-wrap: wrap;
+    height: 150px;
+    width: 80%;
+}
+
+#networks-links h4{
+    margin-top: 0px;
+}
+
+#networks-links a{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    margin-top: 15px;
+    color: var(--ice);
+    text-decoration: none;
+}
+
+#networks-links p{
+    display: inline-block;
+    margin-block: 0px;
+    margin-left: 10px;
+}
+
+/*********************************/
+/***        END FOOTER         ***/
+/*********************************/

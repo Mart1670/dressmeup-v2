@@ -37,9 +37,9 @@
 			</div>
 			<nav>
 				<a href="/">Accueil</a>
-				<a href="/">Dressing</a>
+				<a href="{{ path('app_dressing')}}">Dressing</a>
 				<a href="/">Blog</a>
-				<a href="/">Concept</a>
+				<a href="{{ path('app_about')}}">Concept</a>
 				<div id="user-connect">
 					<i class="fa-solid fa-circle-user"></i><a href="/">Se Connecter</a>
 				</div>
@@ -50,6 +50,47 @@
 			{% block body %}{% endblock %}
 		</main>
 		<footer>
+			<section id="newsletter">
+				<form class="hide-submit" action="{{ path('app_formulaire')}}">
+					<h4>Inscris toi à notre newsletter pour recevoir
+                	des inspirations de style vestimentaire</h4>
+					<div>
+						<input type="mail" id="utilisateur" class="form-field" name="Email" placeholder="Ton adresse email" />
+						<label>
+							<input type="submit" />
+							<i class="fa-solid fa-paper-plane"></i>
+						</label>
+					</div>
+				</form>
+			</section>
+			<nav id="navbarfooter" class="col-sm-12 justify-content-between">
+				<a href="{{ path('app_legal')}}">Mentions légales</a>
+				<a href="{{ path('app_join_us')}}">Nous rejoindre</a>
+				<a href="{{ path('app_accessibility')}}">Accessibilité</a>
+				<a href="{{ path('app_terms_of_use')}}">CGU</a>
+				<a href="{{ path('app_privacy')}}">Politique de confidentialité</a>
+			</nav>
+			<section id="networks">
+				<h4>N'oublie pas de nous suivre sur les réseaux sociaux</h4>
+				<article id="networks-links">
+					<a href="https://www.tiktok.com/fr/" target="_blank">
+						<img src="/assets/img/tiktok-normal.svg" alt="tiktok">
+						<p>Tiktok</p>
+					</a>
+					<a href="https://www.instagram.com/?hl=fr" target="_blank">
+						<img src="/assets/img/instagram-normal.svg" alt="instagram">
+						<p>Instagram</p>
+					</a>
+					<a href="https://www.pinterest.fr/" target="_blank">
+						<img src="/assets/img/pinterest-normal.svg" alt="pinterest">
+						<p>Pinterest</p>
+					</a>
+					<a href="https://www.youtube.com/" target="_blank">
+						<img src="/assets/img/youtube-normal.svg" alt="youtube">
+						<p>Youtube</p>
+					</a>
+				</article>
+          </section>
 		</footer>
   </body>
 {% block javascripts %}

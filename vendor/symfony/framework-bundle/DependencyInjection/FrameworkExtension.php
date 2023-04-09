@@ -1569,9 +1569,16 @@ class FrameworkExtension extends Extension
 
         $loader->load('annotations.php');
 
+        // registerUniqueLoader exists since doctrine/annotations v1.6
         if (!method_exists(AnnotationRegistry::class, 'registerUniqueLoader')) {
-            $container->getDefinition('annotations.dummy_registry')
-                ->setMethodCalls([['registerLoader', ['class_exists']]]);
+            // registerLoader exists only in doctrine/annotations v1
+            if (method_exists(AnnotationRegistry::class, 'registerLoader')) {
+                $container->getDefinition('annotations.dummy_registry')
+                    ->setMethodCalls([['registerLoader', ['class_exists']]]);
+            } else {
+                // remove the dummy registry when doctrine/annotations v2 is used
+                $container->removeDefinition('annotations.dummy_registry');
+            }
         }
 
         if ('none' === $config['cache']) {
