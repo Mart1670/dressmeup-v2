@@ -185,7 +185,7 @@ function analyze(ctx) {
                     <p class="card-color card-data">${body.colorname}</p><span
                     id="color1" class="card-data"
                     class="color-mark" style="background-color:${colors[1]}"></span>
-                    `
+                    `;
                 nameColor.value = body.colorname;
                 vetementColor1.value = colors[1];
             });

@@ -54,11 +54,16 @@ function hsl (color) {
 
 depose.addEventListener("drop", function () {
     var hsl1 = "";
-    color1 = document.getElementById("color1");
-    let rgbColor1 = color1.style.backgroundColor;
-    console.log(rgbColor1);
-    hsl1 = hsl(rgbColor1);
-    console.log(hsl1);
+    setTimeout(() => {
+        console.log("Delayed for 0.5 second.");
+        color1 = document.getElementById("color1");
+        console.log(color1);
+        let rgbColor1 = color1.style.backgroundColor;
+        console.log(color1.style.backgroundColor);
+        hsl1 = hsl(rgbColor1);
+        console.log(hsl1);
+        
+      }, 500);
 });
 
 
