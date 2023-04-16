@@ -30,8 +30,8 @@ class Vetement
     /* #[ORM\ManyToMany(targetEntity: Tenue::class, mappedBy: 'vetement')]
     private Collection $tenues; */
 
-    #[ORM\ManyToMany(targetEntity: TagHumeur::class, inversedBy: 'vetements')]
-    private Collection $tagHumeur;
+    /* #[ORM\ManyToMany(targetEntity: TagHumeur::class, inversedBy: 'vetements')]
+    private Collection $tagHumeur; */
 
     #[ORM\ManyToMany(targetEntity: Color::class, inversedBy: 'vetements')]
     private Collection $color;
@@ -39,7 +39,7 @@ class Vetement
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $alt = null;
 
-    #[ORM\ManyToMany(targetEntity: TagAmbiance::class, mappedBy: 'vetement')]
+    #[ORM\ManyToMany(targetEntity: TagAmbiance::class, inversedBy: 'vetement')]
     private Collection $tagAmbiances;
 
     #[ORM\ManyToOne(inversedBy: 'vetements')]
@@ -47,8 +47,8 @@ class Vetement
 
     public function __construct()
     {
-        $this->tenues = new ArrayCollection();
-        $this->tagHumeur = new ArrayCollection();
+        /* $this->tenues = new ArrayCollection(); */
+        /* $this->tagHumeur = new ArrayCollection(); */
         $this->color = new ArrayCollection();
         $this->tagAmbiances = new ArrayCollection();
     }
@@ -136,7 +136,7 @@ class Vetement
     /**
      * @return Collection<int, Tag>
      */
-    public function getTagHumeur(): Collection
+    /* public function getTagHumeur(): Collection
     {
         return $this->tagHumeur;
     }
@@ -155,7 +155,7 @@ class Vetement
         $this->tagHumeur->removeElement($tagHumeur);
 
         return $this;
-    }
+    } */
 
     /**
      * @return Collection<int, Color>

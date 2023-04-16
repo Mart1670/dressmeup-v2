@@ -21,7 +21,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 class VetementController extends AbstractController
 {
     #[Route('/vetement', name: 'app_vetement')]
-    public function index(Request $request, SluggerInterface $slugger, VetementRepository $vetementRepository, ColorRepository $colorRepository): Response
+    public function index(Request $request, SluggerInterface $slugger, VetementRepository $vetementRepository, ColorRepository $colorRepository, TagAmbianceRepository $tagAmbianceRepository): Response
     {
         //dd($request->getContent());
 
@@ -88,6 +88,8 @@ class VetementController extends AbstractController
                 $vetement->setImage($newFilename);
                 $vetement->setUser($this->getUser());
                 $vetement->addColor($color);
+                $tagAmbiance = $tagAmbianceRepository->findOneById($vetement->getTagAmbiances()[0]->getId());
+                $vetement->addTagAmbiance($tagAmbiance);
                 $tagAmbiance = $vetement->getTagAmbiances()[0]->getName();
                 
 

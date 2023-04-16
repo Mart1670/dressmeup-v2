@@ -24,8 +24,8 @@ class Color
     #[ORM\ManyToMany(targetEntity: Vetement::class, mappedBy: 'color')]
     private Collection $vetements;
 
-    #[ORM\ManyToMany(targetEntity: Palette::class, mappedBy: 'color')]
-    private Collection $palettes;
+/*     #[ORM\ManyToMany(targetEntity: Palette::class, mappedBy: 'color')]
+    private Collection $palettes; */
 
     #[ORM\Column(nullable: true)]
     private ?int $r = null;
@@ -104,7 +104,7 @@ class Color
     /**
      * @return Collection<int, Palette>
      */
-    public function getPalettes(): Collection
+   /*  public function getPalettes(): Collection
     {
         return $this->palettes;
     }
@@ -126,7 +126,7 @@ class Color
         }
 
         return $this;
-    }
+    } */
 
     public function getR(): ?int
     {

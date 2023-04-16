@@ -21,7 +21,7 @@ class TagAmbiance
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $categorie = null;
 
-    #[ORM\ManyToMany(targetEntity: Vetement::class, inversedBy: 'tagAmbiances')]
+    #[ORM\ManyToMany(targetEntity: Vetement::class, mappedBy: 'tagAmbiances')]
     private Collection $vetement;
 
     public function __construct()

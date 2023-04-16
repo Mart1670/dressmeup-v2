@@ -31,6 +31,24 @@ class ReferenceColor
     #[ORM\Column(nullable: true)]
     private ?bool $active = null;
 
+    #[ORM\Column]
+    private ?int $hMin = null;
+
+    #[ORM\Column]
+    private ?int $hMax = null;
+
+    #[ORM\Column]
+    private ?int $sMin = null;
+
+    #[ORM\Column]
+    private ?int $sMax = null;
+
+    #[ORM\Column]
+    private ?int $lMin = null;
+
+    #[ORM\Column]
+    private ?int $lMax = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -104,6 +122,78 @@ class ReferenceColor
     public function setActive(?bool $active): self
     {
         $this->active = $active;
+
+        return $this;
+    }
+
+    public function getHMin(): ?int
+    {
+        return $this->hMin;
+    }
+
+    public function setHMin(int $hMin): self
+    {
+        $this->hMin = $hMin;
+
+        return $this;
+    }
+
+    public function getHMax(): ?int
+    {
+        return $this->hMax;
+    }
+
+    public function setHMax(int $hMax): self
+    {
+        $this->hMax = $hMax;
+
+        return $this;
+    }
+
+    public function getSMin(): ?int
+    {
+        return $this->sMin;
+    }
+
+    public function setSMin(int $sMin): self
+    {
+        $this->sMin = $sMin;
+
+        return $this;
+    }
+
+    public function getSMax(): ?int
+    {
+        return $this->sMax;
+    }
+
+    public function setSMax(int $sMax): self
+    {
+        $this->sMax = $sMax;
+
+        return $this;
+    }
+
+    public function getLMin(): ?int
+    {
+        return $this->lMin;
+    }
+
+    public function setLMin(int $lMin): self
+    {
+        $this->lMin = $lMin;
+
+        return $this;
+    }
+
+    public function getLMax(): ?int
+    {
+        return $this->lMax;
+    }
+
+    public function setLMax(int $lMax): self
+    {
+        $this->lMax = $lMax;
 
         return $this;
     }

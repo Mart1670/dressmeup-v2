@@ -21,8 +21,8 @@ class TagHumeur
     #[ORM\Column(length: 255)]
     private ?string $category = null;
 
-    #[ORM\ManyToMany(targetEntity: Vetement::class, mappedBy: 'tag')]
-    private Collection $vetements;
+/*     #[ORM\ManyToMany(targetEntity: Vetement::class, mappedBy: 'tag')]
+    private Collection $vetements; */
 
     public function __construct()
     {
@@ -61,7 +61,7 @@ class TagHumeur
     /**
      * @return Collection<int, Vetement>
      */
-    public function getVetements(): Collection
+    /* public function getVetements(): Collection
     {
         return $this->vetements;
     }
@@ -83,5 +83,5 @@ class TagHumeur
         }
 
         return $this;
-    }
+    } */
 }

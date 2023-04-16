@@ -18,8 +18,8 @@ class Palette
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $name = null;
 
-    #[ORM\ManyToMany(targetEntity: Color::class, inversedBy: 'palettes')]
-    private Collection $color;
+    /* #[ORM\ManyToMany(targetEntity: Color::class, inversedBy: 'palettes')]
+    private Collection $color; */
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $Color1 = null;
@@ -61,7 +61,7 @@ class Palette
     /**
      * @return Collection<int, Color>
      */
-    public function getColor(): Collection
+/*     public function getColor(): Collection
     {
         return $this->color;
     }
@@ -80,7 +80,7 @@ class Palette
         $this->color->removeElement($color);
 
         return $this;
-    }
+    } */
 
     public function getColor1(): ?string
     {
