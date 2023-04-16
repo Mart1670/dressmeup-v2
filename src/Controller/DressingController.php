@@ -108,7 +108,7 @@ class DressingController extends AbstractController
             unlink( $fichier) ;
         }
         
-        return $deleteVetement;
+        return new Response;
     }
 } 
 

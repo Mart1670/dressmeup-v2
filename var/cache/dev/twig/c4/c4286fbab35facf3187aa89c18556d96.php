@@ -87,18 +87,10 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
         echo "
         <h1>Ajoutes un vêtement</h1>
         <div class=\"container\">
-            <div ";
+            ";
         // line 12
-        echo ">
-                ";
-        // line 13
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), 'form_start', ["attr" => ["id" => "form_vetement"]]);
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), 'form_start', ["attr" => ["id" => "form_vetement"]]);
         echo "
-                ";
-        // line 14
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 14, $this->source); })()), 'form_end');
-        echo "
-            </div>
             <section id=\"add-cloth\">
                 <div class=\"cards\">
                     <div id=\"BtnPipette\">
@@ -127,6 +119,22 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                         </div>
                     </div>
                 </div>
+                ";
+        // line 41
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 41, $this->source); })()), "newColor", [], "any", false, false, false, 41), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+        echo "
+                ";
+        // line 42
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), "nameColor", [], "any", false, false, false, 42), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+        echo "
+                ";
+        // line 43
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), "image", [], "any", false, false, false, 43), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+        echo "
+                ";
+        // line 44
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 44, $this->source); })()), "color", [], "any", false, false, false, 44), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+        echo "
                 <h4>Sélectionne ta catégorie</h4>
                 <div id=\"type-selection\" class=\"button-list\">
                     <input type=\"radio\" name=\"categorie\" id=\"categorie1\" class=\"btn-check\" autocomplete=\"off\" list>
@@ -134,6 +142,10 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                     <input type=\"radio\" name=\"categorie\" id=\"categorie2\" class=\"btn-check\"autocomplete=\"off\">
                     <label for=\"categorie2\" class=\"catBtn\">Bas</label>
                 </div>
+                ";
+        // line 52
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 52, $this->source); })()), "type", [], "any", false, false, false, 52), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+        echo "
 
                 <h4>Choisis le type de vêtement</h4>
                 <div id=\"type-vetements\" class=\"button-list\">
@@ -154,7 +166,12 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
 
                   <input type=\"radio\" class=\"btn-check\" name=\"type\" id=\"type-veste\" autocomplete=\"off\">
                   <label class=\"btn btn-secondary typeBtn\" for=\"type-veste\">Veste</label>
+
                 </div>
+                ";
+        // line 75
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 75, $this->source); })()), "style", [], "any", false, false, false, 75), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+        echo "
 
                 <h4>Pour quelle occasion portes-tu ce vêtement ?</h4>
 
@@ -176,16 +193,28 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
         
                     <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-rien\" autocomplete=\"off\" >
                     <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-rien\" data-index=\"5\">Rien de prévu</label>
+
                 </div>
+                ";
+        // line 99
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 99, $this->source); })()), "tagAmbiances", [], "any", false, false, false, 99), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+        echo "
                 <div id=\"form-control\">
-                    <button type=\"button\" class=\"btn btn-primary\" id=\"btnSubmitVetementForm\">Valider</button>
+                    ";
+        // line 101
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 101, $this->source); })()), "valider", [], "any", false, false, false, 101), 'widget', ["label" => "Valider"]);
+        echo "
                     <button id=\"btnCancel\" type=\"button\" class=\"btn btn-secondary btn-close-modal\" data-bs-dismiss=\"modal\">Annuler</button>
                 </div>
+                ";
+        // line 104
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 104, $this->source); })()), 'form_end');
+        echo "
             </section>
         </div>
         
        ";
-        // line 102
+        // line 109
         echo "
 
 
@@ -195,14 +224,14 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
 
     }
 
-    // line 106
+    // line 113
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 107
+        // line 114
         echo "    <script src=\"assets/js/pipette.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/dragAndDrop.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/kmeans.js\" type=\"text/javascript\"></script>
@@ -226,7 +255,7 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
 
     public function getDebugInfo()
     {
-        return array (  206 => 107,  199 => 106,  189 => 102,  99 => 14,  95 => 13,  92 => 12,  87 => 9,  80 => 8,  68 => 5,  55 => 3,  38 => 1,);
+        return array (  235 => 114,  228 => 113,  218 => 109,  211 => 104,  205 => 101,  200 => 99,  173 => 75,  147 => 52,  136 => 44,  132 => 43,  128 => 42,  124 => 41,  92 => 12,  87 => 9,  80 => 8,  68 => 5,  55 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -242,10 +271,7 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
 
         <h1>Ajoutes un vêtement</h1>
         <div class=\"container\">
-            <div {# style=\"display:none;\" #}>
-                {{ form_start(form, {'attr': {'id': 'form_vetement'}}) }}
-                {{ form_end(form) }}
-            </div>
+            {{ form_start(form, {'attr': {'id': 'form_vetement'}}) }}
             <section id=\"add-cloth\">
                 <div class=\"cards\">
                     <div id=\"BtnPipette\">
@@ -274,6 +300,10 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                         </div>
                     </div>
                 </div>
+                {{ form_widget(form.newColor, {'attr': {'class': 'hidden-form-field'}}) }}
+                {{ form_widget(form.nameColor, {'attr': {'class': 'hidden-form-field'}}) }}
+                {{ form_widget(form.image, {'attr': {'class': 'hidden-form-field'}}) }}
+                {{ form_widget(form.color, {'attr': {'class': 'hidden-form-field'}}) }}
                 <h4>Sélectionne ta catégorie</h4>
                 <div id=\"type-selection\" class=\"button-list\">
                     <input type=\"radio\" name=\"categorie\" id=\"categorie1\" class=\"btn-check\" autocomplete=\"off\" list>
@@ -281,6 +311,7 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                     <input type=\"radio\" name=\"categorie\" id=\"categorie2\" class=\"btn-check\"autocomplete=\"off\">
                     <label for=\"categorie2\" class=\"catBtn\">Bas</label>
                 </div>
+                {{ form_widget(form.type, {'attr': {'class': 'hidden-form-field'}}) }}
 
                 <h4>Choisis le type de vêtement</h4>
                 <div id=\"type-vetements\" class=\"button-list\">
@@ -301,7 +332,9 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
 
                   <input type=\"radio\" class=\"btn-check\" name=\"type\" id=\"type-veste\" autocomplete=\"off\">
                   <label class=\"btn btn-secondary typeBtn\" for=\"type-veste\">Veste</label>
+
                 </div>
+                {{ form_widget(form.style, {'attr': {'class': 'hidden-form-field'}}) }}
 
                 <h4>Pour quelle occasion portes-tu ce vêtement ?</h4>
 
@@ -323,11 +356,14 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
         
                     <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-rien\" autocomplete=\"off\" >
                     <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-rien\" data-index=\"5\">Rien de prévu</label>
+
                 </div>
+                {{ form_widget(form.tagAmbiances, {'attr': {'class': 'hidden-form-field'}}) }}
                 <div id=\"form-control\">
-                    <button type=\"button\" class=\"btn btn-primary\" id=\"btnSubmitVetementForm\">Valider</button>
+                    {{ form_widget(form.valider, { 'label': 'Valider'}) }}
                     <button id=\"btnCancel\" type=\"button\" class=\"btn btn-secondary btn-close-modal\" data-bs-dismiss=\"modal\">Annuler</button>
                 </div>
+                {{ form_end(form) }}
             </section>
         </div>
         

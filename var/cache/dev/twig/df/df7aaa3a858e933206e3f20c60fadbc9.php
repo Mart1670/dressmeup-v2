@@ -85,13 +85,20 @@ class __TwigTemplate_77b9a72b581e9265d4e1d9bf1d79b4e2 extends Template
  <!-- PROFILE -->
    
       <div class=\"container\">
-        <form id=\"user\">
-            <h1> Bienvenue Camille </h1>
+        ";
+        // line 18
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", [], "any", false, false, false, 18) != null)) {
+            // line 19
+            echo "        <form id=\"user\">
+            <h1> Bienvenue ";
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), "firstname", [], "any", false, false, false, 20), "html", null, true);
+            echo "</h1>
             <div id=\"avatar\">
               <img class=\"photo\" src=\"./assets/user_avatar/profile-picture.jpg\" alt=\"photo de profile\">
               ";
-        // line 23
-        echo "            </div>
+            // line 24
+            echo "            </div>
 
             <div class=\"user-data\">
               <label> Nom </label>
@@ -131,7 +138,14 @@ class __TwigTemplate_77b9a72b581e9265d4e1d9bf1d79b4e2 extends Template
               <button id=\"valider\" type=\"submit\"> Enregistrer </button>
             </div>
         </form>
-      </div>
+        ";
+        } else {
+            // line 65
+            echo "          
+        ";
+        }
+        // line 67
+        echo "      </div>
     
 ";
         
@@ -151,7 +165,7 @@ class __TwigTemplate_77b9a72b581e9265d4e1d9bf1d79b4e2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  94 => 23,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  148 => 67,  144 => 65,  101 => 24,  95 => 20,  92 => 19,  90 => 18,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -173,8 +187,9 @@ class __TwigTemplate_77b9a72b581e9265d4e1d9bf1d79b4e2 extends Template
  <!-- PROFILE -->
    
       <div class=\"container\">
+        {% if(app.user != null)  %}
         <form id=\"user\">
-            <h1> Bienvenue Camille </h1>
+            <h1> Bienvenue {{ app.user.firstname }}</h1>
             <div id=\"avatar\">
               <img class=\"photo\" src=\"./assets/user_avatar/profile-picture.jpg\" alt=\"photo de profile\">
               {# <button type=\"submit\"> Modifier</button> #}
@@ -218,6 +233,9 @@ class __TwigTemplate_77b9a72b581e9265d4e1d9bf1d79b4e2 extends Template
               <button id=\"valider\" type=\"submit\"> Enregistrer </button>
             </div>
         </form>
+        {% else %}
+          
+        {% endif %}
       </div>
     
 {% endblock %}

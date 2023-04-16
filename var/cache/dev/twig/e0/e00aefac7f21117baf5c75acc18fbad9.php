@@ -126,7 +126,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t\t\t\t<a href=\"";
             // line 53
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\"> Se deconnecter </a>
+            echo "\"> Se déconnecter </a>
 \t\t\t\t</div>
 \t\t\t\t";
         }
@@ -343,7 +343,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t\t\t</div>
 \t\t\t\t{% if (app.user != null) %}
 \t\t\t\t<div>
-\t\t\t\t\t<a href=\"{{ path('app_logout')}}\"> Se deconnecter </a>
+\t\t\t\t\t<a href=\"{{ path('app_logout')}}\"> Se déconnecter </a>
 \t\t\t\t</div>
 \t\t\t\t{% endif %}
 \t\t\t</nav>

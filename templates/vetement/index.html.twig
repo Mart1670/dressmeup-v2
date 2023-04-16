@@ -9,10 +9,7 @@
 
         <h1>Ajoutes un vêtement</h1>
         <div class="container">
-            <div {# style="display:none;" #}>
-                {{ form_start(form, {'attr': {'id': 'form_vetement'}}) }}
-                {{ form_end(form) }}
-            </div>
+            {{ form_start(form, {'attr': {'id': 'form_vetement'}}) }}
             <section id="add-cloth">
                 <div class="cards">
                     <div id="BtnPipette">
@@ -41,6 +38,10 @@
                         </div>
                     </div>
                 </div>
+                {{ form_widget(form.newColor, {'attr': {'class': 'hidden-form-field'}}) }}
+                {{ form_widget(form.nameColor, {'attr': {'class': 'hidden-form-field'}}) }}
+                {{ form_widget(form.image, {'attr': {'class': 'hidden-form-field'}}) }}
+                {{ form_widget(form.color, {'attr': {'class': 'hidden-form-field'}}) }}
                 <h4>Sélectionne ta catégorie</h4>
                 <div id="type-selection" class="button-list">
                     <input type="radio" name="categorie" id="categorie1" class="btn-check" autocomplete="off" list>
@@ -48,6 +49,7 @@
                     <input type="radio" name="categorie" id="categorie2" class="btn-check"autocomplete="off">
                     <label for="categorie2" class="catBtn">Bas</label>
                 </div>
+                {{ form_widget(form.type, {'attr': {'class': 'hidden-form-field'}}) }}
 
                 <h4>Choisis le type de vêtement</h4>
                 <div id="type-vetements" class="button-list">
@@ -68,7 +70,9 @@
 
                   <input type="radio" class="btn-check" name="type" id="type-veste" autocomplete="off">
                   <label class="btn btn-secondary typeBtn" for="type-veste">Veste</label>
+
                 </div>
+                {{ form_widget(form.style, {'attr': {'class': 'hidden-form-field'}}) }}
 
                 <h4>Pour quelle occasion portes-tu ce vêtement ?</h4>
 
@@ -90,11 +94,14 @@
         
                     <input type="radio" class="btn-check" name="ambiance" id="ambiance-rien" autocomplete="off" >
                     <label class="btn btn-secondary ambBtn" for="ambiance-rien" data-index="5">Rien de prévu</label>
+
                 </div>
+                {{ form_widget(form.tagAmbiances, {'attr': {'class': 'hidden-form-field'}}) }}
                 <div id="form-control">
-                    <button type="button" class="btn btn-primary" id="btnSubmitVetementForm">Valider</button>
+                    {{ form_widget(form.valider, { 'label': 'Valider'}) }}
                     <button id="btnCancel" type="button" class="btn btn-secondary btn-close-modal" data-bs-dismiss="modal">Annuler</button>
                 </div>
+                {{ form_end(form) }}
             </section>
         </div>
         

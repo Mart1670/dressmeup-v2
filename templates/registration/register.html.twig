@@ -3,22 +3,45 @@
 {% block title %}DressMeUp - Inscription{% endblock %}
 
 {% block body %}
-	<h1>Register</h1>
 
-	{{ form_start(registrationForm) }}
-	{{ form_row(registrationForm.name) }}
-	{{ form_row(registrationForm.firstname) }}
-	{{ form_row(registrationForm.email) }}
-	{{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-	{{ form_row(registrationForm.sexe) }}
-	{{ form_row(registrationForm.birthdate) }}
-	{{ form_row(registrationForm.handicap) }}
-	{{ form_row(registrationForm.bio) }}
-	{{ form_row(registrationForm.avatar) }}
-	{{ form_row(registrationForm.agreeTerms) }}
-
-	<button type="submit" class="btn">Register</button>
-	{{ form_end(registrationForm) }}
+	<div class="container">
+		<h1>Créer un compte</h1>
+	
+		{{ form_start(registrationForm, {'attr': {'id': 'registration-form'}}) }}
+		{{ form_row(registrationForm.name, {'attr': {'class': 'form-field'}}) }}
+		{{ form_row(registrationForm.firstname, {'attr': {'class': 'form-field'}}) }}
+		{{ form_row(registrationForm.email, {'attr': {'class': 'form-field'}}) }}
+		{{ form_row(registrationForm.plainPassword, {
+	            label: 'Password',
+				attr: {'class': 'form-field'}
+	        }) }}
+		<div style="display:none">
+			{{ form_row(registrationForm.sexe) }}
+		</div>
+		<div id="genre">
+			<legend>Genre</legend>
+			<div>
+				<div>
+					<input type="radio" id="il" name="genre" value="il">
+					<label data-index="0">Il</label>
+				</div>
+				<div>
+					<input type="radio" id="elle" name="genre" value="elle">
+					<label data-index="1">Elle</label>
+				</div>
+			</div>
+		</div>
+		{{ form_row(registrationForm.birthdate) }}
+		{{ form_row(registrationForm.handicap) }}
+		{{ form_row(registrationForm.bio, {'attr': {'class': 'form-field'}}) }}
+		<div id="form-avatar">
+			{{ form_row(registrationForm.avatar) }}
+		</div>
+		{{ form_row(registrationForm.agreeTerms) }}
+		<div id="submit-button">
+			<button id="valider" type="submit" class="btn">Créer un compte</button>
+		</div>
+		{{ form_end(registrationForm) }}
+	</div>
+	<script src="{{ asset('assets/js/registrationFormAuto.js') }}"></script>
 {% endblock %}

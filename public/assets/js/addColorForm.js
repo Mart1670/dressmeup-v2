@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let color1Btn = document.getElementById('colorName1');
     let color2Btn = document.getElementById('colorName2');
 
-    //DÉCLENCHEMENT DE LA FONCTION AU CLICQUE DANS PIPETTE.JS
+    //DÉCLENCHEMENT DE LA FONCTION AU CLIQUE DANS PIPETTE.JS
     color1Btn.addEventListener('click', switchColorPicker);
     color2Btn.addEventListener('click', switchColorPicker);
 });

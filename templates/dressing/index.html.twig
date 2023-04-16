@@ -8,7 +8,8 @@
 {% endblock %}
 
 {% block body %}
-        <section id="dressing">
+        <section id="dressing" class="container">
+        {% if (app.user != null) %}
             <h1>Mon dressing</h1>
             <h4>Sélectionne ta catégorie</h4>
             <div id="type-selection">
@@ -17,6 +18,26 @@
                     <input type="radio" name="type" id="bas" autocomplete="off">
                     <label for="bas">Bas</label>
             </div>
+            <h4>Choisis le type de vêtement</h4>
+                <div id="type-vetements" class="button-list">
+                  <input type="radio" class="btn-check mt-2" name="style" id="type-tee-shirt" autocomplete="off" list>
+                  <label class="btn btn-secondary typeBtn" for="type-tee-shirt">Tee-shirt</label>
+
+                  <input type="radio" class="btn-check" name="style" id="type-sweat" autocomplete="off">
+                  <label class="btn btn-secondary typeBtn" for="type-sweat">Sweat-shirt</label>
+
+                  <input type="radio" class="btn-check mt-2" name="style" id="type-maille" autocomplete="off" list>
+                  <label class="btn btn-secondary typeBtn" for="type-maille">Maille</label>
+
+                  <input type="radio" class="btn-check" name="style" id="type-chemise" autocomplete="off">
+                  <label class="btn btn-secondary typeBtn" for="type-chemise">Chemise</label>
+
+                  <input type="radio" class="btn-check mt-2" name="style" id="type-gilet" autocomplete="off" list>
+                  <label class="btn btn-secondary typeBtn" for="type-gilet">Gilet</label>
+
+                  <input type="radio" class="btn-check" name="style" id="type-veste" autocomplete="off">
+                  <label class="btn btn-secondary typeBtn" for="type-veste">Veste</label>
+                </div>
             <a href="{{ path('app_vetement')}}">
                 <div class="add">
                     <img src="/assets/img/add-icon.svg" alt="Ajouter un vêtement" srcset="">
@@ -26,7 +47,12 @@
         <section id="dressing-content" data-type="Haut">
             
         </section>
-        
+        {% else %}
+            <div id="create-user">
+                <p>Vous n'avez pas encore de compte ?</p>
+                <a href="{{ path('app_register') }}">Créer un compte</a>
+            </div>
+        {% endif %}
         
        {#  {{ include('/modals/modal-dressing.html.twig') }} #}
 

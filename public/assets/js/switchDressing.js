@@ -4,7 +4,7 @@
 window.addEventListener('DOMContentLoaded', () => {
 
     toggleBtn = document.querySelectorAll('#type-selection label');
-    ul = document.getElementById('styleVetements');
+    ul = document.getElementById('type-vetements');
     dressingContent = document.getElementById('dressing-content');
     imgSrc = document.querySelectorAll('#dressing-content img');
     // console.log(imgSrc);

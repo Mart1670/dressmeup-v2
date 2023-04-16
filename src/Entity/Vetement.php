@@ -27,8 +27,8 @@ class Vetement
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $image = null;
 
-    #[ORM\ManyToMany(targetEntity: Tenue::class, mappedBy: 'vetement')]
-    private Collection $tenues;
+    /* #[ORM\ManyToMany(targetEntity: Tenue::class, mappedBy: 'vetement')]
+    private Collection $tenues; */
 
     #[ORM\ManyToMany(targetEntity: TagHumeur::class, inversedBy: 'vetements')]
     private Collection $tagHumeur;
@@ -106,10 +106,10 @@ class Vetement
         return $this;
     }
 
-    /**
+   /*  *
      * @return Collection<int, Tenue>
      */
-    public function getTenues(): Collection
+/*     public function getTenues(): Collection
     {
         return $this->tenues;
     }
@@ -131,7 +131,7 @@ class Vetement
         }
 
         return $this;
-    }
+    } */
 
     /**
      * @return Collection<int, Tag>

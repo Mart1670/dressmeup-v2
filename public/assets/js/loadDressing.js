@@ -11,7 +11,8 @@ function loadDressingContent(type){
             ul.innerHTML = "";
             for (i = 0; i < body.typeVetements.length; i++) {
                 ul.innerHTML += `
-            <li class="tag_vet me-3 btn">${body.typeVetements[i]}</li>
+                <input type="radio" class="btn-check mt-2" name="style" id="type-${body.typeVetements[i]}" autocomplete="off" list>
+                <label class="btn btn-secondary typeBtn" for="type-${body.typeVetements[i]}">${body.typeVetements[i]}</label>
             `;
             }
         })

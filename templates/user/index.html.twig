@@ -15,8 +15,9 @@
  <!-- PROFILE -->
    
       <div class="container">
+        {% if(app.user != null)  %}
         <form id="user">
-            <h1> Bienvenue Camille </h1>
+            <h1> Bienvenue {{ app.user.firstname }}</h1>
             <div id="avatar">
               <img class="photo" src="./assets/user_avatar/profile-picture.jpg" alt="photo de profile">
               {# <button type="submit"> Modifier</button> #}
@@ -60,6 +61,9 @@
               <button id="valider" type="submit"> Enregistrer </button>
             </div>
         </form>
+        {% else %}
+          
+        {% endif %}
       </div>
     
 {% endblock %}

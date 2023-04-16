@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Vetement;
 use App\Entity\Color;
+use App\Entity\TagAmbiance;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -50,7 +51,7 @@ class VetementFormType extends AbstractType
                             'image/jpeg', 
                             'image/png',
                         ],
-                        'mimeTypesMessage' => 'Please upload a valid JPG document',
+                        'mimeTypesMessage' => 'Le fichier est trop volumineux ou le format est incorrect',
                     ])
                 ],
             ])
@@ -72,7 +73,8 @@ class VetementFormType extends AbstractType
                     'choice_label' => 'name',
                     ])                 
                     ->add('valider', SubmitType::class, [
-                        'attr' => ['class' => 'save'],
+                        'attr' => ['class' => 'save',
+                                    'id' => 'btnSubmitVetementForm'],
                     ]);
     }
 

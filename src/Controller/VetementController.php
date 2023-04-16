@@ -7,10 +7,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Color;
 use App\Entity\Vetement;
+use App\Entity\TagAmbiance;
 use App\Repository\VetementRepository;
 use App\Entity\User;
 use App\Repository\ColorRepository;
 use App\Repository\UserRepository;
+use App\Repository\TagAmbianceRepository;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\VetementFormType;
 use Symfony\Component\String\Slugger\SluggerInterface;
@@ -57,6 +59,7 @@ class VetementController extends AbstractController
             $color->setName($request->request->all()['vetement_form']['nameColor']);
             $colorRepository->save($color, true);
 
+
             // Recovering the image file data
             $imageFile = $form->get('image')->getData();
 
@@ -86,6 +89,7 @@ class VetementController extends AbstractController
                 $vetement->setUser($this->getUser());
                 $vetement->addColor($color);
                 $tagAmbiance = $vetement->getTagAmbiances()[0]->getName();
+                
 
                 // This property is not managed yet. Will be in the V2 of the project
                 //$tagHumeur = $vetement->getTagHumeur()[0]->getName();
@@ -100,6 +104,7 @@ class VetementController extends AbstractController
                 // Saving the cloth with all its properties in the database
                 $vetementRepository->save($vetement, true);
                 
+                return $this->redirect($this->generateUrl('app_dressing'));
             }
         }
 

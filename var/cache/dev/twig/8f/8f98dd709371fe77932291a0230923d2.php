@@ -124,6 +124,13 @@ class __TwigTemplate_5f98c944932a3277a83e0bbe147ebc21 extends Template
             </button>
         </div>
     </form>
+        <div id=\"create-user\">
+            <p>Vous n'avez pas encore de compte ?</p>
+            <a href=\"";
+        // line 47
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo "\">Créer un compte</a>
+        </div>
 </div>
 ";
         
@@ -143,7 +150,7 @@ class __TwigTemplate_5f98c944932a3277a83e0bbe147ebc21 extends Template
 
     public function getDebugInfo()
     {
-        return array (  121 => 39,  115 => 26,  107 => 21,  102 => 18,  94 => 15,  91 => 14,  89 => 13,  86 => 12,  80 => 10,  78 => 9,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  131 => 47,  121 => 39,  115 => 26,  107 => 21,  102 => 18,  94 => 15,  91 => 14,  89 => 13,  86 => 12,  80 => 10,  78 => 9,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -192,6 +199,10 @@ class __TwigTemplate_5f98c944932a3277a83e0bbe147ebc21 extends Template
             </button>
         </div>
     </form>
+        <div id=\"create-user\">
+            <p>Vous n'avez pas encore de compte ?</p>
+            <a href=\"{{ path('app_register') }}\">Créer un compte</a>
+        </div>
 </div>
 {% endblock %}
 ", "security/login.html.twig", "C:\\Users\\mart1\\Documents\\GitHub\\dressmeup-v2\\templates\\security\\login.html.twig");

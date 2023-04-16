@@ -4,7 +4,7 @@
 }
 
 :root{
-    --bg-gradient : linear-gradient(15deg, rgba(97, 64, 86, 1), rgba(104, 99, 136, 1));
+    --bg-gradient : linear-gradient(0.35turn, rgba(97, 64, 86, 1), rgba(111, 138, 192, 1));
     --ice : rgba(249, 249, 249, 1);
     --ice-transparent:rgba(249, 249, 249, 0.35);
     --black-transparent : rgba(0, 0, 0, 0.5);
@@ -363,7 +363,7 @@ main .bg-bas{
 }
 
 .add{
-    max-width: 300px;
+    width: 300px;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -408,6 +408,11 @@ main .bg-bas{
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+#type-vetements{
+    display: flex;
+    justify-content: center;
 }
 
 /*********************************/
@@ -478,7 +483,11 @@ canvas{
     justify-content: center;
 }
 
-#btnSubmitVetementForm{
+.hidden-form-field{
+    display: none;
+}
+
+#vetement_form_valider{
     background-color: var(--green-yes);
 }
 
@@ -519,6 +528,10 @@ canvas{
     height: 100px;
 }
 
+#genre{
+    margin-bottom: 10px;
+}
+
 #genre label{
     display: inline-block;
     width: 50px;
@@ -527,10 +540,12 @@ canvas{
 
 #genre div{
     display: flex;
+    margin-top: -1px;
 }
 
 #valider{
     background-color: var(--green-yes);
+    font-family: 'Changa', cursive;
     border: none;
 }
 
@@ -559,8 +574,94 @@ canvas{
     cursor: pointer;
 }
 
+#create-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#create-user p{
+    margin-bottom: 2px;
+}
+
+#create-user a{
+    color: var(--light-yellow);
+    text-decoration: none;
+}
+
 /*********************************/
 /***        END LOGIN          ***/
+/*********************************/
+
+/*********************************/
+/***       REGISTRATION        ***/
+/*********************************/
+
+#registration-form .form-field{
+    margin-top: 2px;
+}
+
+#registration_form_birthdate{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#registration_form_birthdate_day, #registration_form_birthdate_month, #registration_form_birthdate_year{
+    text-align: center;
+    border:none;
+    display: inline-block;
+    background-color: var(--light-pink);
+    border-radius: 25px;
+    box-shadow: inset 0px 4px 4px 0px var(--light-black-transparent);
+    height: 30px;
+    margin-inline: 5px;
+    margin-top: 2px;
+    padding-block: 8px;
+    padding-left: 10px;
+}
+
+#registration_form_birthdate_day, #registration_form_birthdate_month{
+    width: 50px;
+}
+
+#registration_form_birthdate_year{
+    width: 100px;
+}
+
+#registration_form_bio{
+    font-family: 'Changa', cursive;
+    line-height: 100%;
+    height: 100px;
+    border: none;   
+}
+
+#form-avatar div *{
+    display: block;
+}
+
+#form-avatar input{
+    font-family: 'Changa', cursive;
+    line-height: 100%;
+    border: none;
+    cursor: pointer;
+    color: var(--ice);
+    border: none;
+    margin-inline: auto;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.required:after{
+    content: ' *';
+    color: var(--red-strawberry);
+}
+
+/*********************************/
+/***     END REGISTRATION      ***/
 /*********************************/
 
 /*********************************/
