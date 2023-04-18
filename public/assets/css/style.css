@@ -762,8 +762,6 @@ canvas{
 /*********************************/
 
 footer{
-    /* display: flex;
-    justify-content: center; */
     background-color: var(--black-transparent);
     padding-inline: 20px;
 }
