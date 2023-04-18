@@ -38,6 +38,13 @@ body{
     align-items: center;
 }
 
+@media screen and (min-width: 1724px){
+    .container{
+        max-width: 1068px;
+        margin-inline: auto;
+    }
+}
+
 /*********************************/
 /***      HEADER & NAVBAR      ***/
 /*********************************/
@@ -66,19 +73,20 @@ header nav{
     transition: display 0.6s ease;
 }
 
-header nav>a, header nav>div{
+header nav div>a, header nav div>div{
     margin-block: 5px;
 }
 
-header nav *:not(nav div a){
-    display: block;
-    margin-inline: auto;
-    width: fit-content;
+header nav div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header nav a{
     text-decoration: none;
     color: var(--ice);
+    display: block;
 }
 
 header nav a:hover{
@@ -92,6 +100,82 @@ header nav #user-connect *{
 .show-navbar{
     display: block;
     transition: display 0.6s ease;
+}
+
+@media screen and (min-width: 1724px){
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 200px;
+    }
+
+    #burger-menu{
+        display: none;
+    }
+
+    header #navbar{
+        display: inline-block;
+        width:fit-content;
+    }
+
+    header nav{
+        width:calc(100vw - 80px);
+        display: inline-flex;
+        justify-content: space-between;
+    }
+
+    header nav div{
+        flex-direction: row;
+    }
+
+    header nav div:first-child{
+        margin-left: 50px;
+    }
+
+    header nav div a{
+        padding-inline: 10px !important;
+    }
+
+    header #user-connect a{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+
+    header #user-connect i{
+        font-size: 35px;
+        margin-right: 10px;
+    }
+
+    header #user-connect a:nth-child(2){
+        background: var(--bg-gradient);
+        border-radius: 50px;
+        padding-block: 10px;
+        width: 150px;
+    }
+
+    header #user-connect a:nth-of-type(2):hover{
+        background: var(--ice-transparent);
+    }
+
+    header nav a[href*="mix"]{
+        text-align: center;
+        font-weight: 700;
+        width: 150px;
+        height: 50px;
+        border-radius: 50px;
+        padding-block: 10px;
+        color: var(--light-black);
+        background-color: var(--light-yellow);
+        justify-content: center;
+    }
+
+    header nav a[href*="mix"]:hover{
+        color: var(--ice);
+        background: var(--bg-gradient);
+    }
 }
 
 /*********************************/
@@ -404,8 +488,8 @@ main .bg-bas{
 }
 
 .cards-style img{
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 400px;
     object-fit: cover;
     object-position: center;
 }
@@ -413,6 +497,15 @@ main .bg-bas{
 #type-vetements{
     display: flex;
     justify-content: center;
+}
+
+@media screen and (min-width: 1724px){
+
+    #dressing-content{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-around
+    }
 }
 
 /*********************************/
@@ -675,6 +768,10 @@ footer{
     padding-inline: 20px;
 }
 
+footer div:first-child{
+    padding-top: 30px;
+}
+
 footer form{
     display: flex;
     align-items: center;
@@ -725,12 +822,11 @@ footer form.hide-submit i:hover {
 }
 
 #navbarfooter{
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items:self-end;
-    height: 100px;
+    height: 80px;
     width: 100%;
 }
 
@@ -775,6 +871,54 @@ footer form.hide-submit i:hover {
     display: inline-block;
     margin-block: 0px;
     margin-left: 10px;
+}
+
+@media screen and (min-width: 1724px){
+    footer div:first-child{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content:space-between;  
+        padding-inline: 200px;
+    }
+
+    footer h4{
+        text-align: start;
+    }
+
+    footer #newsletter{
+        max-width: 20vw;
+    }
+
+    footer #newsletter form{
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    footer #newsletter form div{
+        width: 100%;
+    }
+    
+    footer nav{
+        flex-wrap: nowrap !important;
+        flex-direction: row !important;
+        height: fit-content !important;
+        justify-content: space-between;
+        max-width: 100%;
+    }
+
+    footer nav a{
+        width: fit-content !important;
+    }
+
+    footer>div>div{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        margin-inline: auto;
+        width: 65%;
+    }
 }
 
 /*********************************/

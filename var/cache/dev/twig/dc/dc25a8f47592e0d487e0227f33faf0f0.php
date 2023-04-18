@@ -126,7 +126,7 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
                 </div>
             </a>
         </section>
-        <section id=\"dressing-content\" data-type=\"Haut\">
+        <section id=\"dressing-content\" class=\"container\" data-type=\"Haut\">
             
         </section>
         ";
@@ -234,7 +234,7 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
                 </div>
             </a>
         </section>
-        <section id=\"dressing-content\" data-type=\"Haut\">
+        <section id=\"dressing-content\" class=\"container\" data-type=\"Haut\">
             
         </section>
         {% else %}

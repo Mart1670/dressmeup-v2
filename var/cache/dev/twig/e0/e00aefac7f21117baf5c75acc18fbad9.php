@@ -85,53 +85,49 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t<nav>
-\t\t\t\t<a href=\"/\">Accueil</a>
-\t\t\t\t<a href=\"";
-        // line 40
+\t\t\t\t<div>
+\t\t\t\t\t<a href=\"/\">Accueil</a>
+\t\t\t\t\t<a href=\"";
+        // line 41
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dressing");
         echo "\">Dressing</a>
-\t\t\t\t<a href=\"/\">Blog</a>
-\t\t\t\t<a href=\"";
-        // line 42
+\t\t\t\t\t<a href=\"/\">Blog</a>
+\t\t\t\t\t<a href=\"";
+        // line 43
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_about");
         echo "\">Concept</a>
-\t\t\t\t<a href=\"/#anchor-mix\">Mix & Match</a>
+\t\t\t\t</div>
 \t\t\t\t<div id=\"user-connect\">
+\t\t\t\t\t<a href=\"/#anchor-mix\">Mix & Match</a>
 \t\t\t\t\t";
-        // line 45
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 45, $this->source); })()), "user", [], "any", false, false, false, 45) == null)) {
-            // line 46
+        // line 47
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 47, $this->source); })()), "user", [], "any", false, false, false, 47) == null)) {
+            // line 48
             echo "\t\t\t\t\t\t<a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\"><i class=\"fa-solid fa-circle-user\"></i> Se Connecter</a>
 \t\t\t\t\t";
         } else {
-            // line 48
+            // line 50
             echo "\t\t\t\t\t\t<a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user");
             echo "\"><i class=\"fa-solid fa-circle-user\"></i> ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 48, $this->source); })()), "user", [], "any", false, false, false, 48), "firstname", [], "any", false, false, false, 48), "html", null, true);
-            echo " ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 48, $this->source); })()), "user", [], "any", false, false, false, 48), "name", [], "any", false, false, false, 48), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 50, $this->source); })()), "user", [], "any", false, false, false, 50), "firstname", [], "any", false, false, false, 50), "html", null, true);
             echo "</a>
 \t\t\t\t\t";
         }
-        // line 50
-        echo "\t\t\t\t</div>
-\t\t\t\t";
-        // line 51
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 51, $this->source); })()), "user", [], "any", false, false, false, 51) != null)) {
-            // line 52
-            echo "\t\t\t\t<div>
-\t\t\t\t\t<a href=\"";
+        // line 52
+        echo "\t\t\t\t\t";
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "user", [], "any", false, false, false, 52) != null)) {
             // line 53
+            echo "\t\t\t\t\t\t<a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\"> Se déconnecter </a>
-\t\t\t\t</div>
-\t\t\t\t";
+\t\t\t\t\t";
         }
-        // line 56
-        echo "\t\t\t</nav>
+        // line 55
+        echo "\t\t\t\t</div>
+\t\t\t</nav>
 \t\t</header>
 \t\t<main>
 \t\t\t";
@@ -140,73 +136,79 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
         // line 60
         echo "\t\t</main>
 \t\t<footer>
-\t\t\t<section id=\"newsletter\">
-\t\t\t\t<form class=\"hide-submit\" action=\"";
-        // line 63
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_formulaire");
-        echo "\">
-\t\t\t\t\t<h4>Inscris toi à notre newsletter pour recevoir
-                \tdes inspirations de style vestimentaire</h4>
-\t\t\t\t\t<div>
-\t\t\t\t\t\t<input type=\"mail\" id=\"utilisateur\" class=\"form-field\" name=\"Email\" placeholder=\"Ton adresse email\" />
-\t\t\t\t\t\t<label>
-\t\t\t\t\t\t\t<input type=\"submit\" />
-\t\t\t\t\t\t\t<i class=\"fa-solid fa-paper-plane\"></i>
-\t\t\t\t\t\t</label>
-\t\t\t\t\t</div>
-\t\t\t\t</form>
-\t\t\t</section>
-\t\t\t<nav id=\"navbarfooter\" class=\"col-sm-12 justify-content-between\">
-\t\t\t\t<a href=\"";
-        // line 76
+\t\t\t<div ";
+        // line 62
+        echo ">
+\t\t\t\t<nav id=\"navbarfooter\" class=\"col-sm-12 justify-content-between\">
+\t\t\t\t\t<a href=\"";
+        // line 64
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_legal");
         echo "\">Mentions légales</a>
-\t\t\t\t<a href=\"";
-        // line 77
+\t\t\t\t\t<a href=\"";
+        // line 65
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_join_us");
         echo "\">Nous rejoindre</a>
-\t\t\t\t<a href=\"";
-        // line 78
+\t\t\t\t\t<a href=\"";
+        // line 66
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_accessibility");
         echo "\">Accessibilité</a>
-\t\t\t\t<a href=\"";
-        // line 79
+\t\t\t\t\t<a href=\"";
+        // line 67
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_terms_of_use");
         echo "\">CGU</a>
-\t\t\t\t<a href=\"";
-        // line 80
+\t\t\t\t\t<a href=\"";
+        // line 68
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_privacy");
         echo "\">Politique de confidentialité</a>
-\t\t\t</nav>
-\t\t\t<section id=\"networks\">
-\t\t\t\t<h4>N'oublie pas de nous suivre sur les réseaux sociaux</h4>
-\t\t\t\t<article id=\"networks-links\">
-\t\t\t\t\t<a href=\"https://www.tiktok.com/fr/\" target=\"_blank\">
-\t\t\t\t\t\t<img src=\"/assets/img/tiktok-normal.svg\" alt=\"tiktok\">
-\t\t\t\t\t\t<p>Tiktok</p>
-\t\t\t\t\t</a>
-\t\t\t\t\t<a href=\"https://www.instagram.com/?hl=fr\" target=\"_blank\">
-\t\t\t\t\t\t<img src=\"/assets/img/instagram-normal.svg\" alt=\"instagram\">
-\t\t\t\t\t\t<p>Instagram</p>
-\t\t\t\t\t</a>
-\t\t\t\t\t<a href=\"https://www.pinterest.fr/\" target=\"_blank\">
-\t\t\t\t\t\t<img src=\"/assets/img/pinterest-normal.svg\" alt=\"pinterest\">
-\t\t\t\t\t\t<p>Pinterest</p>
-\t\t\t\t\t</a>
-\t\t\t\t\t<a href=\"https://www.youtube.com/\" target=\"_blank\">
-\t\t\t\t\t\t<img src=\"/assets/img/youtube-normal.svg\" alt=\"youtube\">
-\t\t\t\t\t\t<p>Youtube</p>
-\t\t\t\t\t</a>
-\t\t\t\t</article>
-          </section>
+\t\t\t\t</nav>
+\t\t\t\t<div>
+\t\t\t\t\t<section id=\"newsletter\">
+\t\t\t\t\t\t<form class=\"hide-submit\" action=\"";
+        // line 72
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_formulaire");
+        echo "\">
+\t\t\t\t\t\t\t<h4>Inscris toi à notre newsletter pour recevoir
+\t\t                \tdes inspirations de style vestimentaire</h4>
+\t\t\t\t\t\t\t<div>
+\t\t\t\t\t\t\t\t<input type=\"mail\" id=\"utilisateur\" class=\"form-field\" name=\"Email\" placeholder=\"Ton adresse email\" />
+\t\t\t\t\t\t\t\t<label>
+\t\t\t\t\t\t\t\t\t<input type=\"submit\" />
+\t\t\t\t\t\t\t\t\t<i class=\"fa-solid fa-paper-plane\"></i>
+\t\t\t\t\t\t\t\t</label>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</form>
+\t\t\t\t\t</section>
+\t\t\t\t\t<section id=\"networks\">
+\t\t\t\t\t\t<h4>N'oublie pas de nous suivre sur les réseaux sociaux</h4>
+\t\t\t\t\t\t<article id=\"networks-links\">
+\t\t\t\t\t\t\t<a href=\"https://www.tiktok.com/fr/\" target=\"_blank\">
+\t\t\t\t\t\t\t\t<img src=\"/assets/img/tiktok-normal.svg\" alt=\"tiktok\">
+\t\t\t\t\t\t\t\t<p>Tiktok</p>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/?hl=fr\" target=\"_blank\">
+\t\t\t\t\t\t\t\t<img src=\"/assets/img/instagram-normal.svg\" alt=\"instagram\">
+\t\t\t\t\t\t\t\t<p>Instagram</p>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<a href=\"https://www.pinterest.fr/\" target=\"_blank\">
+\t\t\t\t\t\t\t\t<img src=\"/assets/img/pinterest-normal.svg\" alt=\"pinterest\">
+\t\t\t\t\t\t\t\t<p>Pinterest</p>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<a href=\"https://www.youtube.com/\" target=\"_blank\">
+\t\t\t\t\t\t\t\t<img src=\"/assets/img/youtube-normal.svg\" alt=\"youtube\">
+\t\t\t\t\t\t\t\t<p>Youtube</p>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</article>
+\t\t          </section>
+\t\t\t\t</div>
+\t\t\t</div>
 \t\t</footer>
   </body>
   <script src=\"";
-        // line 105
+        // line 109
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/navbar.js"), "html", null, true);
         echo "\"></script>
 ";
-        // line 106
+        // line 110
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -256,14 +258,14 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 
     }
 
-    // line 106
+    // line 110
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 107
+        // line 111
         echo "    ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_script_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -286,7 +288,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 
     public function getDebugInfo()
     {
-        return array (  267 => 107,  260 => 106,  248 => 59,  238 => 25,  231 => 24,  224 => 12,  217 => 11,  210 => 106,  206 => 105,  178 => 80,  174 => 79,  170 => 78,  166 => 77,  162 => 76,  146 => 63,  141 => 60,  139 => 59,  134 => 56,  128 => 53,  125 => 52,  123 => 51,  120 => 50,  110 => 48,  104 => 46,  102 => 45,  96 => 42,  91 => 40,  76 => 27,  74 => 24,  68 => 22,  58 => 13,  56 => 11,  44 => 1,);
+        return array (  269 => 111,  262 => 110,  250 => 59,  240 => 25,  233 => 24,  226 => 12,  219 => 11,  212 => 110,  208 => 109,  168 => 72,  161 => 68,  157 => 67,  153 => 66,  149 => 65,  145 => 64,  141 => 62,  137 => 60,  135 => 59,  129 => 55,  123 => 53,  120 => 52,  112 => 50,  106 => 48,  104 => 47,  97 => 43,  92 => 41,  76 => 27,  74 => 24,  68 => 22,  58 => 13,  56 => 11,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -329,70 +331,74 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t<nav>
-\t\t\t\t<a href=\"/\">Accueil</a>
-\t\t\t\t<a href=\"{{ path('app_dressing')}}\">Dressing</a>
-\t\t\t\t<a href=\"/\">Blog</a>
-\t\t\t\t<a href=\"{{ path('app_about')}}\">Concept</a>
-\t\t\t\t<a href=\"/#anchor-mix\">Mix & Match</a>
+\t\t\t\t<div>
+\t\t\t\t\t<a href=\"/\">Accueil</a>
+\t\t\t\t\t<a href=\"{{ path('app_dressing')}}\">Dressing</a>
+\t\t\t\t\t<a href=\"/\">Blog</a>
+\t\t\t\t\t<a href=\"{{ path('app_about')}}\">Concept</a>
+\t\t\t\t</div>
 \t\t\t\t<div id=\"user-connect\">
+\t\t\t\t\t<a href=\"/#anchor-mix\">Mix & Match</a>
 \t\t\t\t\t{% if (app.user == null) %}
 \t\t\t\t\t\t<a href=\"{{ path('app_login')}}\"><i class=\"fa-solid fa-circle-user\"></i> Se Connecter</a>
 \t\t\t\t\t{% else %}
-\t\t\t\t\t\t<a href=\"{{ path('app_user')}}\"><i class=\"fa-solid fa-circle-user\"></i> {{ app.user.firstname }} {{ app.user.name }}</a>
+\t\t\t\t\t\t<a href=\"{{ path('app_user')}}\"><i class=\"fa-solid fa-circle-user\"></i> {{ app.user.firstname }}{#  {{ app.user.name }} #}</a>
+\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% if (app.user != null) %}
+\t\t\t\t\t\t<a href=\"{{ path('app_logout')}}\"> Se déconnecter </a>
 \t\t\t\t\t{% endif %}
 \t\t\t\t</div>
-\t\t\t\t{% if (app.user != null) %}
-\t\t\t\t<div>
-\t\t\t\t\t<a href=\"{{ path('app_logout')}}\"> Se déconnecter </a>
-\t\t\t\t</div>
-\t\t\t\t{% endif %}
 \t\t\t</nav>
 \t\t</header>
 \t\t<main>
 \t\t\t{% block body %}{% endblock %}
 \t\t</main>
 \t\t<footer>
-\t\t\t<section id=\"newsletter\">
-\t\t\t\t<form class=\"hide-submit\" action=\"{{ path('app_formulaire')}}\">
-\t\t\t\t\t<h4>Inscris toi à notre newsletter pour recevoir
-                \tdes inspirations de style vestimentaire</h4>
-\t\t\t\t\t<div>
-\t\t\t\t\t\t<input type=\"mail\" id=\"utilisateur\" class=\"form-field\" name=\"Email\" placeholder=\"Ton adresse email\" />
-\t\t\t\t\t\t<label>
-\t\t\t\t\t\t\t<input type=\"submit\" />
-\t\t\t\t\t\t\t<i class=\"fa-solid fa-paper-plane\"></i>
-\t\t\t\t\t\t</label>
-\t\t\t\t\t</div>
-\t\t\t\t</form>
-\t\t\t</section>
-\t\t\t<nav id=\"navbarfooter\" class=\"col-sm-12 justify-content-between\">
-\t\t\t\t<a href=\"{{ path('app_legal')}}\">Mentions légales</a>
-\t\t\t\t<a href=\"{{ path('app_join_us')}}\">Nous rejoindre</a>
-\t\t\t\t<a href=\"{{ path('app_accessibility')}}\">Accessibilité</a>
-\t\t\t\t<a href=\"{{ path('app_terms_of_use')}}\">CGU</a>
-\t\t\t\t<a href=\"{{ path('app_privacy')}}\">Politique de confidentialité</a>
-\t\t\t</nav>
-\t\t\t<section id=\"networks\">
-\t\t\t\t<h4>N'oublie pas de nous suivre sur les réseaux sociaux</h4>
-\t\t\t\t<article id=\"networks-links\">
-\t\t\t\t\t<a href=\"https://www.tiktok.com/fr/\" target=\"_blank\">
-\t\t\t\t\t\t<img src=\"/assets/img/tiktok-normal.svg\" alt=\"tiktok\">
-\t\t\t\t\t\t<p>Tiktok</p>
-\t\t\t\t\t</a>
-\t\t\t\t\t<a href=\"https://www.instagram.com/?hl=fr\" target=\"_blank\">
-\t\t\t\t\t\t<img src=\"/assets/img/instagram-normal.svg\" alt=\"instagram\">
-\t\t\t\t\t\t<p>Instagram</p>
-\t\t\t\t\t</a>
-\t\t\t\t\t<a href=\"https://www.pinterest.fr/\" target=\"_blank\">
-\t\t\t\t\t\t<img src=\"/assets/img/pinterest-normal.svg\" alt=\"pinterest\">
-\t\t\t\t\t\t<p>Pinterest</p>
-\t\t\t\t\t</a>
-\t\t\t\t\t<a href=\"https://www.youtube.com/\" target=\"_blank\">
-\t\t\t\t\t\t<img src=\"/assets/img/youtube-normal.svg\" alt=\"youtube\">
-\t\t\t\t\t\t<p>Youtube</p>
-\t\t\t\t\t</a>
-\t\t\t\t</article>
-          </section>
+\t\t\t<div {# class=\"container\" #}>
+\t\t\t\t<nav id=\"navbarfooter\" class=\"col-sm-12 justify-content-between\">
+\t\t\t\t\t<a href=\"{{ path('app_legal')}}\">Mentions légales</a>
+\t\t\t\t\t<a href=\"{{ path('app_join_us')}}\">Nous rejoindre</a>
+\t\t\t\t\t<a href=\"{{ path('app_accessibility')}}\">Accessibilité</a>
+\t\t\t\t\t<a href=\"{{ path('app_terms_of_use')}}\">CGU</a>
+\t\t\t\t\t<a href=\"{{ path('app_privacy')}}\">Politique de confidentialité</a>
+\t\t\t\t</nav>
+\t\t\t\t<div>
+\t\t\t\t\t<section id=\"newsletter\">
+\t\t\t\t\t\t<form class=\"hide-submit\" action=\"{{ path('app_formulaire')}}\">
+\t\t\t\t\t\t\t<h4>Inscris toi à notre newsletter pour recevoir
+\t\t                \tdes inspirations de style vestimentaire</h4>
+\t\t\t\t\t\t\t<div>
+\t\t\t\t\t\t\t\t<input type=\"mail\" id=\"utilisateur\" class=\"form-field\" name=\"Email\" placeholder=\"Ton adresse email\" />
+\t\t\t\t\t\t\t\t<label>
+\t\t\t\t\t\t\t\t\t<input type=\"submit\" />
+\t\t\t\t\t\t\t\t\t<i class=\"fa-solid fa-paper-plane\"></i>
+\t\t\t\t\t\t\t\t</label>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</form>
+\t\t\t\t\t</section>
+\t\t\t\t\t<section id=\"networks\">
+\t\t\t\t\t\t<h4>N'oublie pas de nous suivre sur les réseaux sociaux</h4>
+\t\t\t\t\t\t<article id=\"networks-links\">
+\t\t\t\t\t\t\t<a href=\"https://www.tiktok.com/fr/\" target=\"_blank\">
+\t\t\t\t\t\t\t\t<img src=\"/assets/img/tiktok-normal.svg\" alt=\"tiktok\">
+\t\t\t\t\t\t\t\t<p>Tiktok</p>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<a href=\"https://www.instagram.com/?hl=fr\" target=\"_blank\">
+\t\t\t\t\t\t\t\t<img src=\"/assets/img/instagram-normal.svg\" alt=\"instagram\">
+\t\t\t\t\t\t\t\t<p>Instagram</p>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<a href=\"https://www.pinterest.fr/\" target=\"_blank\">
+\t\t\t\t\t\t\t\t<img src=\"/assets/img/pinterest-normal.svg\" alt=\"pinterest\">
+\t\t\t\t\t\t\t\t<p>Pinterest</p>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t<a href=\"https://www.youtube.com/\" target=\"_blank\">
+\t\t\t\t\t\t\t\t<img src=\"/assets/img/youtube-normal.svg\" alt=\"youtube\">
+\t\t\t\t\t\t\t\t<p>Youtube</p>
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</article>
+\t\t          </section>
+\t\t\t\t</div>
+\t\t\t</div>
 \t\t</footer>
   </body>
   <script src=\"{{ asset('assets/js/navbar.js') }}\"></script>
