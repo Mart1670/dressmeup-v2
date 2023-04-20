@@ -25,6 +25,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //FONCTION PIPETTE 
     function pipette(event) {
+
+        if(document.getElementById('BtnPipette').dataset['active'] == "true"){
         const imageData = ctx.getImageData(event.offsetX, event.offsetY, sizePipette, sizePipette);
 
         //RÉCUPERATION RGB
@@ -77,12 +79,18 @@ window.addEventListener('DOMContentLoaded', () => {
                 nameColor.value = body.colorname;
                 vetementColor1.value = hexa;
                 //console.log(body.colorname);
+
+                document.getElementById('BtnPipette').dataset['active'] = false;
+                canvas.style.cursor = "pointer";
             })
         newColor.value = hexa;
+        
+        }
     }
 
     //DÉCLENCHEMENT QUAND LA SOURIS PASSE AU-DESSUS DU CANVAS 
     function declencheur() {
+        document.getElementById('BtnPipette').dataset['active'] = true;
         canvas.addEventListener('mouseup', pipette);
 
         //CHANGEMENT DE LA FORME DU CURSEUR

@@ -72,10 +72,11 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
         // line 6
         echo "\t <!-- SECTION BIENVENUE -->
       <section class=\"container\">
-        <div class=\"bulle \">
+        <div id=\"bulle\">
           <h1 id=\"titreh1\">Bienvenue !</h1>
+          <img src=\"../assets/img/DO_alfredo.svg\" alt=\"Alfredo\" srcset=\"\">
           <p>
-            Je suis Alfred, ton conseiller en image. Je suis là pour te proposer des idées de styles vestimentaires.<br>Laisse-toi guider !
+            Je suis Alfredo, ton conseiller en image. Je suis là pour te proposer des idées de styles vestimentaires.<br>Laisse-toi guider !
           </p>
         </div>
       </section>
@@ -150,25 +151,25 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
             <div>
               <!-- BOUTON GÉNÉRATEUR -->
               ";
-        // line 85
-        if (((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 85, $this->source); })()), "user", [], "any", false, false, false, 85) != null) && (twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 85, $this->source); })()), "user", [], "any", false, false, false, 85), "vetements", [], "any", false, false, false, 85)) > 0))) {
-            // line 86
+        // line 86
+        if (((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 86, $this->source); })()), "user", [], "any", false, false, false, 86) != null) && (twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 86, $this->source); })()), "user", [], "any", false, false, false, 86), "vetements", [], "any", false, false, false, 86)) > 0))) {
+            // line 87
             echo "                <button id=\"mixmatch\" type=\"button\" class=\"cta-mixandmatch\">Mix & Match</button>
               ";
         } else {
-            // line 88
+            // line 89
             echo "                <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_vetement");
             echo "\"><button id=\"mixmatch\" type=\"button\" class=\"cta-mixandmatch\" >Mix & Match</button></a>
               ";
         }
-        // line 90
+        // line 91
         echo "            </div>
           <div id=\"display-generator\"> 
             <div class=\"tag-selected\">
               <p>Sélection:</p>
               <div";
-        // line 94
+        // line 95
         echo ">
                 <ul>
                   <li class=\"button-tags\" id=\"oneTagHumeur\">Excité</li>
@@ -181,7 +182,7 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
             <div>
               <button id=\"reset\" type=\"button\" class=\"dressinglink button-tags\">Réinitialiser</button>
               <button type=\"button\" class=\"dressinglink button-tags\"><a href=\"";
-        // line 105
+        // line 106
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dressing");
         echo "\">Aller sur mon dressing</a></button>
             </div>
@@ -338,15 +339,15 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
         </div>
       </section>
       <script src=\"";
-        // line 259
+        // line 260
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/generateur.js"), "html", null, true);
         echo "\"></script>
       <script src=\"";
-        // line 260
+        // line 261
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/slide.js"), "html", null, true);
         echo "\"></script>
       <script src=\"";
-        // line 261
+        // line 262
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/mix&match.js"), "html", null, true);
         echo "\"></script>
 
@@ -369,7 +370,7 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
 
     public function getDebugInfo()
     {
-        return array (  350 => 261,  346 => 260,  342 => 259,  185 => 105,  172 => 94,  166 => 90,  160 => 88,  156 => 86,  154 => 85,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  351 => 262,  347 => 261,  343 => 260,  186 => 106,  173 => 95,  167 => 91,  161 => 89,  157 => 87,  155 => 86,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -381,10 +382,11 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
 {% block body %}
 \t <!-- SECTION BIENVENUE -->
       <section class=\"container\">
-        <div class=\"bulle \">
+        <div id=\"bulle\">
           <h1 id=\"titreh1\">Bienvenue !</h1>
+          <img src=\"../assets/img/DO_alfredo.svg\" alt=\"Alfredo\" srcset=\"\">
           <p>
-            Je suis Alfred, ton conseiller en image. Je suis là pour te proposer des idées de styles vestimentaires.<br>Laisse-toi guider !
+            Je suis Alfredo, ton conseiller en image. Je suis là pour te proposer des idées de styles vestimentaires.<br>Laisse-toi guider !
           </p>
         </div>
       </section>

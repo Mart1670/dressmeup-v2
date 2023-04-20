@@ -3,187 +3,91 @@
 {% block title %}DressMeUp - Concept{% endblock %}
 
 {% block body %}
-	{# <style>
-		.example-wrapper {
-			margin: 1em auto;
-			max-width: 800px;
-			width: 95%;
-			font: 18px / 1.5 sans-serif;
-		}
-		.example-wrapper code {
-			background: #F5F5F5;
-			padding: 2px 6px;
-		}
-	</style> #}
+	<section id="about" class="container">
+		<article id="concept">
+			<h1>Le concept</h1>
+			<p>
+				Le projet est parti d’une problématique quotidienne : la panne d’inspiration lors du choix de son
+				style vestimentaire de la journée.
+				Après une étude approfondie, nous avons identifié 2 critères majeures qui interviennent lors de
+				notre choix de vêtement : nos émotions et notre programme de la journée.
 
-	
-
-	<body>
-		<!-- *************** -->
-		<!-- section CONCEPT -->
-		<!-- *************** -->
-
-			<section class="concept container-fluid border-bottom border-3 border-dark px-0"> <div class="row g-0">
-
-				<div class="col-12 col-sm-6 border-end border-2 border-dark text_bloc grey_square">
-					<h1>Le concept</h1>
-					<p>
-						Le projet est parti d’une problématique quotidienne : la panne d’inspiration lors du choix de son
-						                    style vestimentaire de la journée.
-						                    Après une étude approfondie, nous avons identifié 2 critères majeures qui interviennent lors de
-						                    notre choix de vêtement : nos émotions et notre programme de la journée.
-						
-						                    Ton conseiller en image Dress MeUp est donc là pour te proposer ces idées de tenues selon ton humeur
-						                    de jour et l’ambiance de ta journée !
-					</p>
+				Ton conseiller en image Dress MeUp est donc là pour te proposer ces idées de tenues selon ton humeur
+				de jour et l’ambiance de ta journée !
+			</p>
+		</article>
+		<article id="accessibility">
+			<h2>Accessibilité</h2>
+			<p>
+				L’équipe de Dress MeUp est sensible à certaines problématiques en terme d’accessibilité et nous
+				avons fait le choix d’adresser notre interface aux personnes atteintes de daltonisme (deutéranopie,
+				protanopie et tritanopie).
+				Nous avons donc sélectionné une palette de couleur bien réfléchie pour éviter les teintes de
+				marrons.
+				Nous avons opté pour un style graphique franc et contrasté pour y permettre une meilleure lecture.
+				Dans une future version de notre plateforme, nous souhaitons proposer une accessibilité pour les
+				personnes malvoyantes.
+			</p>
+		</article>
+		<article id="accessibility">
+			<h2>Comment ça marche ?</h2>
+			<p>
+				Nous avons voulu proposer un système simple. Après avoir rajouté les photos de tes vêtements dans ta
+				page “Dressing”, nous t’aidons à les catégoriser et à les ranger.
+				Ensuite tu nous indiques, ou non, ton humeur et tes activités du jour et notre générateur se charge
+				de te proposer jusqu’à 3 styles vestimentaires différents !
+				Notre algorithme a été développé avec des professionnels de conseil en image et est régulièrement
+				amélioré pour te proposer des styles toujours plus adaptés.
+			</p>
+		</article>
+		<article id="team">
+			<h2>Notre équipe</h2>
+			<div>
+				<div class="team">
+					<p>Martin Harlaut</p>
+					<img src="assets/img/martin.jpg" alt="Martin Harlaut, Lead Dév">
 				</div>
-
-				<div class="col-12 col-sm-6 border-start border-2 border-dark yellow_square">
-					<img class="img-fluid square_img" src="assets/img/DO_logoconcept.svg" alt="Illustration de notre concept avec plein de petits pictos">
+				<div class="team">
+					<p>Nicolas Touchard</p>
+					<img src="assets/img/nicolas.jpg" alt="Nicolas Touchard, Lead Back">
+				</div>
+				<div class="team">
+					<p>Julien Viain</p>
+					<img src="assets/img/julien.jpg" alt="Julien Viain, Lead Front">
+				</div>
+				<div class="team">
+					<p>Nicolas Malherbe</p>
+					<img src="assets/img/nico.jpg" alt="Nicolas Malherbe, Lead Javascript">
+				</div>
+				<div class="team">
+					<p>Christian Cirri</p>
+					<img src="assets/img/chris.jpg" alt="Christian Cirri, Designer+ et Scrumaster">
+				</div>
+				<div class="team">
+					<p>Loïs Le Du</p>
+					<img src="assets/img/lois.jpg" alt="Loïs Le Du, Lead UX et Intégration">
+				</div>
+				<div class="team">
+					<p>Lou-Mah Vavoda</p>
+					<img src="assets/img/lou-mah.jpg" alt="Lou-Mah Vavoda, Lead UI">
+				</div>
+				<div class="team">
+					<p>Mira Koh</p>
+					<img src="assets/img/mira.jpg" alt="Mira Koh, Designer+">
 				</div>
 			</div>
-		</section>
-
-		<!-- ********************* -->
-		<!-- section ACCESSIBILITE -->
-		<!-- ********************* -->
-
-			<section class="concept container-fluid border-bottom border-3 border-dark px-0"> <div class="row g-0">
-
-				<div class="col-12 col-sm-6 border-end border-2 border-dark blue_square">
-					<img class="img-fluid square_img" src="assets/img/DO_accessibility_eyes.svg" alt="Illustration avec plein de petits smileys colorés pour exprimer l'accessibilité visuelle">
-
-
-				</div>
-				<div  id="anchor-access" class="col-12 col-sm-6 border-start border-2 border-dark text_bloc grey_square">
-					<h1>Accessibilité</h1>
-					<p>
-						L’équipe de Dress MeUp est sensible à certaines problématiques en terme d’accessibilité et nous
-						                    avons fait le choix d’adresser notre interface aux personnes atteintes de daltonisme (deutéranopie,
-						                    protanopie et tritanopie).
-						                    Nous avons donc sélectionné une palette de couleur bien réfléchie pour éviter les teintes de
-						                    marrons.
-						                    Nous avons opté pour un style graphique franc et contrasté pour y permettre une meilleure lecture.
-						                    Dans une future version de notre plateforme, nous souhaitons proposer une accessibilité pour les
-						                    personnes malvoyantes.
-					</p>
-				</div>
-			</div>
-		</section>
-
-		<!-- ************************* -->
-		<!-- section COMMENT ÇA MARCHE -->
-		<!-- ************************* -->
-
-			<section class="concept container-fluid border-bottom border-3 border-dark px-0"> <div class="row g-0">
-
-				<div class="col-12 col-sm-6 border-end border-2 border-dark text_bloc grey_square">
-					<h1>Comment ça marche ?</h1>
-					<p>
-						Nous avons voulu proposer un système simple. Après avoir rajouté les photos de tes vêtements dans ta
-						                    page “Dressing”, nous t’aidons à les catégoriser et à les ranger.
-						                    Ensuite tu nous indiques, ou non, ton humeur et tes activités du jour et notre générateur se charge
-						                    de te proposer jusqu’à 3 styles vestimentaires différents !
-						                    Notre algorithme a été développé avec des professionnels de conseil en image et est régulièrement
-						                    amélioré pour te proposer des styles toujours plus adaptés.
-					</p>
-				</div>
-
-				<div class="col-12 col-sm-6 border-start border-2 border-dark rose_square">
-					<img class="img-fluid square_img" src="assets/img/DO_slotmachine.svg" alt="Illustration avec plein de petits smileys colorés pour exprimer l'accessibilité visuelle">
-
-				</div>
-
-			</div>
-		</section>
-
-		<!-- ****************** -->
-		<!-- section MON EQUIPE -->
-		<!-- ****************** -->
-
-			<div class="container-fluid border-bottom border-3 border-dark px-0"> <h2 class="section_title">Notre équipe</h2>
-		</div>
-
-		<section class="container">
-			<div class="row g-0">
-
-
-				<div class="col-sm-6 col-lg-3 ">
-					<div class="team">
-						<p class="name_pill team-martin">Martin Harlaut</p>
-						<img class="img-fluid" src="assets/img/martin.jpg" alt="Martin Harlaut, Lead Dév">
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-lg-3">
-					<div class="team">
-						<p class="name_pill team-nicolas">Nicolas Touchard</p>
-						<img class="img-fluid" src="assets/img/nicolas.jpg" alt="Nicolas Touchard, Lead Back">
-					</div>
-				</div>
-
-
-				<div class="col-sm-6 col-lg-3">
-					<div class="team">
-						<p class="name_pill team-julien">Julien Viain</p>
-						<img class="img-fluid" src="assets/img/julien.jpg" alt="Julien Viain, Lead Front">
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-lg-3">
-					<div class="team">
-						<p class="name_pill team-nico">Nicolas Malherbe</p>
-						<img class="img-fluid" src="assets/img/nico.jpg" alt="Nicolas Malherbe, Lead Javascript">
-					</div>
-				</div>
-
-				<div class="col-sm-6 col-lg-3">
-					<div class="team">
-						<p class="name_pill team-chris">Christian Cirri</p>
-						<img class="img-fluid" src="assets/img/chris.jpg" alt="Christian Cirri, Designer+ et Scrumaster">
-					</div>
-				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="team">
-						<p class="name_pill team-lois">Loïs Le Du</p>
-						<img class="img-fluid" src="assets/img/lois.jpg" alt="Loïs Le Du, Lead UX et Intégration">
-					</div>
-				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="team">
-						<p class="name_pill team-lou-mah">Lou-Mah Vavoda</p>
-						<img class="img-fluid" src="assets/img/lou mah.jpg" alt="Lou-Mah Vavoda, Lead UI">
-					</div>
-				</div>
-				<div class="col-sm-6 col-lg-3">
-					<div class="team">
-						<p class="name_pill team-mira">Mira Koh</p>
-						<img class="img-fluid" src="assets/img/mira.jpg" alt="Mira Koh, Designer+">
-					</div>
-				</div>
-
-			</div>
-		</section>
+		</article>
 
 		<!-- ******************** -->
 		<!-- Section EQUIPE Texte -->
 		<!-- ******************** -->
 
-			<section class="container-fluid border-bottom border-top border-3 border-dark grey_square px-0"> <div class="row g-0">
-
-				<div class="col-12 col-sm-6 border-2 border-dark text_bloc">
-					<p>
-						Nous sommes une team de designers et développeurs passionnés. Nous avons décidé de créer ce beau
-						                    projet ensemble en regroupant nos compétences diverses
-					</p>
-				</div>
-
-				<div class="col-12 col-sm-6 border-2 border-dark">
-					<img class="img-fluid schema_concept" src="assets/img/DO_schema_concept.svg" alt="Illustration qui représente un beau schéma">
-
-				</div>
-
-			</div>
+			<article id="passion" class="container">
+				<p>
+					Nous sommes une team de designers et développeurs passionnés. Nous avons décidé de créer ce beau
+					projet ensemble en regroupant nos compétences diverses
+				</p>
+			</article>
 		</section>
 	</body>
 {% endblock %}

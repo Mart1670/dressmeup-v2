@@ -93,7 +93,7 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
         echo "
             <section id=\"add-cloth\">
                 <div class=\"cards\">
-                    <div id=\"BtnPipette\">
+                    <div id=\"BtnPipette\" data-active=\"false\">
                         <img src=\"/assets/img/pipette-icon.svg\" alt=\"Supprimer un vêtement\" srcset=\"\">
                     </div>
                     <div class=\"cards-style\">
@@ -281,7 +281,7 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
             {{ form_start(form, {'attr': {'id': 'form_vetement'}}) }}
             <section id=\"add-cloth\">
                 <div class=\"cards\">
-                    <div id=\"BtnPipette\">
+                    <div id=\"BtnPipette\" data-active=\"false\">
                         <img src=\"/assets/img/pipette-icon.svg\" alt=\"Supprimer un vêtement\" srcset=\"\">
                     </div>
                     <div class=\"cards-style\">

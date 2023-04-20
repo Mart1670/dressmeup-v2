@@ -20,7 +20,6 @@ const depose = document.getElementById("canvas");
 
 //GESTION DU DRAG AND DROP
 if (depose) {
-  
   depose.addEventListener("dragover", function (event) {
     //AUTORISE LE JS POUR EFFECTUER LE DRAG & DROP
     event.preventDefault();
@@ -41,18 +40,9 @@ document.getElementById("vetement_form_image").addEventListener("change", functi
 
 var _URL = window.URL || window.webkitURL;
 
-/* function draw() {
-  ctx.font = '20px Changa';
-  ctx.textAlign = "center";
-  ctx.fillStyle = "white";
-  ctx.textBaseline = "middle";
-  ctx.fillText('Sélectionner la photo du vêtement à ajouter', canvasWidth/2, canvasHeight/2);
-}
-
-draw(); */
-
 // FONCTION DU BLOC D'AFFICHAGE DE LA LISTE DES FICHIERS 
 function preview(event) {
+
   divCanvas.classList.remove('empty-add');
   let p = document.getElementById("preview");
 
@@ -72,3 +62,12 @@ function preview(event) {
   }, false);
   image.src = window.URL.createObjectURL(f);
 }
+
+// Ouvrir la sélection du fichier au clic
+divCanvas.addEventListener("click", function(){
+  console.log(document.getElementById('BtnPipette').dataset['active']);
+  console.log(typeof(document.getElementById('BtnPipette').dataset['active']));
+  if(document.getElementById('BtnPipette').dataset['active'] == "false"){
+    document.getElementById("vetement_form_image").showPicker();
+  }
+})

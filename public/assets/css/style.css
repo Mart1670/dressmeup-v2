@@ -217,6 +217,16 @@ main h1{
 /***      HOME GENERATOR       ***/
 /*********************************/
 
+#bulle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bulle img{
+    width: 50%;
+}
+
 main h2{
     font-size: 16px;
     letter-spacing: 1px;
@@ -698,6 +708,7 @@ canvas{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .empty-add:after{
@@ -992,6 +1003,50 @@ canvas{
 
 /*********************************/
 /***     END REGISTRATION      ***/
+/*********************************/
+
+/*********************************/
+/***          CONCEPT          ***/
+/*********************************/
+
+#about article p:not(#team p){
+    text-align: justify;
+}
+
+.team{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#team>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+
+#team p{
+    text-align: center;
+    margin-block-end: 5px;
+}
+
+.team img{
+    border-radius: 50px;
+}
+
+@media screen and (min-width: 1728px){
+    #about article p{
+        line-height: 30px;
+    }
+
+    #team>div{
+        justify-content: space-between;
+    }
+}
+
+/*********************************/
+/***        END CONCEPT        ***/
 /*********************************/
 
 /*********************************/

@@ -91,7 +91,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
         // line 41
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dressing");
         echo "\">Dressing</a>
-\t\t\t\t\t<a href=\"/\">Blog</a>
+\t\t\t\t\t<a href=\"https://dressmeup.alwaysdata.net/\">Blog</a>
 \t\t\t\t\t<a href=\"";
         // line 43
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_about");
@@ -334,7 +334,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t\t\t<div>
 \t\t\t\t\t<a href=\"/\">Accueil</a>
 \t\t\t\t\t<a href=\"{{ path('app_dressing')}}\">Dressing</a>
-\t\t\t\t\t<a href=\"/\">Blog</a>
+\t\t\t\t\t<a href=\"https://dressmeup.alwaysdata.net/\">Blog</a>
 \t\t\t\t\t<a href=\"{{ path('app_about')}}\">Concept</a>
 \t\t\t\t</div>
 \t\t\t\t<div id=\"user-connect\">
