@@ -4,11 +4,12 @@
 let canvasWidth = 300;
 let canvasHeight = 500;
 let file = 'file';
-var dragText = document.querySelector("#pic-area p");
 
 //CANVAS
 const canvas = document.getElementById("canvas");
 var ctx;
+var divCanvas = document.getElementById("pic-area");
+
 if (canvas) {
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
@@ -19,8 +20,9 @@ const depose = document.getElementById("canvas");
 
 //GESTION DU DRAG AND DROP
 if (depose) {
+  
   depose.addEventListener("dragover", function (event) {
-    //AUTORISE LE JS POUR EFFECTUER LE DRAG 1 DROP
+    //AUTORISE LE JS POUR EFFECTUER LE DRAG & DROP
     event.preventDefault();
   });
 
@@ -39,9 +41,19 @@ document.getElementById("vetement_form_image").addEventListener("change", functi
 
 var _URL = window.URL || window.webkitURL;
 
+/* function draw() {
+  ctx.font = '20px Changa';
+  ctx.textAlign = "center";
+  ctx.fillStyle = "white";
+  ctx.textBaseline = "middle";
+  ctx.fillText('Sélectionner la photo du vêtement à ajouter', canvasWidth/2, canvasHeight/2);
+}
+
+draw(); */
+
 // FONCTION DU BLOC D'AFFICHAGE DE LA LISTE DES FICHIERS 
 function preview(event) {
-  let divcanvas = document.getElementById("divcanvas");
+  divCanvas.classList.remove('empty-add');
   let p = document.getElementById("preview");
 
   // EFFACER LE CONTENU INITIAL DE PREVIEW 
@@ -54,7 +66,6 @@ function preview(event) {
     let ratio = image.width / image.height;
     canvasHeight = canvasWidth / ratio;
     canvas.height = canvasHeight;
-    dragText.innerHTML = "";
     ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, canvasWidth, canvasHeight);
     analyze(ctx);
     

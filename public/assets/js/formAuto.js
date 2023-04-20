@@ -51,8 +51,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
                 for (i = 0; i < body.typeVetements.length; i++) {
                     typeVetements.innerHTML += `
-                <input type="radio" class="btn-check mt-2" name="type" id="type-${body.typeVetements[i]}" autocomplete="off" list>
-                <label class="btn btn-secondary typeBtn" for="type-${body.typeVetements[i]}">${body.typeVetements[i]}</label>
+                <input type="radio" class="button-tags" name="type" id="type-${body.typeVetements[i]}" autocomplete="off" list>
+                <label class="button-tags typeBtn" for="type-${body.typeVetements[i]}">${body.typeVetements[i]}</label>
                 `;
                 }
                 toggletStyle();
@@ -129,7 +129,7 @@ window.addEventListener('DOMContentLoaded', () => {
         //let nomCouleur2 = document.getElementById("colorName2");
         nomCouleur1.innerHTML = `<p class="card-color card-data">Couleur 1</p><span id="color1" class="card-data"></span>`;
         //nomCouleur2.innerHTML = `Couleur 2<span id="color2" class="color-mark" style="background-color:#00FA9A"></span>`;
-        dragText.textContent = "Sélectionner la photo du vêtement à ajouter";
+        divCanvas.classList.add('empty-add');
         //console.log('cancel ok');
     }
     //DÉCLANCHEMENT AU CLIC

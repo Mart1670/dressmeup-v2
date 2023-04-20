@@ -94,7 +94,7 @@ class __TwigTemplate_5f98c944932a3277a83e0bbe147ebc21 extends Template
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "userIdentifier", [], "any", false, false, false, 15), "html", null, true);
             echo ", <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">Se déconnectert</a>
+            echo "\" class=\"button-tags\">Se déconnecter</a>
             </div>
         ";
         }
@@ -119,7 +119,7 @@ class __TwigTemplate_5f98c944932a3277a83e0bbe147ebc21 extends Template
         ";
         // line 39
         echo "        <div id=\"submit-button\">
-            <button id=\"valider\" type=\"submit\">
+            <button id=\"valider\" type=\"submit\" class=\"button-tags\">
                 Se connecter
             </button>
         </div>
@@ -169,7 +169,7 @@ class __TwigTemplate_5f98c944932a3277a83e0bbe147ebc21 extends Template
     
         {% if app.user %}
             <div class=\"mb-3\">
-                Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href=\"{{ path('app_logout') }}\">Se déconnectert</a>
+                Vous êtes connecté en tant que {{ app.user.userIdentifier }}, <a href=\"{{ path('app_logout') }}\" class=\"button-tags\">Se déconnecter</a>
             </div>
         {% endif %}
     
@@ -194,7 +194,7 @@ class __TwigTemplate_5f98c944932a3277a83e0bbe147ebc21 extends Template
             </div>
         #}
         <div id=\"submit-button\">
-            <button id=\"valider\" type=\"submit\">
+            <button id=\"valider\" type=\"submit\" class=\"button-tags\">
                 Se connecter
             </button>
         </div>

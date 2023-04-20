@@ -97,9 +97,10 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                         <img src=\"/assets/img/pipette-icon.svg\" alt=\"Supprimer un vêtement\" srcset=\"\">
                     </div>
                     <div class=\"cards-style\">
-                        <div id=\"pic-area\">
-                            <p>Sélectionner la photo du vêtement à ajouter</p>
-                            <div id=\"divcanvas\">
+                        <div id=\"pic-area\" class=\"empty-add\">
+                            ";
+        // line 21
+        echo "                            <div id=\"divcanvas\">
                                 <canvas id=\"canvas\"></canvas>
                             </div>
                         </div>
@@ -109,112 +110,118 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                                     <p id=\"tag_vet\" class=\"card-type card-data\">Type de vêtement</p>
                                 </div>
                                 <div>
-                                <div id=\"colorName1\">
-                                    <p class=\"card-color card-data\">Couleur 1</p><span id=\"color1\" class=\"card-data\"></span>
-                                </div>
-                                <div id=\"colorName2\">
-                                    <p class=\"card-color card-data\">Couleur 2</p><span id=\"color2\" class=\"card-data\"></span>
+                                    <div id=\"colorName1\">
+                                        <p class=\"card-color card-data\">Couleur 1</p><span id=\"color1\" class=\"card-data\"></span>
+                                    </div>
+                                    <div id=\"colorName2\">
+                                        <p class=\"card-color card-data\">Couleur 2</p><span id=\"color2\" class=\"card-data\"></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                ";
-        // line 41
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 41, $this->source); })()), "newColor", [], "any", false, false, false, 41), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
-        echo "
-                ";
-        // line 42
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), "nameColor", [], "any", false, false, false, 42), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
-        echo "
-                ";
+                <div>
+                    ";
         // line 43
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), "image", [], "any", false, false, false, 43), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), "newColor", [], "any", false, false, false, 43), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
         echo "
-                ";
+                    ";
         // line 44
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 44, $this->source); })()), "color", [], "any", false, false, false, 44), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 44, $this->source); })()), "nameColor", [], "any", false, false, false, 44), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
         echo "
-                <h4>Sélectionne ta catégorie</h4>
-                <div id=\"type-selection\" class=\"button-list\">
-                    <input type=\"radio\" name=\"categorie\" id=\"categorie1\" class=\"btn-check\" autocomplete=\"off\" list>
-                    <label for=\"categorie1\" class=\"catBtn\">Haut</label>
-                    <input type=\"radio\" name=\"categorie\" id=\"categorie2\" class=\"btn-check\"autocomplete=\"off\">
-                    <label for=\"categorie2\" class=\"catBtn\">Bas</label>
-                </div>
-                ";
-        // line 52
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 52, $this->source); })()), "type", [], "any", false, false, false, 52), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+                    ";
+        // line 45
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "image", [], "any", false, false, false, 45), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
         echo "
-
-                <h4>Choisis le type de vêtement</h4>
-                <div id=\"type-vetements\" class=\"button-list\">
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"type\" id=\"type-tee-shirt\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-tee-shirt\">Tee-shirt</label>
-
-                  <input type=\"radio\" class=\"btn-check\" name=\"type\" id=\"type-sweat\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-sweat\">Sweat-shirt</label>
-
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"type\" id=\"type-maille\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-maille\">Maille</label>
-
-                  <input type=\"radio\" class=\"btn-check\" name=\"type\" id=\"type-chemise\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-chemise\">Chemise</label>
-
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"type\" id=\"type-gilet\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-gilet\">Gilet</label>
-
-                  <input type=\"radio\" class=\"btn-check\" name=\"type\" id=\"type-veste\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-veste\">Veste</label>
-
-                </div>
-                ";
-        // line 75
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 75, $this->source); })()), "style", [], "any", false, false, false, 75), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+                    ";
+        // line 46
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 46, $this->source); })()), "color", [], "any", false, false, false, 46), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
         echo "
-
-                <h4>Pour quelle occasion portes-tu ce vêtement ?</h4>
-
-                <div id=\"ambiance-vetements\" class=\"button-list\">
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-sortie\" autocomplete=\"off\">
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-sortie\" data-index=\"0\">Sortie entre amis</label>
-        
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-travail\" autocomplete=\"off\" >
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-travail\" data-index=\"1\">Travail</label>
-        
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-sport\" autocomplete=\"off\" >
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-sport\" data-index=\"2\">Sport</label>
-        
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-detente\" autocomplete=\"off\" >
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-detente\" data-index=\"3\">Détente</label>
-        
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-romantique\" autocomplete=\"off\" >
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-romantique\" data-index=\"4\">Rendez-vous Romantique</label>
-        
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-rien\" autocomplete=\"off\" >
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-rien\" data-index=\"5\">Rien de prévu</label>
-
-                </div>
-                ";
-        // line 99
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 99, $this->source); })()), "tagAmbiances", [], "any", false, false, false, 99), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+                    <h4>Sélectionne ta catégorie</h4>
+                    <div id=\"cat-selection\" class=\"button-list\">
+                        <input type=\"radio\" name=\"categorie\" id=\"categorie1\" class=\"button-tags\" autocomplete=\"off\" list>
+                        <label for=\"categorie1\" class=\"catBtn button-tags\">Haut</label>
+                        <input type=\"radio\" name=\"categorie\" id=\"categorie2\" class=\"button-tags\" autocomplete=\"off\">
+                        <label for=\"categorie2\" class=\"catBtn button-tags\">Bas</label>
+                    </div>
+                    ";
+        // line 54
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 54, $this->source); })()), "type", [], "any", false, false, false, 54), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
         echo "
-                <div id=\"form-control\">
+    
+                    <h4>Choisis le type de vêtement</h4>
+                    <div id=\"type-vetements\" class=\"button-list\">
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-tee-shirt\" autocomplete=\"off\" list>
+                      <label class=\"button-tags typeBtn\" for=\"type-tee-shirt\">Tee-shirt</label>
+    
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-sweat\" autocomplete=\"off\">
+                      <label class=\"button-tags typeBtn\" for=\"type-sweat\">Sweat-shirt</label>
+    
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-maille\" autocomplete=\"off\" list>
+                      <label class=\"button-tags typeBtn\" for=\"type-maille\">Maille</label>
+    
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-chemise\" autocomplete=\"off\">
+                      <label class=\"button-tags typeBtn\" for=\"type-chemise\">Chemise</label>
+    
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-gilet\" autocomplete=\"off\" list>
+                      <label class=\"button-tags typeBtn\" for=\"type-gilet\">Gilet</label>
+    
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-veste\" autocomplete=\"off\">
+                      <label class=\"button-tags typeBtn\" for=\"type-veste\">Veste</label>
+    
+                    </div>
+                    ";
+        // line 77
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 77, $this->source); })()), "style", [], "any", false, false, false, 77), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
+        echo "
+    
+                    <h4>Pour quelle occasion portes-tu ce vêtement ?</h4>
+    
+                    <div id=\"ambiance-vetements\" class=\"button-list\">
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sortie\" autocomplete=\"off\">
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-sortie\" data-index=\"0\">Sortie entre amis</label>
+            
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-travail\" autocomplete=\"off\" >
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-travail\" data-index=\"1\">Travail</label>
+            
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sport\" autocomplete=\"off\" >
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-sport\" data-index=\"2\">Sport</label>
+            
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-detente\" autocomplete=\"off\" >
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-detente\" data-index=\"3\">Détente</label>
+            
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-romantique\" autocomplete=\"off\" >
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-romantique\" data-index=\"4\">Rendez-vous Romantique</label>
+            
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-rien\" autocomplete=\"off\" >
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-rien\" data-index=\"5\">Rien de prévu</label>
+    
+                    </div>
                     ";
         // line 101
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 101, $this->source); })()), "valider", [], "any", false, false, false, 101), 'widget', ["label" => "Valider"]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 101, $this->source); })()), "tagAmbiances", [], "any", false, false, false, 101), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
         echo "
-                    <button id=\"btnCancel\" type=\"button\" class=\"btn btn-secondary btn-close-modal\" data-bs-dismiss=\"modal\">Annuler</button>
+                    <div id=\"form-control\">
+                        ";
+        // line 103
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 103, $this->source); })()), "valider", [], "any", false, false, false, 103), 'widget', ["label" => "Valider", "attr" => ["class" => "button-tags"]]);
+        echo "
+                        <a  href=\"";
+        // line 104
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dressing");
+        echo "\"><button id=\"btnCancel\" type=\"button\" class=\"button-tags\">Annuler</button></a>
+                    </div>
                 </div>
                 ";
-        // line 104
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 104, $this->source); })()), 'form_end');
+        // line 107
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 107, $this->source); })()), 'form_end');
         echo "
             </section>
         </div>
         
        ";
-        // line 109
+        // line 112
         echo "
 
 
@@ -224,14 +231,14 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
 
     }
 
-    // line 113
+    // line 116
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 114
+        // line 117
         echo "    <script src=\"assets/js/pipette.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/dragAndDrop.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/kmeans.js\" type=\"text/javascript\"></script>
@@ -255,7 +262,7 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
 
     public function getDebugInfo()
     {
-        return array (  235 => 114,  228 => 113,  218 => 109,  211 => 104,  205 => 101,  200 => 99,  173 => 75,  147 => 52,  136 => 44,  132 => 43,  128 => 42,  124 => 41,  92 => 12,  87 => 9,  80 => 8,  68 => 5,  55 => 3,  38 => 1,);
+        return array (  242 => 117,  235 => 116,  225 => 112,  218 => 107,  212 => 104,  208 => 103,  203 => 101,  176 => 77,  150 => 54,  139 => 46,  135 => 45,  131 => 44,  127 => 43,  103 => 21,  92 => 12,  87 => 9,  80 => 8,  68 => 5,  55 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -278,8 +285,8 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                         <img src=\"/assets/img/pipette-icon.svg\" alt=\"Supprimer un vêtement\" srcset=\"\">
                     </div>
                     <div class=\"cards-style\">
-                        <div id=\"pic-area\">
-                            <p>Sélectionner la photo du vêtement à ajouter</p>
+                        <div id=\"pic-area\" class=\"empty-add\">
+                            {# <p>Sélectionner la photo du vêtement à ajouter</p> #}
                             <div id=\"divcanvas\">
                                 <canvas id=\"canvas\"></canvas>
                             </div>
@@ -290,78 +297,81 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                                     <p id=\"tag_vet\" class=\"card-type card-data\">Type de vêtement</p>
                                 </div>
                                 <div>
-                                <div id=\"colorName1\">
-                                    <p class=\"card-color card-data\">Couleur 1</p><span id=\"color1\" class=\"card-data\"></span>
-                                </div>
-                                <div id=\"colorName2\">
-                                    <p class=\"card-color card-data\">Couleur 2</p><span id=\"color2\" class=\"card-data\"></span>
+                                    <div id=\"colorName1\">
+                                        <p class=\"card-color card-data\">Couleur 1</p><span id=\"color1\" class=\"card-data\"></span>
+                                    </div>
+                                    <div id=\"colorName2\">
+                                        <p class=\"card-color card-data\">Couleur 2</p><span id=\"color2\" class=\"card-data\"></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {{ form_widget(form.newColor, {'attr': {'class': 'hidden-form-field'}}) }}
-                {{ form_widget(form.nameColor, {'attr': {'class': 'hidden-form-field'}}) }}
-                {{ form_widget(form.image, {'attr': {'class': 'hidden-form-field'}}) }}
-                {{ form_widget(form.color, {'attr': {'class': 'hidden-form-field'}}) }}
-                <h4>Sélectionne ta catégorie</h4>
-                <div id=\"type-selection\" class=\"button-list\">
-                    <input type=\"radio\" name=\"categorie\" id=\"categorie1\" class=\"btn-check\" autocomplete=\"off\" list>
-                    <label for=\"categorie1\" class=\"catBtn\">Haut</label>
-                    <input type=\"radio\" name=\"categorie\" id=\"categorie2\" class=\"btn-check\"autocomplete=\"off\">
-                    <label for=\"categorie2\" class=\"catBtn\">Bas</label>
-                </div>
-                {{ form_widget(form.type, {'attr': {'class': 'hidden-form-field'}}) }}
-
-                <h4>Choisis le type de vêtement</h4>
-                <div id=\"type-vetements\" class=\"button-list\">
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"type\" id=\"type-tee-shirt\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-tee-shirt\">Tee-shirt</label>
-
-                  <input type=\"radio\" class=\"btn-check\" name=\"type\" id=\"type-sweat\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-sweat\">Sweat-shirt</label>
-
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"type\" id=\"type-maille\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-maille\">Maille</label>
-
-                  <input type=\"radio\" class=\"btn-check\" name=\"type\" id=\"type-chemise\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-chemise\">Chemise</label>
-
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"type\" id=\"type-gilet\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-gilet\">Gilet</label>
-
-                  <input type=\"radio\" class=\"btn-check\" name=\"type\" id=\"type-veste\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-veste\">Veste</label>
-
-                </div>
-                {{ form_widget(form.style, {'attr': {'class': 'hidden-form-field'}}) }}
-
-                <h4>Pour quelle occasion portes-tu ce vêtement ?</h4>
-
-                <div id=\"ambiance-vetements\" class=\"button-list\">
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-sortie\" autocomplete=\"off\">
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-sortie\" data-index=\"0\">Sortie entre amis</label>
-        
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-travail\" autocomplete=\"off\" >
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-travail\" data-index=\"1\">Travail</label>
-        
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-sport\" autocomplete=\"off\" >
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-sport\" data-index=\"2\">Sport</label>
-        
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-detente\" autocomplete=\"off\" >
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-detente\" data-index=\"3\">Détente</label>
-        
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-romantique\" autocomplete=\"off\" >
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-romantique\" data-index=\"4\">Rendez-vous Romantique</label>
-        
-                    <input type=\"radio\" class=\"btn-check\" name=\"ambiance\" id=\"ambiance-rien\" autocomplete=\"off\" >
-                    <label class=\"btn btn-secondary ambBtn\" for=\"ambiance-rien\" data-index=\"5\">Rien de prévu</label>
-
-                </div>
-                {{ form_widget(form.tagAmbiances, {'attr': {'class': 'hidden-form-field'}}) }}
-                <div id=\"form-control\">
-                    {{ form_widget(form.valider, { 'label': 'Valider'}) }}
-                    <button id=\"btnCancel\" type=\"button\" class=\"btn btn-secondary btn-close-modal\" data-bs-dismiss=\"modal\">Annuler</button>
+                <div>
+                    {{ form_widget(form.newColor, {'attr': {'class': 'hidden-form-field'}}) }}
+                    {{ form_widget(form.nameColor, {'attr': {'class': 'hidden-form-field'}}) }}
+                    {{ form_widget(form.image, {'attr': {'class': 'hidden-form-field'}}) }}
+                    {{ form_widget(form.color, {'attr': {'class': 'hidden-form-field'}}) }}
+                    <h4>Sélectionne ta catégorie</h4>
+                    <div id=\"cat-selection\" class=\"button-list\">
+                        <input type=\"radio\" name=\"categorie\" id=\"categorie1\" class=\"button-tags\" autocomplete=\"off\" list>
+                        <label for=\"categorie1\" class=\"catBtn button-tags\">Haut</label>
+                        <input type=\"radio\" name=\"categorie\" id=\"categorie2\" class=\"button-tags\" autocomplete=\"off\">
+                        <label for=\"categorie2\" class=\"catBtn button-tags\">Bas</label>
+                    </div>
+                    {{ form_widget(form.type, {'attr': {'class': 'hidden-form-field'}}) }}
+    
+                    <h4>Choisis le type de vêtement</h4>
+                    <div id=\"type-vetements\" class=\"button-list\">
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-tee-shirt\" autocomplete=\"off\" list>
+                      <label class=\"button-tags typeBtn\" for=\"type-tee-shirt\">Tee-shirt</label>
+    
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-sweat\" autocomplete=\"off\">
+                      <label class=\"button-tags typeBtn\" for=\"type-sweat\">Sweat-shirt</label>
+    
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-maille\" autocomplete=\"off\" list>
+                      <label class=\"button-tags typeBtn\" for=\"type-maille\">Maille</label>
+    
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-chemise\" autocomplete=\"off\">
+                      <label class=\"button-tags typeBtn\" for=\"type-chemise\">Chemise</label>
+    
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-gilet\" autocomplete=\"off\" list>
+                      <label class=\"button-tags typeBtn\" for=\"type-gilet\">Gilet</label>
+    
+                      <input type=\"radio\" class=\"button-tags\" name=\"type\" id=\"type-veste\" autocomplete=\"off\">
+                      <label class=\"button-tags typeBtn\" for=\"type-veste\">Veste</label>
+    
+                    </div>
+                    {{ form_widget(form.style, {'attr': {'class': 'hidden-form-field'}}) }}
+    
+                    <h4>Pour quelle occasion portes-tu ce vêtement ?</h4>
+    
+                    <div id=\"ambiance-vetements\" class=\"button-list\">
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sortie\" autocomplete=\"off\">
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-sortie\" data-index=\"0\">Sortie entre amis</label>
+            
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-travail\" autocomplete=\"off\" >
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-travail\" data-index=\"1\">Travail</label>
+            
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sport\" autocomplete=\"off\" >
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-sport\" data-index=\"2\">Sport</label>
+            
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-detente\" autocomplete=\"off\" >
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-detente\" data-index=\"3\">Détente</label>
+            
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-romantique\" autocomplete=\"off\" >
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-romantique\" data-index=\"4\">Rendez-vous Romantique</label>
+            
+                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-rien\" autocomplete=\"off\" >
+                        <label class=\"button-tags ambBtn\" for=\"ambiance-rien\" data-index=\"5\">Rien de prévu</label>
+    
+                    </div>
+                    {{ form_widget(form.tagAmbiances, {'attr': {'class': 'hidden-form-field'}}) }}
+                    <div id=\"form-control\">
+                        {{ form_widget(form.valider, { 'label': 'Valider', 'attr': {'class': 'button-tags'}}) }}
+                        <a  href=\"{{ path('app_dressing') }}\"><button id=\"btnCancel\" type=\"button\" class=\"button-tags\">Annuler</button></a>
+                    </div>
                 </div>
                 {{ form_end(form) }}
             </section>

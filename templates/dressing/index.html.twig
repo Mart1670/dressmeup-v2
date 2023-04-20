@@ -13,30 +13,30 @@
             <h1>Mon dressing</h1>
             <h4>Sélectionne ta catégorie</h4>
             <div id="type-selection">
-                    <input type="radio" name="type" id="haut" autocomplete="off" list>
-                    <label for="haut">Haut</label>
-                    <input type="radio" name="type" id="bas" autocomplete="off">
-                    <label for="bas">Bas</label>
+                    <input class="button-tags" type="radio" name="type" id="haut" autocomplete="off" list>
+                    <label class="button-tags" for="haut">Haut</label>
+                    <input class="button-tags" type="radio" name="type" id="bas" autocomplete="off">
+                    <label class="button-tags" for="bas">Bas</label>
             </div>
             <h4>Choisis le type de vêtement</h4>
                 <div id="type-vetements" class="button-list">
-                  <input type="radio" class="btn-check mt-2" name="style" id="type-tee-shirt" autocomplete="off" list>
-                  <label class="btn btn-secondary typeBtn" for="type-tee-shirt">Tee-shirt</label>
+                  <input class="button-tags" type="radio" name="style" id="type-tee-shirt" autocomplete="off" list>
+                  <label class="button-tags typeBtn" for="type-tee-shirt">Tee-shirt</label>
 
-                  <input type="radio" class="btn-check" name="style" id="type-sweat" autocomplete="off">
-                  <label class="btn btn-secondary typeBtn" for="type-sweat">Sweat-shirt</label>
+                  <input class="button-tags" type="radio" name="style" id="type-sweat" autocomplete="off">
+                  <label class="button-tags typeBtn" for="type-sweat">Sweat-shirt</label>
 
-                  <input type="radio" class="btn-check mt-2" name="style" id="type-maille" autocomplete="off" list>
-                  <label class="btn btn-secondary typeBtn" for="type-maille">Maille</label>
+                  <input class="button-tags" type="radio" name="style" id="type-maille" autocomplete="off" list>
+                  <label class="button-tags typeBtn" for="type-maille">Maille</label>
 
-                  <input type="radio" class="btn-check" name="style" id="type-chemise" autocomplete="off">
-                  <label class="btn btn-secondary typeBtn" for="type-chemise">Chemise</label>
+                  <input class="button-tags" type="radio" name="style" id="type-chemise" autocomplete="off">
+                  <label class="button-tags typeBtn" for="type-chemise">Chemise</label>
 
-                  <input type="radio" class="btn-check mt-2" name="style" id="type-gilet" autocomplete="off" list>
-                  <label class="btn btn-secondary typeBtn" for="type-gilet">Gilet</label>
+                  <input class="button-tags" type="radio" name="style" id="type-gilet" autocomplete="off" list>
+                  <label class="button-tags typeBtn" for="type-gilet">Gilet</label>
 
-                  <input type="radio" class="btn-check" name="style" id="type-veste" autocomplete="off">
-                  <label class="btn btn-secondary typeBtn" for="type-veste">Veste</label>
+                  <input class="button-tags" type="radio" name="style" id="type-veste" autocomplete="off">
+                  <label class="button-tags typeBtn" for="type-veste">Veste</label>
                 </div>
             <a href="{{ path('app_vetement')}}">
                 <div class="add">
@@ -45,7 +45,6 @@
             </a>
         </section>
         <section id="dressing-content" class="container" data-type="Haut">
-            
         </section>
         {% else %}
             <div id="create-user">

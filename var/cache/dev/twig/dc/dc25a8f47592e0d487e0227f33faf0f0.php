@@ -92,30 +92,30 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
             echo "            <h1>Mon dressing</h1>
             <h4>Sélectionne ta catégorie</h4>
             <div id=\"type-selection\">
-                    <input type=\"radio\" name=\"type\" id=\"haut\" autocomplete=\"off\" list>
-                    <label for=\"haut\">Haut</label>
-                    <input type=\"radio\" name=\"type\" id=\"bas\" autocomplete=\"off\">
-                    <label for=\"bas\">Bas</label>
+                    <input class=\"button-tags\" type=\"radio\" name=\"type\" id=\"haut\" autocomplete=\"off\" list>
+                    <label class=\"button-tags\" for=\"haut\">Haut</label>
+                    <input class=\"button-tags\" type=\"radio\" name=\"type\" id=\"bas\" autocomplete=\"off\">
+                    <label class=\"button-tags\" for=\"bas\">Bas</label>
             </div>
             <h4>Choisis le type de vêtement</h4>
                 <div id=\"type-vetements\" class=\"button-list\">
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"style\" id=\"type-tee-shirt\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-tee-shirt\">Tee-shirt</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-tee-shirt\" autocomplete=\"off\" list>
+                  <label class=\"button-tags typeBtn\" for=\"type-tee-shirt\">Tee-shirt</label>
 
-                  <input type=\"radio\" class=\"btn-check\" name=\"style\" id=\"type-sweat\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-sweat\">Sweat-shirt</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-sweat\" autocomplete=\"off\">
+                  <label class=\"button-tags typeBtn\" for=\"type-sweat\">Sweat-shirt</label>
 
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"style\" id=\"type-maille\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-maille\">Maille</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-maille\" autocomplete=\"off\" list>
+                  <label class=\"button-tags typeBtn\" for=\"type-maille\">Maille</label>
 
-                  <input type=\"radio\" class=\"btn-check\" name=\"style\" id=\"type-chemise\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-chemise\">Chemise</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-chemise\" autocomplete=\"off\">
+                  <label class=\"button-tags typeBtn\" for=\"type-chemise\">Chemise</label>
 
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"style\" id=\"type-gilet\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-gilet\">Gilet</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-gilet\" autocomplete=\"off\" list>
+                  <label class=\"button-tags typeBtn\" for=\"type-gilet\">Gilet</label>
 
-                  <input type=\"radio\" class=\"btn-check\" name=\"style\" id=\"type-veste\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-veste\">Veste</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-veste\" autocomplete=\"off\">
+                  <label class=\"button-tags typeBtn\" for=\"type-veste\">Veste</label>
                 </div>
             <a href=\"";
             // line 41
@@ -127,24 +127,23 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
             </a>
         </section>
         <section id=\"dressing-content\" class=\"container\" data-type=\"Haut\">
-            
         </section>
         ";
         } else {
-            // line 51
+            // line 50
             echo "            <div id=\"create-user\">
                 <p>Vous n'avez pas encore de compte ?</p>
                 <a href=\"";
-            // line 53
+            // line 52
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\">Créer un compte</a>
             </div>
         ";
         }
-        // line 56
+        // line 55
         echo "        
        ";
-        // line 58
+        // line 57
         echo "
 
 
@@ -154,14 +153,14 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
 
     }
 
-    // line 62
+    // line 61
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 63
+        // line 62
         echo "    <script src=\"assets/js/loadDressing.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/switchDressing.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/deleteOneCloth.js\" type=\"text/javascript\"></script>
@@ -183,7 +182,7 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
 
     public function getDebugInfo()
     {
-        return array (  165 => 63,  158 => 62,  148 => 58,  145 => 56,  139 => 53,  135 => 51,  122 => 41,  92 => 13,  90 => 12,  87 => 11,  80 => 10,  68 => 5,  55 => 3,  38 => 1,);
+        return array (  164 => 62,  157 => 61,  147 => 57,  144 => 55,  138 => 52,  134 => 50,  122 => 41,  92 => 13,  90 => 12,  87 => 11,  80 => 10,  68 => 5,  55 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -203,30 +202,30 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
             <h1>Mon dressing</h1>
             <h4>Sélectionne ta catégorie</h4>
             <div id=\"type-selection\">
-                    <input type=\"radio\" name=\"type\" id=\"haut\" autocomplete=\"off\" list>
-                    <label for=\"haut\">Haut</label>
-                    <input type=\"radio\" name=\"type\" id=\"bas\" autocomplete=\"off\">
-                    <label for=\"bas\">Bas</label>
+                    <input class=\"button-tags\" type=\"radio\" name=\"type\" id=\"haut\" autocomplete=\"off\" list>
+                    <label class=\"button-tags\" for=\"haut\">Haut</label>
+                    <input class=\"button-tags\" type=\"radio\" name=\"type\" id=\"bas\" autocomplete=\"off\">
+                    <label class=\"button-tags\" for=\"bas\">Bas</label>
             </div>
             <h4>Choisis le type de vêtement</h4>
                 <div id=\"type-vetements\" class=\"button-list\">
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"style\" id=\"type-tee-shirt\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-tee-shirt\">Tee-shirt</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-tee-shirt\" autocomplete=\"off\" list>
+                  <label class=\"button-tags typeBtn\" for=\"type-tee-shirt\">Tee-shirt</label>
 
-                  <input type=\"radio\" class=\"btn-check\" name=\"style\" id=\"type-sweat\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-sweat\">Sweat-shirt</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-sweat\" autocomplete=\"off\">
+                  <label class=\"button-tags typeBtn\" for=\"type-sweat\">Sweat-shirt</label>
 
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"style\" id=\"type-maille\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-maille\">Maille</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-maille\" autocomplete=\"off\" list>
+                  <label class=\"button-tags typeBtn\" for=\"type-maille\">Maille</label>
 
-                  <input type=\"radio\" class=\"btn-check\" name=\"style\" id=\"type-chemise\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-chemise\">Chemise</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-chemise\" autocomplete=\"off\">
+                  <label class=\"button-tags typeBtn\" for=\"type-chemise\">Chemise</label>
 
-                  <input type=\"radio\" class=\"btn-check mt-2\" name=\"style\" id=\"type-gilet\" autocomplete=\"off\" list>
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-gilet\">Gilet</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-gilet\" autocomplete=\"off\" list>
+                  <label class=\"button-tags typeBtn\" for=\"type-gilet\">Gilet</label>
 
-                  <input type=\"radio\" class=\"btn-check\" name=\"style\" id=\"type-veste\" autocomplete=\"off\">
-                  <label class=\"btn btn-secondary typeBtn\" for=\"type-veste\">Veste</label>
+                  <input class=\"button-tags\" type=\"radio\" name=\"style\" id=\"type-veste\" autocomplete=\"off\">
+                  <label class=\"button-tags typeBtn\" for=\"type-veste\">Veste</label>
                 </div>
             <a href=\"{{ path('app_vetement')}}\">
                 <div class=\"add\">
@@ -235,7 +234,6 @@ class __TwigTemplate_7f61ae838f803493423968beeaa4e3fc extends Template
             </a>
         </section>
         <section id=\"dressing-content\" class=\"container\" data-type=\"Haut\">
-            
         </section>
         {% else %}
             <div id=\"create-user\">

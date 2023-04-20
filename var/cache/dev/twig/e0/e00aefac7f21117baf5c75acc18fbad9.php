@@ -78,7 +78,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t<header>
 \t\t\t<div id=\"navbar\">
 \t\t\t\t<a href=\"/\">
-\t\t\t\t\t<img src=\"/assets/img/Logo_final.svg\" alt=\"Dress Me Up logo\" width=\"80\" height=\"50\">
+\t\t\t\t\t<img src=\"/assets/img/Logo_final.svg\" alt=\"Dress Me Up logo\">
 \t\t\t\t</a>
 \t\t\t\t<div>
 \t\t\t\t\t<i id=\"burger-menu\" class=\"fa-solid fa-bars\"></i>
@@ -324,7 +324,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t<header>
 \t\t\t<div id=\"navbar\">
 \t\t\t\t<a href=\"/\">
-\t\t\t\t\t<img src=\"/assets/img/Logo_final.svg\" alt=\"Dress Me Up logo\" width=\"80\" height=\"50\">
+\t\t\t\t\t<img src=\"/assets/img/Logo_final.svg\" alt=\"Dress Me Up logo\">
 \t\t\t\t</a>
 \t\t\t\t<div>
 \t\t\t\t\t<i id=\"burger-menu\" class=\"fa-solid fa-bars\"></i>

@@ -84,67 +84,70 @@ class __TwigTemplate_77b9a72b581e9265d4e1d9bf1d79b4e2 extends Template
 
  <!-- PROFILE -->
    
-      <div class=\"container\">
+      <section class=\"container\">
         ";
         // line 18
         if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", [], "any", false, false, false, 18) != null)) {
             // line 19
-            echo "        <form id=\"user\">
-            <h1> Bienvenue ";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), "firstname", [], "any", false, false, false, 20), "html", null, true);
+            echo "        <h1> Bienvenue ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19), "firstname", [], "any", false, false, false, 19), "html", null, true);
             echo "</h1>
-            <div id=\"avatar\">
-              <img class=\"photo\" src=\"./assets/user_avatar/profile-picture.jpg\" alt=\"photo de profile\">
-              ";
-            // line 24
-            echo "            </div>
-
-            <div class=\"user-data\">
-              <label> Nom </label>
-              <input type=\"text\" id=\"name\" class=\"form-field\" value=\"Camille\"></input>
-            </div>
-
-            <div class=\"user-data\">
-              <label> E-mail </label>
-              <input type=\"text\" id=\"mail\" class=\"form-field\" value=\"camillelelouche@yahoo.fr\"></input>
-            </div>
-
-            <div class=\"user-data\">
-              <label> Date de naissance </label>
-              <input type=\"date\" id=\"birthdate\" class=\"form-field\" value=\"1990-07-03\"></input>
-            </div>
-
-            <div id=\"genre\">
-              <legend>Genre</legend>
-              <div>
-                <div>
-                  <input type=\"radio\" id=\"il\" name=\"genre\" checked=\"checked\">
-                  <label>Il</label>
-                </div>
-                <div>
-                  <input type=\"radio\" id=\"elle\" name=\"genre\">
-                  <label>Elle</label>
-                </div>
+        <form id=\"user\">
+            <div>
+              <div id=\"avatar\">
+                <img class=\"photo\" src=\"./assets/user_avatar/profile-picture.jpg\" alt=\"photo de profile\">
+                ";
+            // line 25
+            echo "              </div>
+  
+              <div class=\"user-data\">
+                <label> Nom </label>
+                <input type=\"text\" id=\"name\" class=\"form-field\" value=\"Camille\"></input>
+              </div>
+  
+              <div class=\"user-data\">
+                <label> E-mail </label>
+                <input type=\"text\" id=\"mail\" class=\"form-field\" value=\"camillelelouche@yahoo.fr\"></input>
               </div>
             </div>
 
-            <div  class=\"user-data\">
-              <label> Bio </label>
-              <textarea id=\"biographie\" class=\"form-field\">Fan de jeux vidéos et de cinéma. J'aime sortir avec des amis pour découvrir des nouveaux restaurants et faire des apréros jeux de société. J'essaie de me maintenir en forme.</textarea>
-            </div>
-
-            <div id=\"submit-button\">
-              <button id=\"valider\" type=\"submit\"> Enregistrer </button>
+            <div>
+              <div class=\"user-data\">
+                <label> Date de naissance </label>
+                <input type=\"date\" id=\"birthdate\" class=\"form-field\" value=\"1990-07-03\"></input>
+              </div>
+  
+              <div id=\"genre\">
+                <legend>Genre</legend>
+                <div>
+                  <div>
+                    <input type=\"radio\" id=\"il\" name=\"genre\" checked=\"checked\">
+                    <label class=\"button-tags\" for=\"il\">Il</label>
+                  </div>
+                  <div>
+                    <input type=\"radio\" id=\"elle\" name=\"genre\">
+                    <label class=\"button-tags\" for=\"elle\">Elle</label>
+                  </div>
+                </div>
+              </div>
+  
+              <div  class=\"user-data\">
+                <label> Bio </label>
+                <textarea id=\"biographie\" class=\"form-field\">Fan de jeux vidéos et de cinéma. J'aime sortir avec des amis pour découvrir des nouveaux restaurants et faire des apréros jeux de société. J'essaie de me maintenir en forme.</textarea>
+              </div>
+  
+              <div id=\"submit-button\">
+                <button class=\"button-tags\" id=\"valider\" type=\"submit\"> Enregistrer </button>
+              </div>
             </div>
         </form>
         ";
         } else {
-            // line 65
+            // line 69
             echo "          
         ";
         }
-        // line 67
+        // line 71
         echo "      </div>
     
 ";
@@ -165,7 +168,7 @@ class __TwigTemplate_77b9a72b581e9265d4e1d9bf1d79b4e2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  148 => 67,  144 => 65,  101 => 24,  95 => 20,  92 => 19,  90 => 18,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  151 => 71,  147 => 69,  101 => 25,  92 => 19,  90 => 18,  77 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -186,51 +189,55 @@ class __TwigTemplate_77b9a72b581e9265d4e1d9bf1d79b4e2 extends Template
 
  <!-- PROFILE -->
    
-      <div class=\"container\">
+      <section class=\"container\">
         {% if(app.user != null)  %}
+        <h1> Bienvenue {{ app.user.firstname }}</h1>
         <form id=\"user\">
-            <h1> Bienvenue {{ app.user.firstname }}</h1>
-            <div id=\"avatar\">
-              <img class=\"photo\" src=\"./assets/user_avatar/profile-picture.jpg\" alt=\"photo de profile\">
-              {# <button type=\"submit\"> Modifier</button> #}
-            </div>
-
-            <div class=\"user-data\">
-              <label> Nom </label>
-              <input type=\"text\" id=\"name\" class=\"form-field\" value=\"Camille\"></input>
-            </div>
-
-            <div class=\"user-data\">
-              <label> E-mail </label>
-              <input type=\"text\" id=\"mail\" class=\"form-field\" value=\"camillelelouche@yahoo.fr\"></input>
-            </div>
-
-            <div class=\"user-data\">
-              <label> Date de naissance </label>
-              <input type=\"date\" id=\"birthdate\" class=\"form-field\" value=\"1990-07-03\"></input>
-            </div>
-
-            <div id=\"genre\">
-              <legend>Genre</legend>
-              <div>
-                <div>
-                  <input type=\"radio\" id=\"il\" name=\"genre\" checked=\"checked\">
-                  <label>Il</label>
-                </div>
-                <div>
-                  <input type=\"radio\" id=\"elle\" name=\"genre\">
-                  <label>Elle</label>
-                </div>
+            <div>
+              <div id=\"avatar\">
+                <img class=\"photo\" src=\"./assets/user_avatar/profile-picture.jpg\" alt=\"photo de profile\">
+                {# <button type=\"submit\"> Modifier</button> #}
+              </div>
+  
+              <div class=\"user-data\">
+                <label> Nom </label>
+                <input type=\"text\" id=\"name\" class=\"form-field\" value=\"Camille\"></input>
+              </div>
+  
+              <div class=\"user-data\">
+                <label> E-mail </label>
+                <input type=\"text\" id=\"mail\" class=\"form-field\" value=\"camillelelouche@yahoo.fr\"></input>
               </div>
             </div>
 
-            <div  class=\"user-data\">
-              <label> Bio </label>
-              <textarea id=\"biographie\" class=\"form-field\">Fan de jeux vidéos et de cinéma. J'aime sortir avec des amis pour découvrir des nouveaux restaurants et faire des apréros jeux de société. J'essaie de me maintenir en forme.</textarea>
-            </div>
-
-            <div id=\"submit-button\">
-              <button id=\"valider\" type=\"submit\"> Enregistrer </button>
+            <div>
+              <div class=\"user-data\">
+                <label> Date de naissance </label>
+                <input type=\"date\" id=\"birthdate\" class=\"form-field\" value=\"1990-07-03\"></input>
+              </div>
+  
+              <div id=\"genre\">
+                <legend>Genre</legend>
+                <div>
+                  <div>
+                    <input type=\"radio\" id=\"il\" name=\"genre\" checked=\"checked\">
+                    <label class=\"button-tags\" for=\"il\">Il</label>
+                  </div>
+                  <div>
+                    <input type=\"radio\" id=\"elle\" name=\"genre\">
+                    <label class=\"button-tags\" for=\"elle\">Elle</label>
+                  </div>
+                </div>
+              </div>
+  
+              <div  class=\"user-data\">
+                <label> Bio </label>
+                <textarea id=\"biographie\" class=\"form-field\">Fan de jeux vidéos et de cinéma. J'aime sortir avec des amis pour découvrir des nouveaux restaurants et faire des apréros jeux de société. J'essaie de me maintenir en forme.</textarea>
+              </div>
+  
+              <div id=\"submit-button\">
+                <button class=\"button-tags\" id=\"valider\" type=\"submit\"> Enregistrer </button>
+              </div>
             </div>
         </form>
         {% else %}

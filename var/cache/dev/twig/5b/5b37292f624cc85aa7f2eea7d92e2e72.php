@@ -137,7 +137,7 @@ class __TwigTemplate_4fff17c3233019bfffa49e5ef791849a extends Template
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 40, $this->source); })()), "agreeTerms", [], "any", false, false, false, 40), 'row');
         echo "
 \t\t<div id=\"submit-button\">
-\t\t\t<button id=\"valider\" type=\"submit\" class=\"btn\">Créer un compte</button>
+\t\t\t<button id=\"valider\" type=\"submit\" class=\"btn button-tags\">Créer un compte</button>
 \t\t</div>
 \t\t";
         // line 44
@@ -212,7 +212,7 @@ class __TwigTemplate_4fff17c3233019bfffa49e5ef791849a extends Template
 \t\t</div>
 \t\t{{ form_row(registrationForm.agreeTerms) }}
 \t\t<div id=\"submit-button\">
-\t\t\t<button id=\"valider\" type=\"submit\" class=\"btn\">Créer un compte</button>
+\t\t\t<button id=\"valider\" type=\"submit\" class=\"btn button-tags\">Créer un compte</button>
 \t\t</div>
 \t\t{{ form_end(registrationForm) }}
 \t</div>
