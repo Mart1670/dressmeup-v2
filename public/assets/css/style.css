@@ -200,6 +200,13 @@ main h2{
     text-align: center;
 }
 
+@media screen and (min-width: 1724px){
+    main h2{
+        margin-top: 50px;
+        font-size: larger;
+    }
+}
+
 main h4{
     text-align: center;
     margin-bottom: 5px;
