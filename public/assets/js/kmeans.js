@@ -35,6 +35,7 @@ function kmeans(points, k, min_diff) {
     seen = [];
     // Boucle sur l'ensemble des pixels pour déterminer les 3 clusters
     while (clusters.length < k) {
+
         // Génération aléatoire des clusters
         idx = parseInt(Math.random() * plen);
         // Initialisation de la variable
@@ -130,7 +131,7 @@ function process_image(ctx) {
     // Dessin de l'image active dans le Canvas
     // ctx.drawImage(img, 0, 0, 200, 200);
     // Récupération des données R, G et B de chaque pixel
-    data = ctx.getImageData(0, 0, 200, 200).data;
+    data = ctx.getImageData(50, 50, canvas.width-100, canvas.height-100).data;
     // Boucle sur chaque donnée R, G et B de chaque pixel par pas de 4 (afin de récupérer le RGB de chaque pixel séparément)
     for (var i = 0, l = data.length; i < l;  i += 4) {
         // Stockage des données R, G et B de chaque pixel dans des variables séparée
@@ -141,7 +142,7 @@ function process_image(ctx) {
         points.push([r, g, b]);
     }
     // Stockage du résultat issue du traitement de l'algorithme avec en paramètre le tableau des codes RGB de chaque pixel le nombre de clusters (couleurs de référence) et le minimum de différence attendu
-    var results = kmeans(points, 3, 1),
+    var results = kmeans(points, 8, 1),
         // Création d'un tableau qui va recevoir les codes Hexadecimaux issue du traitement
         hex = [];
     // Boucle sur les résultats du traitement par l'algorithme "K-Moyenne" pour les convertir en code Héxadécimal
@@ -172,7 +173,7 @@ function analyze(ctx) {
             pt1 = document.getElementById('colorName1')
             // , pt2 = document.getElementById('colorName2')
             // , p3 = document.getElementById('c3');
-        let hexa1 = colors[1].substring(1);
+        let hexa1 = colors[0].substring(1);
         // console.log(hexa1);
         // let hexa2 = colors[2].substring(1);
         //RÉCUPÉRATION DES NOMS DES COULEURS DANS LA BASE DE DONNÉES POUR AFFICHAGE
@@ -184,7 +185,7 @@ function analyze(ctx) {
                 pt1.innerHTML = `
                     <p class="card-color card-data">${body.colorname}</p><span
                     id="color1" class="card-data"
-                    class="color-mark" style="background-color:${colors[1]}"></span>
+                    class="color-mark" style="background-color:${colors[0]}"></span>
                     `;
                 nameColor.value = body.colorname;
                 vetementColor1.value = colors[1];
