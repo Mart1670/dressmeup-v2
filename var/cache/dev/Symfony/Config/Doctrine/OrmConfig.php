@@ -15,6 +15,7 @@ class OrmConfig
 {
     private $defaultEntityManager;
     private $autoGenerateProxyClasses;
+    private $enableLazyGhostObjects;
     private $proxyDir;
     private $proxyNamespace;
     private $controllerResolver;
@@ -45,6 +46,19 @@ class OrmConfig
     {
         $this->_usedProperties['autoGenerateProxyClasses'] = true;
         $this->autoGenerateProxyClasses = $value;
+
+        return $this;
+    }
+
+    /**
+     * @default false
+     * @param ParamConfigurator|bool $value
+     * @return $this
+     */
+    public function enableLazyGhostObjects($value): static
+    {
+        $this->_usedProperties['enableLazyGhostObjects'] = true;
+        $this->enableLazyGhostObjects = $value;
 
         return $this;
     }
@@ -124,6 +138,12 @@ class OrmConfig
             unset($value['auto_generate_proxy_classes']);
         }
 
+        if (array_key_exists('enable_lazy_ghost_objects', $value)) {
+            $this->_usedProperties['enableLazyGhostObjects'] = true;
+            $this->enableLazyGhostObjects = $value['enable_lazy_ghost_objects'];
+            unset($value['enable_lazy_ghost_objects']);
+        }
+
         if (array_key_exists('proxy_dir', $value)) {
             $this->_usedProperties['proxyDir'] = true;
             $this->proxyDir = $value['proxy_dir'];
@@ -167,6 +187,9 @@ class OrmConfig
         }
         if (isset($this->_usedProperties['autoGenerateProxyClasses'])) {
             $output['auto_generate_proxy_classes'] = $this->autoGenerateProxyClasses;
+        }
+        if (isset($this->_usedProperties['enableLazyGhostObjects'])) {
+            $output['enable_lazy_ghost_objects'] = $this->enableLazyGhostObjects;
         }
         if (isset($this->_usedProperties['proxyDir'])) {
             $output['proxy_dir'] = $this->proxyDir;

@@ -27,4 +27,5 @@ return [
     'app_testcolorname' => [['hexa1'], ['_controller' => 'App\\Controller\\TestpaletteController::colorname'], [], [['variable', '/', '[^/]++', 'hexa1', true], ['text', '/testcolorname']], [], [], []],
     'app_user' => [[], ['_controller' => 'App\\Controller\\UserController::index'], [], [['text', '/user']], [], [], []],
     'app_vetement' => [[], ['_controller' => 'App\\Controller\\VetementController::index'], [], [['text', '/vetement']], [], [], []],
+    'app_hsl' => [['h', 's', 'l'], ['_controller' => 'App\\Controller\\VetementController::hsl'], [], [['text', '/'], ['variable', '/', '[^/]++', 'l', true], ['variable', '/', '[^/]++', 's', true], ['variable', '/', '[^/]++', 'h', true], ['text', '/hsl']], [], [], []],
 ];

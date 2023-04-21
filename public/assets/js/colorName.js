@@ -1,5 +1,7 @@
 let color1 = document.getElementById("color1");
-let colorName1 = document.getElementById("colorName1").childNodes;
+let colorName1 = document.querySelector("#colorName1 p");
+let fileField = document.getElementById('vetement_form_image');
+let nameColor = document.getElementById('vetement_form_nameColor');
 
 console.log(color1);
 
@@ -10,6 +12,7 @@ function hsl (color) {
     r = rgb[0] / 255;
     g = rgb[1] / 255;
     b = rgb[2] / 255;
+    var hslCode = [];
     
     // Find greatest and smallest channel values
     let cmin = Math.min(r,g,b),
@@ -49,55 +52,34 @@ function hsl (color) {
     s = +(s * 100).toFixed(1);
     l = +(l * 100).toFixed(1);
 
-    return "hsl(" + h + "," + s + "%," + l + "%)";
+    hslCode.push(Math.floor(h));
+    hslCode.push(Math.floor(s));
+    hslCode.push(Math.floor(l));
+
+    // return "hsl(" + h + "," + s + "%," + l + "%)";
+    return hslCode;
 }
 
-depose.addEventListener("drop", function () {
+function colorNameTrigger(){
     var hsl1 = "";
     setTimeout(() => {
         console.log("Delayed for 0.5 second.");
-        color1 = document.getElementById("color1");
+        /* color1 = document.getElementById("color1"); */
         console.log(color1);
         let rgbColor1 = color1.style.backgroundColor;
         console.log(color1.style.backgroundColor);
         hsl1 = hsl(rgbColor1);
         console.log(hsl1);
-        
+        fetch('/hsl/' + hsl1[0] + '/' + hsl1[1] + '/' + hsl1[2])
+            .then(function (header) {
+                return header.json();
+            })
+            .then(function (body) {
+                colorName1.textContent = body.colorName;
+                nameColor1.value = body.colorname;
+        });
       }, 500);
-});
+}
 
-
- /* rgbToHsl (sColor,bSupAlpha){
-    var aHsl=sColor.match(this._sRegRgb);
-    if(aHsl!=null&&aHsl.length==5){
-        var a=aHsl[4]||undefined,
-            r=aHsl[1]/255,
-            g=aHsl[2]/255,
-            b=aHsl[3]/255,
-            bAlpha=this._hasAlpha(aHsl[4]);
-        var max=Math.max(r,g,b),
-            min=Math.min(r,g,b);
-        var h,
-            s,
-            l=(max+min)/2;
-        if(max==min){
-            h=s=0;
-        }else{
-            var d=max-min;s=l>0.5?d/(2-max-min):d/(max+min);
-            switch(max){
-                case r:
-                    h=(g-b)/d+(g<b?6:0);
-                    break;
-                case g:
-                    h=(b-r)/d+2;
-                    break;
-                case b:
-                    h=(r-g)/d+4;
-                    break;
-            }
-            h/=6;
-        }function
-    return"hsl"+(bAlpha==true&&bSupAlpha==false?'a':'')+"("+Math.round(h*360)+", "+Math.round(s*100)+"%, "+Math.round(l*100)+"%"+(bAlpha==true&&bSupAlpha==false?", "+a:'')+")";
-    }
-return undefined;
-}; */
+depose.addEventListener("drop", colorNameTrigger);
+fileField.addEventListener('change', colorNameTrigger);

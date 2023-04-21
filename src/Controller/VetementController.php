@@ -8,15 +8,19 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Color;
 use App\Entity\Vetement;
 use App\Entity\TagAmbiance;
-use App\Repository\VetementRepository;
 use App\Entity\User;
+use App\Repository\VetementRepository;
 use App\Repository\ColorRepository;
 use App\Repository\UserRepository;
 use App\Repository\TagAmbianceRepository;
+use App\Repository\ReferenceColorRepository;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\VetementFormType;
 use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class VetementController extends AbstractController
 {
@@ -114,5 +118,22 @@ class VetementController extends AbstractController
             'controller_name' => 'DressingController',
             'form' => $form,
         ]);
+    }
+
+    #[Route('/hsl/{h}/{s}/{l}/', name: 'app_hsl')]
+    public function hsl($h, $s, $l, ReferenceColorRepository $referenceColorRepository): JsonResponse
+    {
+        $listColors = $referenceColorRepository->findBy(['active' => 1]);
+
+        foreach($listColors as $colors){
+            if($h >= $colors->gethMin() && $h <= $colors->gethMax() && $s >= $colors->getsMin() && $s <= $colors->getsMax() && $l >= $colors->getlMin() && $l <= $colors->getlMax()){
+                $colorName = $colors->getName();
+                // dd($colorName);
+            }
+        }
+
+        // dd($listColor);
+
+        return new JsonResponse(['colorName' => $colorName]);
     }
 }

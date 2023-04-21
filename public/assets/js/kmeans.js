@@ -1,5 +1,4 @@
 let newColor = document.getElementById('vetement_form_newColor');
-let nameColor = document.getElementById('vetement_form_nameColor');
 let vetementColor1 = document.getElementById('vetement_form_color');
 
 function euclidean(p1, p2) {
@@ -170,27 +169,15 @@ function analyze(ctx) {
         // Récupération des éléments DOM permettant d'afficher les couleurs
             // , p1 = document.getElementById('color1')
             // , p2 = document.getElementById('color2')
-            pt1 = document.getElementById('colorName1')
+        var color1 = document.getElementById('color1')
             // , pt2 = document.getElementById('colorName2')
             // , p3 = document.getElementById('c3');
-        let hexa1 = colors[0].substring(1);
         // console.log(hexa1);
         // let hexa2 = colors[2].substring(1);
         //RÉCUPÉRATION DES NOMS DES COULEURS DANS LA BASE DE DONNÉES POUR AFFICHAGE
-        fetch('/testcolorname/' + hexa1)
-            .then(function (header) {
-                return header.json();
-            })
-            .then(function (body) {
-                pt1.innerHTML = `
-                    <p class="card-color card-data">${body.colorname}</p><span
-                    id="color1" class="card-data"
-                    class="color-mark" style="background-color:${colors[0]}"></span>
-                    `;
-                nameColor.value = body.colorname;
-                vetementColor1.value = colors[1];
-            });
-            newColor.value = colors[1];
+        color1.style.backgroundColor = colors[0];
+        vetementColor1.value = colors[0];
+        newColor.value = colors[0];
 
         // fetch('/testcolorname/' + hexa2)
         //     .then(function (header) {
