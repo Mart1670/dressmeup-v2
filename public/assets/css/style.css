@@ -309,10 +309,6 @@ main .bg-bas{
     background-image: url("../img/pant.svg");
 }
 
-.slider, #display-generator{
-    width: 100%;
-}
-
 #generateur a{
     text-decoration: none;
 }
@@ -421,6 +417,7 @@ main .bg-bas{
     #display-generator div:nth-child(4){
         order: 3;
     }
+
 }
 
 /*********************************/
@@ -430,6 +427,33 @@ main .bg-bas{
 /*********************************/
 /***           CARDS           ***/
 /*********************************/
+
+.slider, #display-generator{
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-pagination{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px !important;
+    margin-block-start: 30px;
+}
+
+.swiper-pagination-bullet{
+    opacity: 1;
+    background: var(--ice);
+}
+
+.swiper-pagination-bullet-active{
+    border: solid 10px var(--ice);
+}
 
 .cards-style{
     max-width: 300px;
@@ -550,6 +574,15 @@ main .bg-bas{
         width: 100%;
         display: flex;
         justify-content: space-between;
+    }
+
+    .swiper-wrapper{
+        
+    }
+
+    .swiper-slide{
+       display: flex;
+       justify-content: center;
     }
 
     #card-generator .cards-style{

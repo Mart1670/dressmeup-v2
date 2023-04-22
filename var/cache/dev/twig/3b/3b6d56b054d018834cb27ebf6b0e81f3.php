@@ -193,161 +193,181 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
 
       <!-- SECTION : Cards 3 styles vestimentaires (bootstrap) -->
       <section id=\"card-generator\" class=\"container\">
-        <div class=\"slider\">
-          <!-- SECTION : CARD 1 -->
-          <div class=\"cards-style\">
-            <div class=\"card-header\">
-              <h5>Mix and Match</h5>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardHaut1\" class=\"main-generator bg-haut\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
+        ";
+        // line 116
+        echo "        ";
+        // line 117
+        echo "          <!-- Slider main container -->
+          <div class=\"swiper\">
+            <!-- Additional required wrapper -->
+            <div class=\"swiper-wrapper\">
+              <!-- Slides -->
+              <div class=\"swiper-slide\">
+                <!-- SECTION : CARD 1 -->
+                <div class=\"cards-style\">
+                  <div class=\"card-header\">
+                    <h5>Mix and Match</h5>
                   </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                  <div class=\"card-content\">
+                    <div id=\"cardHaut1\" class=\"main-generator bg-haut\">
                     </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardBas1\" class=\"main-generator bg-bas\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
-                  </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
-                    </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FIN SECTION : CARD 1 -->
-
-          <!-- SECTION : CARD 2 -->
-          <div class=\"cards-style\">
-            <div class=\"card-header\">
-              <h5 id=\"doute\">Tu as un doute ?</h5>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardHaut2\" class=\"main-generator bg-haut\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
-                  </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                  <div class=\"card-content\">
+                    <div id=\"cardBas1\" class=\"main-generator bg-bas\">
                     </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <!-- FIN SECTION : CARD 1 -->
               </div>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardBas2\" class=\"main-generator bg-bas\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
+              <div class=\"swiper-slide\">
+                <!-- SECTION : CARD 2 -->
+                <div class=\"cards-style\">
+                  <div class=\"card-header\">
+                    <h5 id=\"doute\">Tu as un doute ?</h5>
                   </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                  <div class=\"card-content\">
+                    <div id=\"cardHaut2\" class=\"main-generator bg-haut\">
                     </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FIN SECTION : CARD 2 -->
-
-          <!-- SECTION : CARD 3 -->
-          <div class=\"cards-style\">
-            <div class=\"card-header\">
-              <h5 id=\"chance\">Dernière chance</h5>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardHaut3\" class=\"main-generator bg-haut\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
-                  </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
-                    </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardBas3\" class=\"main-generator bg-bas\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
-                  </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                  <div class=\"card-content\">
+                    <div id=\"cardBas2\" class=\"main-generator bg-bas\">
                     </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <!-- FIN SECTION : CARD 2 -->
+              </div>
+              <div class=\"swiper-slide\">
+                <!-- SECTION : CARD 3 -->
+                <div class=\"cards-style\">
+                  <div class=\"card-header\">
+                    <h5 id=\"chance\">Dernière chance</h5>
+                  </div>
+                  <div class=\"card-content\">
+                    <div id=\"cardHaut3\" class=\"main-generator bg-haut\">
+                    </div>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class=\"card-content\">
+                    <div id=\"cardBas3\" class=\"main-generator bg-bas\">
+                    </div>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- FIN SECTION : CARD 3 -->
               </div>
             </div>
-          </div>
-          <!-- FIN SECTION : CARD 3 -->
-        </div>
-        <div id=\"dot-list\" style=\"display:none\">
-          <span class=\"dot active\" data-index=\"0\"></span> 
-          <span class=\"dot\" data-index=\"1\"></span> 
-          <span class=\"dot\" data-index=\"2\"></span> 
-        </div>
-      </section>
+            <!-- If we need pagination -->
+            <div class=\"swiper-pagination\"></div>
+        
+          ";
+        // line 268
+        echo "          ";
+        // line 273
+        echo "          ";
+        // line 274
+        echo "        ";
+        // line 275
+        echo "      </section>
       <script src=\"";
-        // line 260
+        // line 276
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/generateur.js"), "html", null, true);
         echo "\"></script>
+      <script src=\"https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js\"></script>
       <script src=\"";
-        // line 261
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/slide.js"), "html", null, true);
+        // line 278
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/swiper.js"), "html", null, true);
         echo "\"></script>
-      <script src=\"";
-        // line 262
+      ";
+        // line 280
+        echo "      <script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/mix&match.js"), "html", null, true);
         echo "\"></script>
 
@@ -370,7 +390,7 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
 
     public function getDebugInfo()
     {
-        return array (  351 => 262,  347 => 261,  343 => 260,  186 => 106,  173 => 95,  167 => 91,  161 => 89,  157 => 87,  155 => 86,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  370 => 280,  366 => 278,  361 => 276,  358 => 275,  356 => 274,  354 => 273,  352 => 268,  200 => 117,  198 => 116,  186 => 106,  173 => 95,  167 => 91,  161 => 89,  157 => 87,  155 => 86,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -489,153 +509,171 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
 
       <!-- SECTION : Cards 3 styles vestimentaires (bootstrap) -->
       <section id=\"card-generator\" class=\"container\">
-        <div class=\"slider\">
-          <!-- SECTION : CARD 1 -->
-          <div class=\"cards-style\">
-            <div class=\"card-header\">
-              <h5>Mix and Match</h5>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardHaut1\" class=\"main-generator bg-haut\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
+        {# <div class=\"slider\"> #}
+        {# <div id=\"card-generator-container\"> #}
+          <!-- Slider main container -->
+          <div class=\"swiper\">
+            <!-- Additional required wrapper -->
+            <div class=\"swiper-wrapper\">
+              <!-- Slides -->
+              <div class=\"swiper-slide\">
+                <!-- SECTION : CARD 1 -->
+                <div class=\"cards-style\">
+                  <div class=\"card-header\">
+                    <h5>Mix and Match</h5>
                   </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                  <div class=\"card-content\">
+                    <div id=\"cardHaut1\" class=\"main-generator bg-haut\">
                     </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardBas1\" class=\"main-generator bg-bas\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
-                  </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
-                    </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FIN SECTION : CARD 1 -->
-
-          <!-- SECTION : CARD 2 -->
-          <div class=\"cards-style\">
-            <div class=\"card-header\">
-              <h5 id=\"doute\">Tu as un doute ?</h5>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardHaut2\" class=\"main-generator bg-haut\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
-                  </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                  <div class=\"card-content\">
+                    <div id=\"cardBas1\" class=\"main-generator bg-bas\">
                     </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <!-- FIN SECTION : CARD 1 -->
               </div>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardBas2\" class=\"main-generator bg-bas\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
+              <div class=\"swiper-slide\">
+                <!-- SECTION : CARD 2 -->
+                <div class=\"cards-style\">
+                  <div class=\"card-header\">
+                    <h5 id=\"doute\">Tu as un doute ?</h5>
                   </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                  <div class=\"card-content\">
+                    <div id=\"cardHaut2\" class=\"main-generator bg-haut\">
                     </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- FIN SECTION : CARD 2 -->
-
-          <!-- SECTION : CARD 3 -->
-          <div class=\"cards-style\">
-            <div class=\"card-header\">
-              <h5 id=\"chance\">Dernière chance</h5>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardHaut3\" class=\"main-generator bg-haut\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
-                  </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
-                    </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class=\"card-content\">
-              <div id=\"cardBas3\" class=\"main-generator bg-bas\">
-              </div>
-              <div class=\"info-vetement\">
-                <div>
-                  <div>
-                    <p class=\"card-type card-data\">Type de vêtement</p>
-                  </div>
-                  <div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                  <div class=\"card-content\">
+                    <div id=\"cardBas2\" class=\"main-generator bg-bas\">
                     </div>
-                    <div>
-                      <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
+                <!-- FIN SECTION : CARD 2 -->
+              </div>
+              <div class=\"swiper-slide\">
+                <!-- SECTION : CARD 3 -->
+                <div class=\"cards-style\">
+                  <div class=\"card-header\">
+                    <h5 id=\"chance\">Dernière chance</h5>
+                  </div>
+                  <div class=\"card-content\">
+                    <div id=\"cardHaut3\" class=\"main-generator bg-haut\">
+                    </div>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class=\"card-content\">
+                    <div id=\"cardBas3\" class=\"main-generator bg-bas\">
+                    </div>
+                    <div class=\"info-vetement\">
+                      <div>
+                        <div>
+                          <p class=\"card-type card-data\">Type de vêtement</p>
+                        </div>
+                        <div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 1</p><span class=\"span-color1 card-data\"></span>
+                          </div>
+                          <div>
+                            <p class=\"card-color card-data\">Couleur 2</p><span class=\"span-color2 card-data\"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- FIN SECTION : CARD 3 -->
               </div>
             </div>
-          </div>
-          <!-- FIN SECTION : CARD 3 -->
-        </div>
-        <div id=\"dot-list\" style=\"display:none\">
-          <span class=\"dot active\" data-index=\"0\"></span> 
-          <span class=\"dot\" data-index=\"1\"></span> 
-          <span class=\"dot\" data-index=\"2\"></span> 
-        </div>
+            <!-- If we need pagination -->
+            <div class=\"swiper-pagination\"></div>
+        
+          {# </div> #}
+          {# <div id=\"dot-list\" style=\"display:none\">
+              <span class=\"dot active\" data-index=\"0\"></span> 
+              <span class=\"dot\" data-index=\"1\"></span> 
+              <span class=\"dot\" data-index=\"2\"></span> 
+            </div> #}
+          {# </div> #}
+        {# </div> #}
       </section>
       <script src=\"{{ asset('assets/js/generateur.js') }}\"></script>
-      <script src=\"{{ asset('assets/js/slide.js') }}\"></script>
+      <script src=\"https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js\"></script>
+      <script src=\"{{ asset('assets/js/swiper.js') }}\"></script>
+      {# <script src=\"{{ asset('assets/js/slide.js') }}\"></script> #}
       <script src=\"{{ asset('assets/js/mix&match.js') }}\"></script>
 
     <!-- FIN SECTION : Cards 3 styles vestimentaires (bootstrap) -->

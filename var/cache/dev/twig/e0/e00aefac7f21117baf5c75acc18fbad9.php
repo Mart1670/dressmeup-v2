@@ -63,16 +63,20 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
 \t\t<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
 \t\t<link href=\"https://fonts.googleapis.com/css2?family=Changa+One&family=Changa:wght@400;700;800&display=swap\" rel=\"stylesheet\">
+\t\t<link
+\t\trel=\"stylesheet\"
+\t\thref=\"https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css\"
+\t\t/>
 \t\t";
-        // line 22
+        // line 26
         echo "\t\t<link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/assets/css/style.css"), "html", null, true);
         echo "\">
 
 \t\t";
-        // line 24
+        // line 28
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 27
+        // line 31
         echo "\t</head>
 \t<body>
 \t\t<header>
@@ -88,83 +92,83 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t\t\t<div>
 \t\t\t\t\t<a href=\"/\">Accueil</a>
 \t\t\t\t\t<a href=\"";
-        // line 41
+        // line 45
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dressing");
         echo "\">Dressing</a>
 \t\t\t\t\t<a href=\"https://dressmeup.alwaysdata.net/\">Blog</a>
 \t\t\t\t\t<a href=\"";
-        // line 43
+        // line 47
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_about");
         echo "\">Concept</a>
 \t\t\t\t</div>
 \t\t\t\t<div id=\"user-connect\">
 \t\t\t\t\t<a href=\"/#anchor-mix\">Mix & Match</a>
 \t\t\t\t\t";
-        // line 47
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 47, $this->source); })()), "user", [], "any", false, false, false, 47) == null)) {
-            // line 48
+        // line 51
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 51, $this->source); })()), "user", [], "any", false, false, false, 51) == null)) {
+            // line 52
             echo "\t\t\t\t\t\t<a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\"><i class=\"fa-solid fa-circle-user\"></i> Se Connecter</a>
 \t\t\t\t\t";
         } else {
-            // line 50
+            // line 54
             echo "\t\t\t\t\t\t<a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user");
             echo "\"><i class=\"fa-solid fa-circle-user\"></i> ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 50, $this->source); })()), "user", [], "any", false, false, false, 50), "firstname", [], "any", false, false, false, 50), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 54, $this->source); })()), "user", [], "any", false, false, false, 54), "firstname", [], "any", false, false, false, 54), "html", null, true);
             echo "</a>
 \t\t\t\t\t";
         }
-        // line 52
+        // line 56
         echo "\t\t\t\t\t";
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 52, $this->source); })()), "user", [], "any", false, false, false, 52) != null)) {
-            // line 53
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 56, $this->source); })()), "user", [], "any", false, false, false, 56) != null)) {
+            // line 57
             echo "\t\t\t\t\t\t<a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\"> Se déconnecter </a>
 \t\t\t\t\t";
         }
-        // line 55
+        // line 59
         echo "\t\t\t\t</div>
 \t\t\t</nav>
 \t\t</header>
 \t\t<main>
 \t\t\t";
-        // line 59
+        // line 63
         $this->displayBlock('body', $context, $blocks);
-        // line 60
+        // line 64
         echo "\t\t</main>
 \t\t<footer>
 \t\t\t<div ";
-        // line 62
+        // line 66
         echo ">
 \t\t\t\t<nav id=\"navbarfooter\" class=\"col-sm-12 justify-content-between\">
 \t\t\t\t\t<a href=\"";
-        // line 64
+        // line 68
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_legal");
         echo "\">Mentions légales</a>
 \t\t\t\t\t<a href=\"";
-        // line 65
+        // line 69
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_join_us");
         echo "\">Nous rejoindre</a>
 \t\t\t\t\t<a href=\"";
-        // line 66
+        // line 70
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_accessibility");
         echo "\">Accessibilité</a>
 \t\t\t\t\t<a href=\"";
-        // line 67
+        // line 71
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_terms_of_use");
         echo "\">CGU</a>
 \t\t\t\t\t<a href=\"";
-        // line 68
+        // line 72
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_privacy");
         echo "\">Politique de confidentialité</a>
 \t\t\t\t</nav>
 \t\t\t\t<div>
 \t\t\t\t\t<section id=\"newsletter\">
 \t\t\t\t\t\t<form class=\"hide-submit\" action=\"";
-        // line 72
+        // line 76
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_formulaire");
         echo "\">
 \t\t\t\t\t\t\t<h4>Inscris toi à notre newsletter pour recevoir
@@ -204,11 +208,11 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t</footer>
   </body>
   <script src=\"";
-        // line 109
+        // line 113
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/navbar.js"), "html", null, true);
         echo "\"></script>
 ";
-        // line 110
+        // line 114
         $this->displayBlock('javascripts', $context, $blocks);
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -229,14 +233,14 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 
     }
 
-    // line 24
+    // line 28
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 25
+        // line 29
         echo "\t\t\t";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_link_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -246,7 +250,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 
     }
 
-    // line 59
+    // line 63
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -258,14 +262,14 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 
     }
 
-    // line 110
+    // line 114
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 111
+        // line 115
         echo "    ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_script_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -288,7 +292,7 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 
     public function getDebugInfo()
     {
-        return array (  269 => 111,  262 => 110,  250 => 59,  240 => 25,  233 => 24,  226 => 12,  219 => 11,  212 => 110,  208 => 109,  168 => 72,  161 => 68,  157 => 67,  153 => 66,  149 => 65,  145 => 64,  141 => 62,  137 => 60,  135 => 59,  129 => 55,  123 => 53,  120 => 52,  112 => 50,  106 => 48,  104 => 47,  97 => 43,  92 => 41,  76 => 27,  74 => 24,  68 => 22,  58 => 13,  56 => 11,  44 => 1,);
+        return array (  273 => 115,  266 => 114,  254 => 63,  244 => 29,  237 => 28,  230 => 12,  223 => 11,  216 => 114,  212 => 113,  172 => 76,  165 => 72,  161 => 71,  157 => 70,  153 => 69,  149 => 68,  145 => 66,  141 => 64,  139 => 63,  133 => 59,  127 => 57,  124 => 56,  116 => 54,  110 => 52,  108 => 51,  101 => 47,  96 => 45,  80 => 31,  78 => 28,  72 => 26,  58 => 13,  56 => 11,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -313,6 +317,10 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">
 \t\t<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>
 \t\t<link href=\"https://fonts.googleapis.com/css2?family=Changa+One&family=Changa:wght@400;700;800&display=swap\" rel=\"stylesheet\">
+\t\t<link
+\t\trel=\"stylesheet\"
+\t\thref=\"https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css\"
+\t\t/>
 \t\t{# <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65\" crossorigin=\"anonymous\"> #}
 \t\t<link rel=\"stylesheet\" href=\"{{asset('/assets/css/style.css')}}\">
 
