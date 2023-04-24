@@ -32,19 +32,19 @@ return [
         0 => '{^(?'
                 .'|/_error/(\\d+)(?:\\.([^/]++))?(*:35)'
                 .'|/style/([^/]++)(*:57)'
-                .'|/list\\-vetements/([^/]++)(*:89)'
-                .'|/delete/([^/]++)/([^/]++)(*:121)'
-                .'|/testcolorname/([^/]++)(*:152)'
-                .'|/hsl/([^/]++)/([^/]++)/([^/]++)(*:191)'
+                .'|/list\\-vetements/([^/]++)/([^/]++)(*:98)'
+                .'|/delete/([^/]++)/([^/]++)(*:130)'
+                .'|/testcolorname/([^/]++)(*:161)'
+                .'|/hsl/([^/]++)/([^/]++)/([^/]++)(*:200)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
         35 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
         57 => [[['_route' => 'app_style', '_controller' => 'App\\Controller\\DressingController::top'], ['type'], null, null, false, true, null]],
-        89 => [[['_route' => 'app_list-vetements', '_controller' => 'App\\Controller\\DressingController::bottom'], ['type'], null, null, false, true, null]],
-        121 => [[['_route' => 'app_delete', '_controller' => 'App\\Controller\\DressingController::delete'], ['type', 'id'], null, null, false, true, null]],
-        152 => [[['_route' => 'app_testcolorname', '_controller' => 'App\\Controller\\TestpaletteController::colorname'], ['hexa1'], null, null, false, true, null]],
-        191 => [
+        98 => [[['_route' => 'app_list-vetements', '_controller' => 'App\\Controller\\DressingController::bottom'], ['type', 'style'], null, null, false, true, null]],
+        130 => [[['_route' => 'app_delete', '_controller' => 'App\\Controller\\DressingController::delete'], ['type', 'id'], null, null, false, true, null]],
+        161 => [[['_route' => 'app_testcolorname', '_controller' => 'App\\Controller\\TestpaletteController::colorname'], ['hexa1'], null, null, false, true, null]],
+        200 => [
             [['_route' => 'app_hsl', '_controller' => 'App\\Controller\\VetementController::hsl'], ['h', 's', 'l'], null, null, true, true, null],
             [null, null, null, null, false, false, 0],
         ],

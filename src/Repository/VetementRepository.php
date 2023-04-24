@@ -51,6 +51,19 @@ class VetementRepository extends ServiceEntityRepository
         ;
    }
 
+   public function filterDressingContent($userId, $type, $style): array
+{
+        return $this->createQueryBuilder('r')
+            ->andWhere('r.user = :id AND r.type = :type AND r.style = :style')
+            //->andWhere('r.min<= :val AND r.max >= :val')
+            ->setParameter('id', $userId)
+            ->setParameter('type', $type)
+            ->setParameter('style', $style)
+            ->getQuery()
+            ->getResult()
+        ;
+   }
+
 
 //**
 //     * @return Vetement[] Returns an array of Vetement objects

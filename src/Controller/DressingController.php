@@ -42,16 +42,23 @@ class DressingController extends AbstractController
         return new JsonResponse(['typeVetements' => $typeVetements]);
     }
 
-    #[Route('/list-vetements/{type}', name: 'app_list-vetements')]
+    #[Route('/list-vetements/{type}/{style}', name: 'app_list-vetements')]
     //#[Route('/bottom', name: 'app_bottom')]
-    public function bottom($type, VetementRepository $vetementRepository, UserRepository $userRepository, ColorRepository $colorRepository): JsonResponse
+    public function bottom($type, $style, VetementRepository $vetementRepository, UserRepository $userRepository, ColorRepository $colorRepository): JsonResponse
     {   
         // Recover the logged user id
         $users = $this->getUser()->getId();
         //dd($users);
         
         // Recovering the corresponding clothes by type chosen by the user in the dressing using a custom request
-        $listeVetements = $vetementRepository->findDressingContent($users, $type);
+
+        // dd($style);
+
+        if($style == "Tout"){
+            $listeVetements = $vetementRepository->findDressingContent($users, $type);
+        } else {
+            $listeVetements = $vetementRepository->filterDressingContent($users, $type, $style);
+        }
         //dd($listeVetements);
 
         // Creation of an empty tab which will store the requested user clothes

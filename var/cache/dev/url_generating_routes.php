@@ -10,7 +10,7 @@ return [
     'app_colortest' => [[], ['_controller' => 'App\\Controller\\ColortestController::index'], [], [['text', '/colortest']], [], [], []],
     'app_dressing' => [[], ['_controller' => 'App\\Controller\\DressingController::index'], [], [['text', '/dressing']], [], [], []],
     'app_style' => [['type'], ['_controller' => 'App\\Controller\\DressingController::top'], [], [['variable', '/', '[^/]++', 'type', true], ['text', '/style']], [], [], []],
-    'app_list-vetements' => [['type'], ['_controller' => 'App\\Controller\\DressingController::bottom'], [], [['variable', '/', '[^/]++', 'type', true], ['text', '/list-vetements']], [], [], []],
+    'app_list-vetements' => [['type', 'style'], ['_controller' => 'App\\Controller\\DressingController::bottom'], [], [['variable', '/', '[^/]++', 'style', true], ['variable', '/', '[^/]++', 'type', true], ['text', '/list-vetements']], [], [], []],
     'app_delete' => [['type', 'id'], ['_controller' => 'App\\Controller\\DressingController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['variable', '/', '[^/]++', 'type', true], ['text', '/delete']], [], [], []],
     'app_formulaire' => [[], ['_controller' => 'App\\Controller\\FormulaireController::index'], [], [['text', '/formulaire']], [], [], []],
     'app_home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], [], []],

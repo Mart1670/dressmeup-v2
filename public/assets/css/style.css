@@ -622,6 +622,13 @@ main .bg-bas{
 
 }
 
+#dressing button{
+    border: none;
+    font-family: 'Changa', cursive;
+    line-height: 100%;
+    cursor: pointer;
+}
+
 #dressing-content{
     display: flex;
     flex-direction: column;
@@ -636,7 +643,7 @@ main .bg-bas{
     justify-content: end;
 }
 
-#add-wide-cloth{
+.add-wide-cloth{
     width: 300px;
     height: 400px;
     background: url("../../assets/img/add-icon-big.svg"),
@@ -696,9 +703,8 @@ main .bg-bas{
 @media screen and (min-width: 1724px){
 
     #dressing-content{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content:space-around
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 

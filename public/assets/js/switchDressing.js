@@ -12,14 +12,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //FONCTION SWITCH LES VÊTEMENTS HAUTS ET BAS AVEC RÉCUPÉRATION DES INFOS EN BASE DE DONNÉE + AFFICHAGES
     function switchDressingContent(e) {
-        console.log(e);
+        // console.log(e);
         if(e.currentTarget != null){
             dressingContent.dataset['type'] = e.currentTarget.textContent;
             type = e.currentTarget.textContent;
         }
-        console.log(type);
+        // console.log(type);
 
-        loadDressingContent(type);
+        loadDressingContent(type, "Tout");
     }
 
     //DÉCLENCHEMENT DE LA FONCTION AU CLIQUE
