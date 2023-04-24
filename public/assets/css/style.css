@@ -576,18 +576,16 @@ main .bg-bas{
         justify-content: space-between;
     }
 
-    .swiper-wrapper{
-        
+    .swiper-slide:nth-child(1) .cards-style{
+        margin-inline-start: 0px;
     }
 
-    .swiper-slide{
-       display: flex;
-       justify-content: center;
+    .swiper-slide:nth-child(3) .cards-style{
+        margin-inline-end: 0px;
     }
 
     #card-generator .cards-style{
         width: 360px !important;
-        margin-inline: 0px;
     }
 
     .card-content{
