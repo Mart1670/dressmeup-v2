@@ -36,9 +36,13 @@ class Palette
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $Color5 = null;
 
+    #[ORM\ManyToMany(targetEntity: TagHumeur::class)]
+    private Collection $tagHumeur;
+
     public function __construct()
     {
         $this->color = new ArrayCollection();
+        $this->tagHumeur = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -138,6 +142,30 @@ class Palette
     public function setColor5(?string $Color5): self
     {
         $this->Color5 = $Color5;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, TagHumeur>
+     */
+    public function getTagHumeur(): Collection
+    {
+        return $this->tagHumeur;
+    }
+
+    public function addTagHumeur(TagHumeur $tagHumeur): self
+    {
+        if (!$this->tagHumeur->contains($tagHumeur)) {
+            $this->tagHumeur->add($tagHumeur);
+        }
+
+        return $this;
+    }
+
+    public function removeTagHumeur(TagHumeur $tagHumeur): self
+    {
+        $this->tagHumeur->removeElement($tagHumeur);
 
         return $this;
     }

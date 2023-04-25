@@ -18,8 +18,8 @@ class TagHumeur
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $category = null;
+/*     #[ORM\Column(length: 255)]
+    private ?string $category = null; */
 
 /*     #[ORM\ManyToMany(targetEntity: Vetement::class, mappedBy: 'tag')]
     private Collection $vetements; */
@@ -46,7 +46,7 @@ class TagHumeur
         return $this;
     }
 
-    public function getCategory(): ?string
+/*     public function getCategory(): ?string
     {
         return $this->category;
     }
@@ -56,7 +56,7 @@ class TagHumeur
         $this->category = $category;
 
         return $this;
-    }
+    } */
 
     /**
      * @return Collection<int, Vetement>
@@ -84,4 +84,8 @@ class TagHumeur
 
         return $this;
     } */
+
+    public function __toString(){
+        return $this->name; //or anything else
+    }
 }

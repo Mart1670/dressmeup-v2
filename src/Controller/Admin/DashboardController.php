@@ -13,6 +13,8 @@ use App\Controller\Admin\ReferenceColorCrudController;
 use App\Entity\Color;
 use App\Entity\ReferenceColor;
 use App\Entity\Vetement;
+use App\Entity\Palette;
+use App\Entity\TagHumeur;
 
 class DashboardController extends AbstractDashboardController
 {
@@ -42,7 +44,7 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Skeleton');
+            ->setTitle('Admin');
     }
 
     public function configureMenuItems(): iterable
@@ -51,5 +53,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Color', 'fas fa-list', Color::class);
         yield MenuItem::linkToCrud('Reference Color', 'fas fa-list', ReferenceColor::class);
         yield MenuItem::linkToCrud('Vetement', 'fas fa-list', Vetement::class);
+        yield MenuItem::linkToCrud('Palette', 'fas fa-list', Palette::class);
+        yield MenuItem::linkToCrud('TagHumeur', 'fas fa-list', TagHumeur::class);
     }
 }
