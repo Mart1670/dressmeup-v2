@@ -36,14 +36,15 @@ window.addEventListener('DOMContentLoaded', () => {
     //FONCTION DU MIX AND MATCH AVEC RÉCUPÉRATION DES INFORMATIONS EN BASE DE DONNÉE
     function mixMatch() {
         clic++;
+        let ambiance = document.getElementById('oneTagAmbiance').dataset.index;
         //console.log(clic);
-        fetch('/generator/')
+        fetch('/generator/' + ambiance)
             .then(function (header) {
                 return header.json();
             })
             .then(function (body) {
                 body = JSON.parse(body);
-                //console.log(body.combinaisons[0]);
+                console.log(body.combinaisons/* [0] */);
 
                 //COMBINAISON DE LA PREMIÈRE CARTE + AFFICHAGE 
                 if (clic == 1) {
@@ -154,6 +155,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         
         oneTamb.textContent = "Travail";
+        oneTamb.dataset.index = "2";
 
         li[0].textContent = `Type de vêtement`;
         li[1].textContent = `Couleur 1`;

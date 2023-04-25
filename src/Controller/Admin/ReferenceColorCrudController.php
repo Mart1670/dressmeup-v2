@@ -24,7 +24,13 @@ class ReferenceColorCrudController extends AbstractCrudController
             IntegerField::new('r'),
             IntegerField::new('g'),
             IntegerField::new('b'),
-            BooleanField::new('active')
+            BooleanField::new('active'),
+            IntegerField::new('hMin'),
+            IntegerField::new('hMax'),
+            IntegerField::new('sMin'),
+            IntegerField::new('sMax'),
+            IntegerField::new('lMin'),
+            IntegerField::new('lMax'),
         ];
     }
 }

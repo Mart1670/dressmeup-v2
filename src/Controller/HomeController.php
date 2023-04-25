@@ -20,15 +20,15 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/generator', name: 'app_generator')]
-    public function generator(VetementRepository $vetementRepository, ColorRepository $colorRepository, PaletteRepository $paletteRepository, ): JsonResponse
+    #[Route('/generator/{ambiance}', name: 'app_generator')]
+    public function generator($ambiance, VetementRepository $vetementRepository, ColorRepository $colorRepository, PaletteRepository $paletteRepository, ): JsonResponse
     {   
         $users = $this->getUser()->getId();
 
         // Récupérer les vêtements Hauts et Bas de l'utilisateur
-        $hauts = $vetementRepository->findDressingContent($users, 'Haut');
+        $hauts = $vetementRepository->findDressingContentByAmbiance($users, 'Haut', $ambiance);
         // dd($hauts);
-        $bas = $vetementRepository->findDressingContent($users, 'Bas');
+        $bas = $vetementRepository->findDressingContentByAmbiance($users, 'Bas', $ambiance);
         // dd($bas);
 
         //Récupérer toutes les palettes stockées en BDD
@@ -275,7 +275,7 @@ class HomeController extends AbstractController
                             // Inserting the current combination into the combination tab to avoid duplicates
                             array_push($combinaison, $currentCombinaison);
 
-                            //var_dump($combinaison);
+                            // dd($combinaison);
                             $index++;
                     }
                 }

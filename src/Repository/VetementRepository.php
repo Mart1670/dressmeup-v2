@@ -51,18 +51,19 @@ class VetementRepository extends ServiceEntityRepository
         ;
    }
 
-   /* public function findDressingContentByAmbiance($userId, $type, $ambiance): array
+   public function findDressingContentByAmbiance($userId, $type, $ambiance): array
    {
-           return $this->createQueryBuilder('r')
-               ->andWhere('r.user = :id AND r.type = :type')
-               //->andWhere('r.min<= :val AND r.max >= :val')
+           return $this->createQueryBuilder('v')
+               ->where('v.user = :id AND v.type = :type')
+               ->andWhere('a.id = :ambianceId')
+               ->join('v.tagAmbiances', 'a')
                ->setParameter('id', $userId)
                ->setParameter('type', $type)
-               ->setParameter('type', $type, $ambiance)
+               ->setParameter('ambianceId', $ambiance)
                ->getQuery()
                ->getResult()
            ;
-      } */
+      }
 
    public function filterDressingContent($userId, $type, $style): array
 {

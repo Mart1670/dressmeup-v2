@@ -119,22 +119,22 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
         <div class=\"tag\"id=\"tagAmbiance\">
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance1\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance1\">Sortie entre amis</label>
+          <label class=\"button-tags\" for=\"TagAmbiance1\" data-index=\"1\">Sortie entre amis</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance2\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance2\">Travail</label>
+          <label class=\"button-tags\" for=\"TagAmbiance2\" data-index=\"2\">Travail</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance3\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance3\">Sport</label>
+          <label class=\"button-tags\" for=\"TagAmbiance3\" data-index=\"3\">Sport</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance4\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance4\">Détente</label>
+          <label class=\"button-tags\" for=\"TagAmbiance4\" data-index=\"4\">Détente</label>
 
-          <input class=\"button-tags\" type=\"radio\" class=name=\"optionsA\" id=\"TagAmbiance5\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance5\">Rendez-vous Romantique</label>
+          <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance5\" autocomplete=\"off\">
+          <label class=\"button-tags\" for=\"TagAmbiance5\" data-index=\"5\">Rendez-vous Romantique</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance6\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance6\">Rien de prévu</label>
+          <label class=\"button-tags\" for=\"TagAmbiance6\" data-index=\"6\">Rien de prévu</label>
             
         </div>
       </section>
@@ -172,7 +172,7 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
         // line 95
         echo ">
                 <ul>
-                  <li class=\"button-tags\" id=\"oneTagHumeur\">Excité</li>
+                  <li class=\"button-tags\" id=\"oneTagHumeur\" data-index=\"2\">Excité</li>
                   <li class=\"button-tags\" id=\"oneTagAmbiance\">Travail</li>
                 </ul>
               </div>
@@ -449,22 +449,22 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
         <div class=\"tag\"id=\"tagAmbiance\">
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance1\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance1\">Sortie entre amis</label>
+          <label class=\"button-tags\" for=\"TagAmbiance1\" data-index=\"1\">Sortie entre amis</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance2\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance2\">Travail</label>
+          <label class=\"button-tags\" for=\"TagAmbiance2\" data-index=\"2\">Travail</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance3\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance3\">Sport</label>
+          <label class=\"button-tags\" for=\"TagAmbiance3\" data-index=\"3\">Sport</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance4\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance4\">Détente</label>
+          <label class=\"button-tags\" for=\"TagAmbiance4\" data-index=\"4\">Détente</label>
 
-          <input class=\"button-tags\" type=\"radio\" class=name=\"optionsA\" id=\"TagAmbiance5\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance5\">Rendez-vous Romantique</label>
+          <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance5\" autocomplete=\"off\">
+          <label class=\"button-tags\" for=\"TagAmbiance5\" data-index=\"5\">Rendez-vous Romantique</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsA\" id=\"TagAmbiance6\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"TagAmbiance6\">Rien de prévu</label>
+          <label class=\"button-tags\" for=\"TagAmbiance6\" data-index=\"6\">Rien de prévu</label>
             
         </div>
       </section>
@@ -491,7 +491,7 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
               <p>Sélection:</p>
               <div{#  class=\"tag-selected\" #}>
                 <ul>
-                  <li class=\"button-tags\" id=\"oneTagHumeur\">Excité</li>
+                  <li class=\"button-tags\" id=\"oneTagHumeur\" data-index=\"2\">Excité</li>
                   <li class=\"button-tags\" id=\"oneTagAmbiance\">Travail</li>
                 </ul>
               </div>

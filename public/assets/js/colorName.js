@@ -1,7 +1,7 @@
 let color1 = document.getElementById("color1");
 let colorName1 = document.querySelector("#colorName1 p");
 let fileField = document.getElementById('vetement_form_image');
-let nameColor = document.getElementById('vetement_form_nameColor');
+let nameColorField = document.getElementById('vetement_form_nameColor');
 
 console.log(color1);
 
@@ -75,8 +75,9 @@ function colorNameTrigger(){
                 return header.json();
             })
             .then(function (body) {
+                console.log(colorName1);
                 colorName1.textContent = body.colorName;
-                nameColor1.value = body.colorname;
+                nameColorField.value = body.colorName;
         });
       }, 500);
 }

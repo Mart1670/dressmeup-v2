@@ -26,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
     //FONCTION POUR SELECTIONER AMBIANCE
     function selectAmbiance(e) {
         oneTamb.textContent = e.currentTarget.textContent;
+        oneTamb.dataset.index = e.currentTarget.dataset.index;
     }
 
     //DÉCLENCHEMENT DE LA FONCTION AU CLIC
