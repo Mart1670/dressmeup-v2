@@ -3,15 +3,6 @@
 {% block title %}DressMeUp - Profil{% endblock %}
  
 {% block body %}
-
-
-        <link rel="stylesheet" href="{{asset('/assets/css/profil.css')}}">
-       
-       
-         
-       
-
-
  <!-- PROFILE -->
    
       <section class="container">
@@ -20,36 +11,37 @@
         <form id="user">
             <div>
               <div id="avatar">
-                <img class="photo" src="./assets/user_avatar/profile-picture.jpg" alt="photo de profile">
+                <img class="photo" src="./assets/user_avatar/{{ app.user.avatar }}" alt="photo de profile">
                 {# <button type="submit"> Modifier</button> #}
               </div>
   
               <div class="user-data">
                 <label> Nom </label>
-                <input type="text" id="name" class="form-field" value="Camille"></input>
+                <input type="text" id="name" class="form-field" value="{{ app.user.firstname }}"></input>
               </div>
   
               <div class="user-data">
                 <label> E-mail </label>
-                <input type="text" id="mail" class="form-field" value="camillelelouche@yahoo.fr"></input>
+                <input type="text" id="mail" class="form-field" value="{{ app.user.email }}"></input>
               </div>
             </div>
 
             <div>
               <div class="user-data">
                 <label> Date de naissance </label>
-                <input type="date" id="birthdate" class="form-field" value="1990-07-03"></input>
+                {# {{ app.user.birthdate }} #}
+                <input type="date" id="birthdate" class="form-field" value="{{ app.user.birthdate|date('Y-m-d') }}"></input>
               </div>
   
               <div id="genre">
                 <legend>Genre</legend>
                 <div>
                   <div>
-                    <input type="radio" id="il" name="genre" checked="checked">
+                    <input type="radio" id="il" name="genre" {% if (app.user.sexe == "Il")%} checked="checked" {% endif %}>
                     <label class="button-tags" for="il">Il</label>
                   </div>
                   <div>
-                    <input type="radio" id="elle" name="genre">
+                    <input type="radio" id="elle" name="genre" {% if (app.user.sexe == "Elle")%} checked="checked" {% endif %}>
                     <label class="button-tags" for="elle">Elle</label>
                   </div>
                 </div>
@@ -57,7 +49,7 @@
   
               <div  class="user-data">
                 <label> Bio </label>
-                <textarea id="biographie" class="form-field">Fan de jeux vidéos et de cinéma. J'aime sortir avec des amis pour découvrir des nouveaux restaurants et faire des apréros jeux de société. J'essaie de me maintenir en forme.</textarea>
+                <textarea id="biographie" class="form-field">{{ app.user.bio }}</textarea>
               </div>
   
               <div id="submit-button">

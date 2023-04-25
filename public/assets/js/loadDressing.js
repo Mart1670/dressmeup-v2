@@ -100,12 +100,13 @@ function loadDressingContent(type, style){
             // console.log(body.typeVetements);
             ul.innerHTML = "";
             ul.innerHTML += `
-                <button id="style-all" class="button-tags typeBtn">Tout</button>
+                <input class="button-tags" type="radio" name="style" id="style-all" autocomplete="off" list checked="checked">
+                <label class="button-tags typeBtn" for="style-all">Tout</label>
             `;
             for (i = 0; i < body.typeVetements.length; i++) {
                 ul.innerHTML += `
-                <input class="button-tags" type="radio" name="style" id="type-${body.typeVetements[i]}" autocomplete="off" list>
-                <label class="button-tags typeBtn" for="type-${body.typeVetements[i]}">${body.typeVetements[i]}</label>
+                <input class="button-tags" type="radio" name="style" id="style-${body.typeVetements[i]}" autocomplete="off" list>
+                <label class="button-tags typeBtn" for="style-${body.typeVetements[i]}">${body.typeVetements[i]}</label>
             `;
 
         }   

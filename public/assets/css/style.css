@@ -622,13 +622,6 @@ main .bg-bas{
 
 }
 
-#dressing button{
-    border: none;
-    font-family: 'Changa', cursive;
-    line-height: 100%;
-    cursor: pointer;
-}
-
 #dressing-content{
     display: flex;
     flex-direction: column;

@@ -131,12 +131,30 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //FONCTION RÉINILTIALISATION DU MIX AND MATCH
     function reset() {
+        let dThumeur = document.querySelectorAll('#tagHumeur input');
+        let oneTaghum = document.getElementById('oneTagHumeur');
+        let dTambiance = document.querySelectorAll('#tagAmbiance input');
+        let oneTamb = document.getElementById('oneTagAmbiance');
         BtnmMat.textContent = "Mix and Match";
         hautGenerator.innerHTML = '';
         basGenerator.innerHTML = '';
         cardHaut1.innerHTML = '';
         cardBas1.innerHTML = '';
         randomTab =[];
+
+        for (i = 1; i < dThumeur.length; i++) {
+            console.log("ok");
+            dThumeur[i].checked = "";
+        }
+
+        oneTaghum.textContent = "Excité";
+
+        for (i = 1; i < dTambiance.length; i++) {
+            dTambiance[i].checked = "";
+        }
+        
+        oneTamb.textContent = "Travail";
+
         li[0].textContent = `Type de vêtement`;
         li[1].textContent = `Couleur 1`;
         li[2].style.backgroundColor = `#CA7A83`;

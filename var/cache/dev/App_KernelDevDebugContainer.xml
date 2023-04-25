@@ -5373,10 +5373,11 @@
         <argument key="vetementRepository" type="service_closure" id="App\Repository\VetementRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.YU8H6ve" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.sV_lXpb" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="slugger" type="service_closure" id="slugger"/>
         <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
       </argument>
     </service>
@@ -5404,7 +5405,7 @@
         <argument key="vetementRepository" type="service_closure" id="App\Repository\VetementRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.TfgCsOL" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.vX9_h3m" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\ColorCrudController::autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
@@ -5476,7 +5477,7 @@
         <argument key="App\Controller\DressingController::delete" type="service_closure" id=".service_locator.tGrh7JF"/>
         <argument key="App\Controller\DressingController::top" type="service_closure" id=".service_locator.tGrh7JF"/>
         <argument key="App\Controller\HomeController::generator" type="service_closure" id=".service_locator.zfr.ayg"/>
-        <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.YU8H6ve"/>
+        <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.sV_lXpb"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\TestpaletteController::colorname" type="service_closure" id=".service_locator.8LNhHdJ"/>
         <argument key="App\Controller\TestpaletteController::index" type="service_closure" id=".service_locator.8LNhHdJ"/>
@@ -5556,7 +5557,7 @@
         <argument key="App\Controller\DressingController:delete" type="service_closure" id=".service_locator.tGrh7JF"/>
         <argument key="App\Controller\DressingController:top" type="service_closure" id=".service_locator.tGrh7JF"/>
         <argument key="App\Controller\HomeController:generator" type="service_closure" id=".service_locator.zfr.ayg"/>
-        <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.YU8H6ve"/>
+        <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.sV_lXpb"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\TestpaletteController:colorname" type="service_closure" id=".service_locator.8LNhHdJ"/>
         <argument key="App\Controller\TestpaletteController:index" type="service_closure" id=".service_locator.8LNhHdJ"/>
@@ -6055,12 +6056,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.TfgCsOL"/>
+      <argument type="service" id=".service_locator.vX9_h3m"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.TfgCsOL"/>
+      <argument type="service" id=".service_locator.vX9_h3m"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -6824,7 +6825,7 @@
     <service id="EasyCorp\Bundle\EasyAdminBundle\Menu\MenuItemMatcherInterface" alias="EasyCorp\Bundle\EasyAdminBundle\Menu\MenuItemMatcher"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.TfgCsOL"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.vX9_h3m"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
@@ -6835,10 +6836,10 @@
     <service id=".service_locator.6rNHno." alias=".service_locator.riFbGaB"/>
     <service id=".service_locator._Me4i5K" alias=".service_locator.VEbqy3h"/>
     <service id=".service_locator.Eg4mtHD" alias=".service_locator.zfr.ayg"/>
-    <service id=".service_locator.riGN6sa" alias=".service_locator.YU8H6ve"/>
+    <service id=".service_locator.ThTk2EK" alias=".service_locator.sV_lXpb"/>
     <service id=".service_locator.O4Ft_nL" alias=".service_locator.GgO3p.I"/>
     <service id=".service_locator.WDQqQDJ" alias=".service_locator.FPsfQyR"/>
-    <service id=".service_locator.E.yxBck" alias=".service_locator.TfgCsOL"/>
+    <service id=".service_locator.48q1QKg" alias=".service_locator.vX9_h3m"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.HRsDWUx" alias=".service_locator.h4Ej._i"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -6880,7 +6881,7 @@
     <service id=".service_locator.DO8U8rO" alias=".service_locator.tGrh7JF"/>
     <service id=".service_locator.lZV38Ug" alias=".service_locator.VEbqy3h"/>
     <service id=".service_locator.liRouxP" alias=".service_locator.zfr.ayg"/>
-    <service id=".service_locator.DoCD.2o" alias=".service_locator.YU8H6ve"/>
+    <service id=".service_locator.xiOr_3p" alias=".service_locator.sV_lXpb"/>
     <service id=".service_locator.URfgn8g" alias=".service_locator.zFcJjKU"/>
     <service id=".service_locator.SYDnoDt" alias=".service_locator.GgO3p.I"/>
     <service id=".service_locator.50bqIHU" alias=".service_locator.FPsfQyR"/>

@@ -106,11 +106,11 @@ class __TwigTemplate_4fff17c3233019bfffa49e5ef791849a extends Template
 \t\t\t<div>
 \t\t\t\t<div>
 \t\t\t\t\t<input type=\"radio\" id=\"il\" name=\"genre\" value=\"il\">
-\t\t\t\t\t<label data-index=\"0\">Il</label>
+\t\t\t\t\t<label class=\"button-tags\" data-index=\"0\">Il</label>
 \t\t\t\t</div>
 \t\t\t\t<div>
 \t\t\t\t\t<input type=\"radio\" id=\"elle\" name=\"genre\" value=\"elle\">
-\t\t\t\t\t<label data-index=\"1\">Elle</label>
+\t\t\t\t\t<label class=\"button-tags\" data-index=\"1\">Elle</label>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
@@ -196,11 +196,11 @@ class __TwigTemplate_4fff17c3233019bfffa49e5ef791849a extends Template
 \t\t\t<div>
 \t\t\t\t<div>
 \t\t\t\t\t<input type=\"radio\" id=\"il\" name=\"genre\" value=\"il\">
-\t\t\t\t\t<label data-index=\"0\">Il</label>
+\t\t\t\t\t<label class=\"button-tags\" data-index=\"0\">Il</label>
 \t\t\t\t</div>
 \t\t\t\t<div>
 \t\t\t\t\t<input type=\"radio\" id=\"elle\" name=\"genre\" value=\"elle\">
-\t\t\t\t\t<label data-index=\"1\">Elle</label>
+\t\t\t\t\t<label class=\"button-tags\" data-index=\"1\">Elle</label>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
