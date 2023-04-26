@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
     //FONCTION POUR SELECTIONER HUMEUR
     function selectHumeur(e) {
         oneTaghum.textContent = e.currentTarget.textContent;
+        oneTaghum.dataset.index = e.currentTarget.dataset.index;
     }
 
     //DÉCLENCHEMENT DE LA FONCTION AU CLIC

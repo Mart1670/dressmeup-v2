@@ -36,93 +36,103 @@ window.addEventListener('DOMContentLoaded', () => {
     //FONCTION DU MIX AND MATCH AVEC RÉCUPÉRATION DES INFORMATIONS EN BASE DE DONNÉE
     function mixMatch() {
         clic++;
+        // console.log("clic : " + clic);
         let ambiance = document.getElementById('oneTagAmbiance').dataset.index;
-        //console.log(clic);
-        fetch('/generator/' + ambiance)
+        let humeur = document.getElementById('oneTagHumeur').dataset.index;
+
+        fetch('/generator/' + ambiance + '/' + humeur)
             .then(function (header) {
                 return header.json();
             })
             .then(function (body) {
                 body = JSON.parse(body);
-                console.log(body.combinaisons/* [0] */);
+                // console.log(body.combinaisons);
 
-                //COMBINAISON DE LA PREMIÈRE CARTE + AFFICHAGE 
-                if (clic == 1) {
-                    BtnmMat.textContent = CardDoute.textContent;
-                    random = randomPick(body.combinaisons);
-                    randomTab.push(random);
-                    //console.log(random);
-                    
-                    hautGenerator.innerHTML = `
-                    <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
-                    `;
-                    basGenerator.innerHTML = `
-                    <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
-                    `;
-                    cardHaut1.innerHTML = `
-                    <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
-                    `;
-                    cardBas1.innerHTML = `
-                     <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
-                    `;
-                    li[0].textContent = `${body.combinaisons[random]['styleHaut']}`;
-                    li[1].textContent = `${body.combinaisons[random]['colorNameHaut']}`;
-                    li[2].style.backgroundColor = `${body.combinaisons[random]['colorHaut']}`;
+                if(body.combinaisons && body.combinaisons.length >= 3){
+                    //COMBINAISON DE LA PREMIÈRE CARTE + AFFICHAGE 
+                    if (clic == 1) {
+                        BtnmMat.textContent = CardDoute.textContent;
+                        random = randomPick(body.combinaisons);
+                        randomTab.push(random);
+                        
+                        hautGenerator.innerHTML = `
+                        <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
+                        `;
+                        basGenerator.innerHTML = `
+                        <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
+                        `;
+                        cardHaut1.innerHTML = `
+                        <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
+                        `;
+                        cardBas1.innerHTML = `
+                        <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
+                        `;
+                        li[0].textContent = `${body.combinaisons[random]['styleHaut']}`;
+                        li[1].textContent = `${body.combinaisons[random]['colorNameHaut']}`;
+                        li[2].style.backgroundColor = `${body.combinaisons[random]['colorHaut']}`;
 
-                    li[5].textContent = `${body.combinaisons[random]['styleBas']}`;
-                    li[6].textContent = `${body.combinaisons[random]['colorNameBas']}`;
-                    li[7].style.backgroundColor = `${body.combinaisons[random]['colorBas']}`;
+                        li[5].textContent = `${body.combinaisons[random]['styleBas']}`;
+                        li[6].textContent = `${body.combinaisons[random]['colorNameBas']}`;
+                        li[7].style.backgroundColor = `${body.combinaisons[random]['colorBas']}`;
 
-                    //COMBINAISON DE LA DEUXIÈME CARTE + AFFICHAGE
-                } else if (clic == 2) {
-                    BtnmMat.textContent = CardDchance.textContent;
-                    random = randomPick(body.combinaisons);
-                    randomTab.push(random);
+                        //COMBINAISON DE LA DEUXIÈME CARTE + AFFICHAGE
+                    } else if (clic == 2) {
+                        BtnmMat.textContent = CardDchance.textContent;
+                        random = randomPick(body.combinaisons);
+                        randomTab.push(random);
 
-                    hautGenerator.innerHTML = `
-                    <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
-                    `;
-                    basGenerator.innerHTML = `
-                    <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
-                    `;
-                    cardHaut2.innerHTML = `
-                    <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
-                    `;
-                    cardBas2.innerHTML = `
-                     <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
-                    `;
-                    li[10].textContent = `${body.combinaisons[random]['styleHaut']}`;
-                    li[11].textContent = `${body.combinaisons[random]['colorNameHaut']}`;
-                    li[12].style.backgroundColor = `${body.combinaisons[random]['colorHaut']}`;
+                        if(body.combinaisons.length >= 2){
 
-                    li[15].textContent = `${body.combinaisons[random]['styleBas']}`;
-                    li[16].textContent = `${body.combinaisons[random]['colorNameBas']}`;
-                    li[17].style.backgroundColor = `${body.combinaisons[random]['colorBas']}`;
+                            hautGenerator.innerHTML = `
+                            <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
+                            `;
+                            basGenerator.innerHTML = `
+                            <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
+                            `;
+                            cardHaut2.innerHTML = `
+                            <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
+                            `;
+                            cardBas2.innerHTML = `
+                            <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
+                            `;
+                            li[10].textContent = `${body.combinaisons[random]['styleHaut']}`;
+                            li[11].textContent = `${body.combinaisons[random]['colorNameHaut']}`;
+                            li[12].style.backgroundColor = `${body.combinaisons[random]['colorHaut']}`;
 
-                    //COMBINAISON DE LA TROISIÈME CARTE + AFFICHAGE
-                } else if (clic == 3) {
-                    random = randomPick(body.combinaisons);
-                    randomTab.push(random);
+                            li[15].textContent = `${body.combinaisons[random]['styleBas']}`;
+                            li[16].textContent = `${body.combinaisons[random]['colorNameBas']}`;
+                            li[17].style.backgroundColor = `${body.combinaisons[random]['colorBas']}`;
+                        }
+                        //COMBINAISON DE LA TROISIÈME CARTE + AFFICHAGE
+                    } else if (clic == 3) {
+                        random = randomPick(body.combinaisons);
+                        randomTab.push(random);
 
-                    hautGenerator.innerHTML = `
-                    <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
-                    `;
-                    basGenerator.innerHTML = `
-                    <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
-                    `;
-                    cardHaut3.innerHTML = `
-                    <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
-                    `;
-                    cardBas3.innerHTML = `
-                     <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
-                    `;
-                    li[20].textContent = `${body.combinaisons[random]['styleHaut']}`;
-                    li[21].textContent = `${body.combinaisons[random]['colorNameHaut']}`;
-                    li[22].style.backgroundColor = `${body.combinaisons[random]['colorHaut']}`;
+                        if(body.combinaisons.length >= 3){
 
-                    li[25].textContent = `${body.combinaisons[random]['styleBas']}`;
-                    li[26].textContent = `${body.combinaisons[random]['colorNameBas']}`;
-                    li[27].style.backgroundColor = `${body.combinaisons[random]['colorBas']}`;
+                            hautGenerator.innerHTML = `
+                            <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
+                            `;
+                            basGenerator.innerHTML = `
+                            <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
+                            `;
+                            cardHaut3.innerHTML = `
+                            <img src=".//assets/user_img/${body.combinaisons[random]['imageHaut']}" alt="${body.combinaisons[random]['altHaut']}">
+                            `;
+                            cardBas3.innerHTML = `
+                            <img src=".//assets/user_img/${body.combinaisons[random]['imageBas']}" alt="${body.combinaisons[random]['altBas']}">
+                            `;
+                            li[20].textContent = `${body.combinaisons[random]['styleHaut']}`;
+                            li[21].textContent = `${body.combinaisons[random]['colorNameHaut']}`;
+                            li[22].style.backgroundColor = `${body.combinaisons[random]['colorHaut']}`;
+
+                            li[25].textContent = `${body.combinaisons[random]['styleBas']}`;
+                            li[26].textContent = `${body.combinaisons[random]['colorNameBas']}`;
+                            li[27].style.backgroundColor = `${body.combinaisons[random]['colorBas']}`;
+
+                        }
+                        BtnmMat.style.backgroundColor = "#959595";
+                    }
                 }
             })
 
@@ -141,7 +151,7 @@ window.addEventListener('DOMContentLoaded', () => {
         basGenerator.innerHTML = '';
         cardHaut1.innerHTML = '';
         cardBas1.innerHTML = '';
-        randomTab =[];
+        randomTab = [];
 
         for (i = 1; i < dThumeur.length; i++) {
             console.log("ok");
@@ -154,6 +164,7 @@ window.addEventListener('DOMContentLoaded', () => {
             dTambiance[i].checked = "";
         }
         
+        BtnmMat.style.backgroundColor = "#ffe588";
         oneTamb.textContent = "Travail";
         oneTamb.dataset.index = "2";
 
@@ -189,14 +200,14 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function randomPick(combinaisons){
-        let randomPickValue = Math.floor(Math.random() * combinaisons.length);
-        console.log(randomTab);
-        //console.log(randomTab.includes(randomPickValue));
-        if(randomTab.includes(randomPickValue)){
-            randomPick(combinaisons);
-        } else {
-            //console.log(randomPickValue);
-            return randomPickValue; 
+        if(combinaisons){
+            let randomPickValue = Math.floor(Math.random() * combinaisons.length);
+            if(randomTab.includes(randomPickValue)){
+                return randomPick(combinaisons);
+            } else {
+                // randomTab.push(randomPickValue);
+                return randomPickValue; 
+            }
         }
     }
 

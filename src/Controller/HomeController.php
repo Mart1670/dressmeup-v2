@@ -20,8 +20,8 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/generator/{ambiance}', name: 'app_generator')]
-    public function generator($ambiance, VetementRepository $vetementRepository, ColorRepository $colorRepository, PaletteRepository $paletteRepository, ): JsonResponse
+    #[Route('/generator/{ambiance}/{humeur}', name: 'app_generator')]
+    public function generator($ambiance, $humeur, VetementRepository $vetementRepository, ColorRepository $colorRepository, PaletteRepository $paletteRepository, ): JsonResponse
     {   
         $users = $this->getUser()->getId();
 
@@ -32,6 +32,7 @@ class HomeController extends AbstractController
         // dd($bas);
 
         //Récupérer toutes les palettes stockées en BDD
+        $palettes = $paletteRepository->findPaletteByHumeur($humeur);
         $palettes = $paletteRepository->findAll();
 
         // If the user doesn't have any cloth in his dressing, return an empty tab

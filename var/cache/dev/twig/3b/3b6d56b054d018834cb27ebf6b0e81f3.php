@@ -87,28 +87,28 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
         <h2>Pour commencer, sélectionne ton humeur du jour</h2>
         <div class=\"tag\" id=\"tagHumeur\">
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur1\" autocomplete=\"off\" list>
-          <label class=\"button-tags\" for=\"tagHumeur1\">Joyeux</label>
+          <label class=\"button-tags\" for=\"tagHumeur1\" data-index=\"1\">Joyeux</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur2\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur2\">Excité</label>
+          <label class=\"button-tags\" for=\"tagHumeur2\" data-index=\"2\">Excité</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur3\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur3\">Fatigué</label>
+          <label class=\"button-tags\" for=\"tagHumeur3\" data-index=\"3\">Fatigué</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur4\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur4\">Festif</label>
+          <label class=\"button-tags\" for=\"tagHumeur4\" data-index=\"4\">Festif</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur5\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur5\">Casual friday</label>
+          <label class=\"button-tags\" for=\"tagHumeur5\" data-index=\"5\">Casual friday</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur6\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur6\">Décontracté</label>
+          <label class=\"button-tags\" for=\"tagHumeur6\" data-index=\"6\">Décontracté</label>
+
+          <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur7\" autocomplete=\"off\">
+          <label class=\"button-tags\" for=\"tagHumeur7\" data-index=\"7\">Comme un lundi</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur8\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur8\">Comme un lundi</label>
-
-          <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur9\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur9\">Je ne sais pas</label>
+          <label class=\"button-tags\" for=\"tagHumeur8\" data-index=\"8\">Je ne sais pas</label>
         </div>
       </section>
 
@@ -173,7 +173,7 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
         echo ">
                 <ul>
                   <li class=\"button-tags\" id=\"oneTagHumeur\" data-index=\"2\">Excité</li>
-                  <li class=\"button-tags\" id=\"oneTagAmbiance\">Travail</li>
+                  <li class=\"button-tags\" id=\"oneTagAmbiance\" data-index=\"2\">Travail</li>
                 </ul>
               </div>
             </div>
@@ -417,28 +417,28 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
         <h2>Pour commencer, sélectionne ton humeur du jour</h2>
         <div class=\"tag\" id=\"tagHumeur\">
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur1\" autocomplete=\"off\" list>
-          <label class=\"button-tags\" for=\"tagHumeur1\">Joyeux</label>
+          <label class=\"button-tags\" for=\"tagHumeur1\" data-index=\"1\">Joyeux</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur2\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur2\">Excité</label>
+          <label class=\"button-tags\" for=\"tagHumeur2\" data-index=\"2\">Excité</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur3\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur3\">Fatigué</label>
+          <label class=\"button-tags\" for=\"tagHumeur3\" data-index=\"3\">Fatigué</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur4\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur4\">Festif</label>
+          <label class=\"button-tags\" for=\"tagHumeur4\" data-index=\"4\">Festif</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur5\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur5\">Casual friday</label>
+          <label class=\"button-tags\" for=\"tagHumeur5\" data-index=\"5\">Casual friday</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur6\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur6\">Décontracté</label>
+          <label class=\"button-tags\" for=\"tagHumeur6\" data-index=\"6\">Décontracté</label>
+
+          <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur7\" autocomplete=\"off\">
+          <label class=\"button-tags\" for=\"tagHumeur7\" data-index=\"7\">Comme un lundi</label>
 
           <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur8\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur8\">Comme un lundi</label>
-
-          <input class=\"button-tags\" type=\"radio\" name=\"optionsH\" id=\"tagHumeur9\" autocomplete=\"off\">
-          <label class=\"button-tags\" for=\"tagHumeur9\">Je ne sais pas</label>
+          <label class=\"button-tags\" for=\"tagHumeur8\" data-index=\"8\">Je ne sais pas</label>
         </div>
       </section>
 
@@ -492,7 +492,7 @@ class __TwigTemplate_fd646d7737d0e3f7896f38746089db3a extends Template
               <div{#  class=\"tag-selected\" #}>
                 <ul>
                   <li class=\"button-tags\" id=\"oneTagHumeur\" data-index=\"2\">Excité</li>
-                  <li class=\"button-tags\" id=\"oneTagAmbiance\">Travail</li>
+                  <li class=\"button-tags\" id=\"oneTagAmbiance\" data-index=\"2\">Travail</li>
                 </ul>
               </div>
             </div>

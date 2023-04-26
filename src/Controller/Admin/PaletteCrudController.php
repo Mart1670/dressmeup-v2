@@ -21,7 +21,7 @@ class PaletteCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
+            // IdField::new('id'),
             TextField::new('name'),
             ColorField::new('color1')->showValue(),
             ColorField::new('color2')->showValue(),

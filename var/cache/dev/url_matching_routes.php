@@ -33,9 +33,9 @@ return [
                 .'|/style/([^/]++)(*:57)'
                 .'|/list\\-vetements/([^/]++)/([^/]++)(*:98)'
                 .'|/delete/([^/]++)/([^/]++)(*:130)'
-                .'|/generator/([^/]++)(*:157)'
-                .'|/testcolorname/([^/]++)(*:188)'
-                .'|/hsl/([^/]++)/([^/]++)/([^/]++)(*:227)'
+                .'|/generator/([^/]++)/([^/]++)(*:166)'
+                .'|/testcolorname/([^/]++)(*:197)'
+                .'|/hsl/([^/]++)/([^/]++)/([^/]++)(*:236)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -43,9 +43,9 @@ return [
         57 => [[['_route' => 'app_style', '_controller' => 'App\\Controller\\DressingController::top'], ['type'], null, null, false, true, null]],
         98 => [[['_route' => 'app_list-vetements', '_controller' => 'App\\Controller\\DressingController::bottom'], ['type', 'style'], null, null, false, true, null]],
         130 => [[['_route' => 'app_delete', '_controller' => 'App\\Controller\\DressingController::delete'], ['type', 'id'], null, null, false, true, null]],
-        157 => [[['_route' => 'app_generator', '_controller' => 'App\\Controller\\HomeController::generator'], ['ambiance'], null, null, false, true, null]],
-        188 => [[['_route' => 'app_testcolorname', '_controller' => 'App\\Controller\\TestpaletteController::colorname'], ['hexa1'], null, null, false, true, null]],
-        227 => [
+        166 => [[['_route' => 'app_generator', '_controller' => 'App\\Controller\\HomeController::generator'], ['ambiance', 'humeur'], null, null, false, true, null]],
+        197 => [[['_route' => 'app_testcolorname', '_controller' => 'App\\Controller\\TestpaletteController::colorname'], ['hexa1'], null, null, false, true, null]],
+        236 => [
             [['_route' => 'app_hsl', '_controller' => 'App\\Controller\\VetementController::hsl'], ['h', 's', 'l'], null, null, true, true, null],
             [null, null, null, null, false, false, 0],
         ],

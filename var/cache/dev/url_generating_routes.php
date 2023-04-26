@@ -14,7 +14,7 @@ return [
     'app_delete' => [['type', 'id'], ['_controller' => 'App\\Controller\\DressingController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['variable', '/', '[^/]++', 'type', true], ['text', '/delete']], [], [], []],
     'app_formulaire' => [[], ['_controller' => 'App\\Controller\\FormulaireController::index'], [], [['text', '/formulaire']], [], [], []],
     'app_home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], [], []],
-    'app_generator' => [['ambiance'], ['_controller' => 'App\\Controller\\HomeController::generator'], [], [['variable', '/', '[^/]++', 'ambiance', true], ['text', '/generator']], [], [], []],
+    'app_generator' => [['ambiance', 'humeur'], ['_controller' => 'App\\Controller\\HomeController::generator'], [], [['variable', '/', '[^/]++', 'humeur', true], ['variable', '/', '[^/]++', 'ambiance', true], ['text', '/generator']], [], [], []],
     'app_join_us' => [[], ['_controller' => 'App\\Controller\\JoinUsController::index'], [], [['text', '/join/us']], [], [], []],
     'app_legal' => [[], ['_controller' => 'App\\Controller\\LegalController::index'], [], [['text', '/legal']], [], [], []],
     'app_privacy' => [[], ['_controller' => 'App\\Controller\\PrivacyController::index'], [], [['text', '/privacy']], [], [], []],
