@@ -79,26 +79,27 @@
                     <h4>Pour quelle occasion portes-tu ce vêtement ?</h4>
     
                     <div id="ambiance-vetements" class="button-list">
-                        <input type="radio" class="button-tags" name="ambiance" id="ambiance-sortie" autocomplete="off">
+                        <input type="checkbox" class="button-tags" name="ambiance" id="ambiance-sortie" autocomplete="off">
                         <label class="button-tags ambBtn" for="ambiance-sortie" data-index="0">Sortie entre amis</label>
             
-                        <input type="radio" class="button-tags" name="ambiance" id="ambiance-travail" autocomplete="off" >
+                        <input type="checkbox" class="button-tags" name="ambiance" id="ambiance-travail" autocomplete="off" >
                         <label class="button-tags ambBtn" for="ambiance-travail" data-index="1">Travail</label>
             
-                        <input type="radio" class="button-tags" name="ambiance" id="ambiance-sport" autocomplete="off" >
+                        <input type="checkbox" class="button-tags" name="ambiance" id="ambiance-sport" autocomplete="off" >
                         <label class="button-tags ambBtn" for="ambiance-sport" data-index="2">Sport</label>
             
-                        <input type="radio" class="button-tags" name="ambiance" id="ambiance-detente" autocomplete="off" >
+                        <input type="checkbox" class="button-tags" name="ambiance" id="ambiance-detente" autocomplete="off" >
                         <label class="button-tags ambBtn" for="ambiance-detente" data-index="3">Détente</label>
             
-                        <input type="radio" class="button-tags" name="ambiance" id="ambiance-romantique" autocomplete="off" >
+                        <input type="checkbox" class="button-tags" name="ambiance" id="ambiance-romantique" autocomplete="off" >
                         <label class="button-tags ambBtn" for="ambiance-romantique" data-index="4">Rendez-vous Romantique</label>
             
-                        <input type="radio" class="button-tags" name="ambiance" id="ambiance-rien" autocomplete="off" >
+                        <input type="checkbox" class="button-tags" name="ambiance" id="ambiance-rien" autocomplete="off" >
                         <label class="button-tags ambBtn" for="ambiance-rien" data-index="5">Rien de prévu</label>
     
                     </div>
                     {{ form_widget(form.tagAmbiances, {'attr': {'class': 'hidden-form-field'}}) }}
+                    {# {{ form_widget(form.tagAmbiances) }} #}
                     <div id="form-control">
                         {{ form_widget(form.valider, { 'label': 'Valider', 'attr': {'class': 'button-tags'}}) }}
                         <a  href="{{ path('app_dressing') }}"><button id="btnCancel" type="button" class="button-tags">Annuler</button></a>

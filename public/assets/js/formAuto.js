@@ -71,10 +71,20 @@ window.addEventListener('DOMContentLoaded', () => {
     function fillAmbiance(e) {
         //console.log(e.currentTarget.dataset.index);
         //console.log(vFa[e.currentTarget.dataset.index]);
-        for (i = 0; i < vFa.length; i++) {
-            vFa[i].checked = false;
+        // for (i = 0; i < vFa.length; i++) {
+        //     vFa[i].checked = false;
+        // }
+        // vFa[e.currentTarget.dataset.index].checked = true;
+
+        if (vFa[e.currentTarget.dataset.index].checked == true) {
+            //console.log(e.currentTarget.dataset.index);
+            //console.log(vFa[e.currentTarget.dataset.index]);
+            vFa[e.currentTarget.dataset.index].checked = false;
+        } else {
+            // console.log(vFa[e.currentTarget.dataset.index].checked);
+            // console.log(vFa[e.currentTarget.dataset.index]);
+            vFa[e.currentTarget.dataset.index].checked = true;
         }
-        vFa[e.currentTarget.dataset.index].checked = true;
     }
 
     //FONCTION POUR RÉCUPÉRATION DES TAGS
