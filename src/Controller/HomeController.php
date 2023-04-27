@@ -33,7 +33,7 @@ class HomeController extends AbstractController
 
         //Récupérer toutes les palettes stockées en BDD
         $palettes = $paletteRepository->findPaletteByHumeur($humeur);
-        $palettes = $paletteRepository->findAll();
+        //$palettes = $paletteRepository->findAll();
 
         // If the user doesn't have any cloth in his dressing, return an empty tab
         if ($hauts==[]) {
