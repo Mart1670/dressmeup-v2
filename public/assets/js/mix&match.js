@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //VARIABLES DU MIX AND MATCH
     let BtnmMat = document.getElementById('mixmatch');
-    console.log(BtnmMat);
+    // console.log(BtnmMat);
     let CardDoute = document.getElementById('doute');
     let CardDchance = document.getElementById('chance');
     let hautGenerator = document.getElementById('hautGenerator1');
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //RECUPERATION DES li POUR AFFICHAGE DES INFORMATIONS DU VÊTEMENT
     let li = document.querySelectorAll('.card-data');
-    console.log(li);
+    // console.log(li);
 
     //CLIC 
     let clic = 0;
@@ -154,7 +154,7 @@ window.addEventListener('DOMContentLoaded', () => {
         randomTab = [];
 
         for (i = 1; i < dThumeur.length; i++) {
-            console.log("ok");
+            // console.log("ok");
             dThumeur[i].checked = "";
         }
 

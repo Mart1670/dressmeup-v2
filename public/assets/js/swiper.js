@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const divSwiperSlide = document.querySelectorAll('.swiper-slide');
     
 
-    console.log('swiper');
+    // console.log('swiper');
     // init Swiper:
     let swiper = new Swiper('.swiper', {
         // Optional parameters

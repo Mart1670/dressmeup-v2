@@ -35,7 +35,7 @@ function addWideCloth(){
             </div>
         </div>`;
     if(window.innerWidth < 768){
-        console.log(dressingContent.childNodes);
+        // console.log(dressingContent.childNodes);
         dressingContent.childNodes[1].style.display = "none";
     }
 }
@@ -110,7 +110,6 @@ function loadDressingContent(type, style){
             `;
 
         }   
-            document.getElementById("style-all").addEventListener("click", dressingFilter);
             typeFilterButtons = document.querySelectorAll("#type-vetements label");
             for(i = 0; i < typeFilterButtons.length; i++){
                 typeFilterButtons[i].addEventListener('click', dressingFilter);
@@ -132,14 +131,14 @@ function loadDressingContent(type, style){
 
 function dressingFilter(e){
     filter = e.currentTarget.textContent;
-    console.log(typeFilterButtons);
+    // console.log(filter);
     fetch('/list-vetements/' + type + '/' + filter)
         .then(function (header){
             return header.json();
         })
         .then(function (body) {
             body = JSON.parse(body);
-            console.log(body.listeVetements);
+            // console.log(body.listeVetements);
             emptyDressingContent();
             displayAddCard();
             displayDressing(body.listeVetements);
