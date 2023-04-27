@@ -179,22 +179,22 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                     <h4>Pour quelle occasion portes-tu ce vêtement ?</h4>
     
                     <div id=\"ambiance-vetements\" class=\"button-list\">
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sortie\" autocomplete=\"off\">
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sortie\" autocomplete=\"off\">
                         <label class=\"button-tags ambBtn\" for=\"ambiance-sortie\" data-index=\"0\">Sortie entre amis</label>
             
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-travail\" autocomplete=\"off\" >
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-travail\" autocomplete=\"off\" >
                         <label class=\"button-tags ambBtn\" for=\"ambiance-travail\" data-index=\"1\">Travail</label>
             
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sport\" autocomplete=\"off\" >
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sport\" autocomplete=\"off\" >
                         <label class=\"button-tags ambBtn\" for=\"ambiance-sport\" data-index=\"2\">Sport</label>
             
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-detente\" autocomplete=\"off\" >
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-detente\" autocomplete=\"off\" >
                         <label class=\"button-tags ambBtn\" for=\"ambiance-detente\" data-index=\"3\">Détente</label>
             
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-romantique\" autocomplete=\"off\" >
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-romantique\" autocomplete=\"off\" >
                         <label class=\"button-tags ambBtn\" for=\"ambiance-romantique\" data-index=\"4\">Rendez-vous Romantique</label>
             
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-rien\" autocomplete=\"off\" >
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-rien\" autocomplete=\"off\" >
                         <label class=\"button-tags ambBtn\" for=\"ambiance-rien\" data-index=\"5\">Rien de prévu</label>
     
                     </div>
@@ -202,26 +202,28 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
         // line 101
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 101, $this->source); })()), "tagAmbiances", [], "any", false, false, false, 101), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
         echo "
-                    <div id=\"form-control\">
-                        ";
+                    ";
         // line 103
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 103, $this->source); })()), "valider", [], "any", false, false, false, 103), 'widget', ["label" => "Valider", "attr" => ["class" => "button-tags"]]);
+        echo "                    <div id=\"form-control\">
+                        ";
+        // line 104
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 104, $this->source); })()), "valider", [], "any", false, false, false, 104), 'widget', ["label" => "Valider", "attr" => ["class" => "button-tags"]]);
         echo "
                         <a  href=\"";
-        // line 104
+        // line 105
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dressing");
         echo "\"><button id=\"btnCancel\" type=\"button\" class=\"button-tags\">Annuler</button></a>
                     </div>
                 </div>
                 ";
-        // line 107
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 107, $this->source); })()), 'form_end');
+        // line 108
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 108, $this->source); })()), 'form_end');
         echo "
             </section>
         </div>
         
        ";
-        // line 112
+        // line 113
         echo "
 
 
@@ -231,14 +233,14 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
 
     }
 
-    // line 116
+    // line 117
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 117
+        // line 118
         echo "    <script src=\"assets/js/pipette.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/dragAndDrop.js\" type=\"text/javascript\"></script>
     <script src=\"assets/js/kmeans.js\" type=\"text/javascript\"></script>
@@ -262,7 +264,7 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
 
     public function getDebugInfo()
     {
-        return array (  242 => 117,  235 => 116,  225 => 112,  218 => 107,  212 => 104,  208 => 103,  203 => 101,  176 => 77,  150 => 54,  139 => 46,  135 => 45,  131 => 44,  127 => 43,  103 => 21,  92 => 12,  87 => 9,  80 => 8,  68 => 5,  55 => 3,  38 => 1,);
+        return array (  244 => 118,  237 => 117,  227 => 113,  220 => 108,  214 => 105,  210 => 104,  207 => 103,  203 => 101,  176 => 77,  150 => 54,  139 => 46,  135 => 45,  131 => 44,  127 => 43,  103 => 21,  92 => 12,  87 => 9,  80 => 8,  68 => 5,  55 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -348,26 +350,27 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                     <h4>Pour quelle occasion portes-tu ce vêtement ?</h4>
     
                     <div id=\"ambiance-vetements\" class=\"button-list\">
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sortie\" autocomplete=\"off\">
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sortie\" autocomplete=\"off\">
                         <label class=\"button-tags ambBtn\" for=\"ambiance-sortie\" data-index=\"0\">Sortie entre amis</label>
             
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-travail\" autocomplete=\"off\" >
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-travail\" autocomplete=\"off\" >
                         <label class=\"button-tags ambBtn\" for=\"ambiance-travail\" data-index=\"1\">Travail</label>
             
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sport\" autocomplete=\"off\" >
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-sport\" autocomplete=\"off\" >
                         <label class=\"button-tags ambBtn\" for=\"ambiance-sport\" data-index=\"2\">Sport</label>
             
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-detente\" autocomplete=\"off\" >
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-detente\" autocomplete=\"off\" >
                         <label class=\"button-tags ambBtn\" for=\"ambiance-detente\" data-index=\"3\">Détente</label>
             
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-romantique\" autocomplete=\"off\" >
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-romantique\" autocomplete=\"off\" >
                         <label class=\"button-tags ambBtn\" for=\"ambiance-romantique\" data-index=\"4\">Rendez-vous Romantique</label>
             
-                        <input type=\"radio\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-rien\" autocomplete=\"off\" >
+                        <input type=\"checkbox\" class=\"button-tags\" name=\"ambiance\" id=\"ambiance-rien\" autocomplete=\"off\" >
                         <label class=\"button-tags ambBtn\" for=\"ambiance-rien\" data-index=\"5\">Rien de prévu</label>
     
                     </div>
                     {{ form_widget(form.tagAmbiances, {'attr': {'class': 'hidden-form-field'}}) }}
+                    {# {{ form_widget(form.tagAmbiances) }} #}
                     <div id=\"form-control\">
                         {{ form_widget(form.valider, { 'label': 'Valider', 'attr': {'class': 'button-tags'}}) }}
                         <a  href=\"{{ path('app_dressing') }}\"><button id=\"btnCancel\" type=\"button\" class=\"button-tags\">Annuler</button></a>

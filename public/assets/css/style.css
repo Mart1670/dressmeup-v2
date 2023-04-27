@@ -782,6 +782,10 @@ canvas{
     justify-content: center;
 }
 
+#form_vetement input[type="checkbox"]{
+    display: none;
+}
+
 .hidden-form-field{
     display: none;
 }
