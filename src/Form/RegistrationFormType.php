@@ -16,14 +16,28 @@ use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\File;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class RegistrationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('email')
+            ->add('email', TextType::class, [
+                'constraints' => [
+                    new NotBlank([
+                        'message' => 'Merci d\'entrer une adresse mail',
+                    ]),
+                    new Assert\Regex([
+                        'pattern' => '/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/',
+                        'match' => true,
+                        'message' => 'Ceci n\'est pas une adresse mail valide',
+                ])
+                ]
+            ])
             ->add('agreeTerms', CheckboxType::class, [
+                'label' => 'Accepter les CGU',
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
@@ -34,7 +48,7 @@ class RegistrationFormType extends AbstractType
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
-                'label' => 'Mot de passe',
+                'label' => 'Mots de passe',
                 'mapped' => false,
                 'attr' => ['autocomplete' => 'new-password'],
                 'constraints' => [
@@ -42,12 +56,16 @@ class RegistrationFormType extends AbstractType
                         'message' => 'Merci d\'entrer un mot de passe',
                     ]),
                     new Length([
-                        'min' => 6,
+                        'min' => 8,
                         'minMessage' => 'Votre mot de passe doit contenir au minimum {{ limit }} caractères',
                         // max length allowed by Symfony for security reasons
                         'max' => 4096,
                     ]),
-                ],
+                    new Assert\Regex([
+                        'pattern' => '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[-+!*$@%_])([-+!*$@%_\w]{8,15})$/',
+                        'match' => true,
+                        'message' => 'Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial',
+                ])],
             ])
             ->add('name', TextType::class, [
                 'label' => 'Nom'

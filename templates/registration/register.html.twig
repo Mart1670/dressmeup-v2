@@ -5,43 +5,45 @@
 {% block body %}
 
 	<div class="container">
-		<h1>Créer un compte</h1>
-	
-		{{ form_start(registrationForm, {'attr': {'id': 'registration-form'}}) }}
-		{{ form_row(registrationForm.name, {'attr': {'class': 'form-field'}}) }}
-		{{ form_row(registrationForm.firstname, {'attr': {'class': 'form-field'}}) }}
-		{{ form_row(registrationForm.email, {'attr': {'class': 'form-field'}}) }}
-		{{ form_row(registrationForm.plainPassword, {
-	            label: 'Password',
-				attr: {'class': 'form-field'}
-	        }) }}
-		<div style="display:none">
-			{{ form_row(registrationForm.sexe) }}
-		</div>
-		<div id="genre">
-			<legend>Genre</legend>
-			<div>
+		<section id="creation-compte">
+			<h1>Créer un compte</h1>
+		
+			{{ form_start(registrationForm, {'attr': {'id': 'registration-form'}}) }}
+			{{ form_row(registrationForm.name, {'attr': {'class': 'form-field'}}) }}
+			{{ form_row(registrationForm.firstname, {'attr': {'class': 'form-field'}}) }}
+			{{ form_row(registrationForm.email, {'attr': {'class': 'form-field'}}) }}
+			{{ form_row(registrationForm.plainPassword, {
+					label: 'Password',
+					attr: {'class': 'form-field'}
+				}) }}
+			<div style="display:none">
+				{{ form_row(registrationForm.sexe) }}
+			</div>
+			<div id="genre">
+				<legend>Genre</legend>
 				<div>
-					<input type="radio" id="il" name="genre" value="il">
-					<label class="button-tags" data-index="0">Il</label>
-				</div>
-				<div>
-					<input type="radio" id="elle" name="genre" value="elle">
-					<label class="button-tags" data-index="1">Elle</label>
+					<div>
+						<input type="radio" id="il" name="genre" value="il">
+						<label class="button-tags" data-index="0">Il</label>
+					</div>
+					<div>
+						<input type="radio" id="elle" name="genre" value="elle">
+						<label class="button-tags" data-index="1">Elle</label>
+					</div>
 				</div>
 			</div>
-		</div>
-		{{ form_row(registrationForm.birthdate) }}
-		{{ form_row(registrationForm.handicap) }}
-		{{ form_row(registrationForm.bio, {'attr': {'class': 'form-field'}}) }}
-		<div id="form-avatar">
-			{{ form_row(registrationForm.avatar) }}
-		</div>
-		{{ form_row(registrationForm.agreeTerms) }}
-		<div id="submit-button">
-			<button id="valider" type="submit" class="btn button-tags">Créer un compte</button>
-		</div>
-		{{ form_end(registrationForm) }}
+			{{ form_row(registrationForm.birthdate) }}
+			{{ form_row(registrationForm.handicap) }}
+			{{ form_row(registrationForm.bio, {'attr': {'class': 'form-field'}}) }}
+			<div id="form-avatar">
+				{{ form_row(registrationForm.avatar) }}
+			</div>
+			{{ form_row(registrationForm.agreeTerms) }}
+			<div id="submit-button">
+				<button id="valider" type="submit" class="btn button-tags">Créer un compte</button>
+			</div>
+			{{ form_end(registrationForm) }}
+		</section>
 	</div>
 	<script src="{{ asset('assets/js/registrationFormAuto.js') }}"></script>
 {% endblock %}

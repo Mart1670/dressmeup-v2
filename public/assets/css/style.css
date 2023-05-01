@@ -980,7 +980,6 @@ canvas{
 
 #registration_form_birthdate{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     margin-bottom: 10px;
 }
@@ -996,7 +995,6 @@ canvas{
     margin-inline: 5px;
     margin-top: 2px;
     padding-block: 8px;
-    padding-left: 10px;
 }
 
 #registration_form_birthdate_day, #registration_form_birthdate_month{
@@ -1025,7 +1023,6 @@ canvas{
     cursor: pointer;
     color: var(--ice);
     border: none;
-    margin-inline: auto;
     margin-top: 2px;
     margin-bottom: 10px;
 }
@@ -1033,6 +1030,21 @@ canvas{
 .required:after{
     content: ' *';
     color: var(--red-strawberry);
+}
+
+#creation-compte ul{
+    font-size: 12px;
+    padding: 10px;
+    list-style-type: none;
+    color: var(--ice);
+    background-color: var(--red-strawberry);
+    border-radius: 25px 25px 25px 0px;
+}
+
+@media screen and (min-width: 1724px){
+    #creation-compte{
+        width: 400px;
+    }
 }
 
 /*********************************/

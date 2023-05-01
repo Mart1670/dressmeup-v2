@@ -4536,6 +4536,7 @@
     <service id="EasyCorp\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension" class="EasyCorp\Bundle\EasyAdminBundle\Twig\EasyAdminTwigExtension">
       <tag name="twig.extension"/>
       <argument type="service" id="service_locator_EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
+      <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Provider\AdminContextProvider"/>
       <argument type="service" id="security.csrf.token_manager" on-invalid="null"/>
     </service>
     <service id="EasyCorp\Bundle\EasyAdminBundle\Form\Extension\EaCrudFormTypeExtension" class="EasyCorp\Bundle\EasyAdminBundle\Form\Extension\EaCrudFormTypeExtension">
@@ -4561,7 +4562,6 @@
       <argument type="service" id="debug.controller_resolver"/>
       <argument type="service" id="router.default"/>
       <argument type="service" id="router.default"/>
-      <argument type="service" id="twig"/>
     </service>
     <service id="EasyCorp\Bundle\EasyAdminBundle\Factory\ControllerFactory" class="EasyCorp\Bundle\EasyAdminBundle\Factory\ControllerFactory">
       <argument type="service" id="debug.controller_resolver"/>
@@ -5397,12 +5397,13 @@
         <argument key="vetementRepository" type="service_closure" id="App\Repository\VetementRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.sV_lXpb" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.ReJjmbv" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
         <argument key="slugger" type="service_closure" id="slugger"/>
         <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
+        <argument key="validator" type="service_closure" id="validator"/>
       </argument>
     </service>
     <service id=".service_locator.zFcJjKU" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -5429,7 +5430,7 @@
         <argument key="vetementRepository" type="service_closure" id="App\Repository\VetementRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.iiHcuEo" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.8TEm0cJ" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\ColorCrudController::autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
@@ -5543,7 +5544,7 @@
         <argument key="App\Controller\DressingController::delete" type="service_closure" id=".service_locator.tGrh7JF"/>
         <argument key="App\Controller\DressingController::top" type="service_closure" id=".service_locator.tGrh7JF"/>
         <argument key="App\Controller\HomeController::generator" type="service_closure" id=".service_locator.zfr.ayg"/>
-        <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.sV_lXpb"/>
+        <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.ReJjmbv"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\TestpaletteController::colorname" type="service_closure" id=".service_locator.8LNhHdJ"/>
         <argument key="App\Controller\TestpaletteController::index" type="service_closure" id=".service_locator.8LNhHdJ"/>
@@ -5665,7 +5666,7 @@
         <argument key="App\Controller\DressingController:delete" type="service_closure" id=".service_locator.tGrh7JF"/>
         <argument key="App\Controller\DressingController:top" type="service_closure" id=".service_locator.tGrh7JF"/>
         <argument key="App\Controller\HomeController:generator" type="service_closure" id=".service_locator.zfr.ayg"/>
-        <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.sV_lXpb"/>
+        <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.ReJjmbv"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\TestpaletteController:colorname" type="service_closure" id=".service_locator.8LNhHdJ"/>
         <argument key="App\Controller\TestpaletteController:index" type="service_closure" id=".service_locator.8LNhHdJ"/>
@@ -5824,20 +5825,42 @@
       <argument type="collection"/>
     </service>
     <service id="EasyCorp\Bundle\EasyAdminBundle\Registry\DashboardControllerRegistry" class="EasyCorp\Bundle\EasyAdminBundle\Registry\DashboardControllerRegistry">
-      <argument>%env(APP_SECRET)%</argument>
       <argument>C:\Users\mart1\Documents\GitHub\dressmeup-v2\var\cache\dev</argument>
       <argument type="collection">
-        <argument>App\Controller\Admin\DashboardController</argument>
+        <argument key="App\Controller\Admin\DashboardController">17c8bda</argument>
+      </argument>
+      <argument type="collection">
+        <argument key="17c8bda">App\Controller\Admin\DashboardController</argument>
       </argument>
     </service>
     <service id="EasyCorp\Bundle\EasyAdminBundle\Registry\CrudControllerRegistry" class="EasyCorp\Bundle\EasyAdminBundle\Registry\CrudControllerRegistry">
-      <argument>%env(APP_SECRET)%</argument>
       <argument type="collection">
-        <argument>App\Controller\Admin\ColorCrudController</argument>
-        <argument>App\Controller\Admin\PaletteCrudController</argument>
-        <argument>App\Controller\Admin\ReferenceColorCrudController</argument>
-        <argument>App\Controller\Admin\TagHumeurCrudController</argument>
-        <argument>App\Controller\Admin\VetementCrudController</argument>
+        <argument key="App\Controller\Admin\ColorCrudController">App\Entity\Color</argument>
+        <argument key="App\Controller\Admin\PaletteCrudController">App\Entity\Palette</argument>
+        <argument key="App\Controller\Admin\ReferenceColorCrudController">App\Entity\ReferenceColor</argument>
+        <argument key="App\Controller\Admin\TagHumeurCrudController">App\Entity\TagHumeur</argument>
+        <argument key="App\Controller\Admin\VetementCrudController">App\Entity\Vetement</argument>
+      </argument>
+      <argument type="collection">
+        <argument key="App\Controller\Admin\ColorCrudController">e5830ba</argument>
+        <argument key="App\Controller\Admin\PaletteCrudController">368d237</argument>
+        <argument key="App\Controller\Admin\ReferenceColorCrudController">bdcb4bf</argument>
+        <argument key="App\Controller\Admin\TagHumeurCrudController">4c87bd2</argument>
+        <argument key="App\Controller\Admin\VetementCrudController">6cd2c80</argument>
+      </argument>
+      <argument type="collection">
+        <argument key="App\Entity\Color">App\Controller\Admin\ColorCrudController</argument>
+        <argument key="App\Entity\Palette">App\Controller\Admin\PaletteCrudController</argument>
+        <argument key="App\Entity\ReferenceColor">App\Controller\Admin\ReferenceColorCrudController</argument>
+        <argument key="App\Entity\TagHumeur">App\Controller\Admin\TagHumeurCrudController</argument>
+        <argument key="App\Entity\Vetement">App\Controller\Admin\VetementCrudController</argument>
+      </argument>
+      <argument type="collection">
+        <argument key="e5830ba">App\Controller\Admin\ColorCrudController</argument>
+        <argument key="368d237">App\Controller\Admin\PaletteCrudController</argument>
+        <argument key="bdcb4bf">App\Controller\Admin\ReferenceColorCrudController</argument>
+        <argument key="4c87bd2">App\Controller\Admin\TagHumeurCrudController</argument>
+        <argument key="6cd2c80">App\Controller\Admin\VetementCrudController</argument>
       </argument>
     </service>
     <service id="logger" class="Symfony\Component\HttpKernel\Log\Logger"/>
@@ -6178,12 +6201,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.iiHcuEo"/>
+      <argument type="service" id=".service_locator.8TEm0cJ"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.iiHcuEo"/>
+      <argument type="service" id=".service_locator.8TEm0cJ"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -6947,7 +6970,7 @@
     <service id="EasyCorp\Bundle\EasyAdminBundle\Menu\MenuItemMatcherInterface" alias="EasyCorp\Bundle\EasyAdminBundle\Menu\MenuItemMatcher"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.iiHcuEo"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.8TEm0cJ"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
@@ -6958,10 +6981,10 @@
     <service id=".service_locator.6rNHno." alias=".service_locator.riFbGaB"/>
     <service id=".service_locator._Me4i5K" alias=".service_locator.VEbqy3h"/>
     <service id=".service_locator.Eg4mtHD" alias=".service_locator.zfr.ayg"/>
-    <service id=".service_locator.ThTk2EK" alias=".service_locator.sV_lXpb"/>
+    <service id=".service_locator.Ac9a7pV" alias=".service_locator.ReJjmbv"/>
     <service id=".service_locator.O4Ft_nL" alias=".service_locator.GgO3p.I"/>
     <service id=".service_locator.WDQqQDJ" alias=".service_locator.FPsfQyR"/>
-    <service id=".service_locator.84yoKDB" alias=".service_locator.iiHcuEo"/>
+    <service id=".service_locator.pWh8SXP" alias=".service_locator.8TEm0cJ"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
     <service id=".service_locator.HRsDWUx" alias=".service_locator.h4Ej._i"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
@@ -7003,7 +7026,7 @@
     <service id=".service_locator.DO8U8rO" alias=".service_locator.tGrh7JF"/>
     <service id=".service_locator.lZV38Ug" alias=".service_locator.VEbqy3h"/>
     <service id=".service_locator.liRouxP" alias=".service_locator.zfr.ayg"/>
-    <service id=".service_locator.xiOr_3p" alias=".service_locator.sV_lXpb"/>
+    <service id=".service_locator.v3SeBJ8" alias=".service_locator.ReJjmbv"/>
     <service id=".service_locator.URfgn8g" alias=".service_locator.zFcJjKU"/>
     <service id=".service_locator.SYDnoDt" alias=".service_locator.GgO3p.I"/>
     <service id=".service_locator.50bqIHU" alias=".service_locator.FPsfQyR"/>
