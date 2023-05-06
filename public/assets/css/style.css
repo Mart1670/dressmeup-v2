@@ -782,6 +782,10 @@ canvas{
     justify-content: center;
 }
 
+input[type="checkbox"]:checked + label{
+    background-color: var(--light-yellow);
+}
+
 #form_vetement input[type="checkbox"]{
     display: none;
 }
