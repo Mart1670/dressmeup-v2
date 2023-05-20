@@ -40,8 +40,8 @@
                     </div>
                 </div>
                 <div>
-                    {{ form_widget(form.newColor) }}
-                    {{ form_widget(form.nameColor) }}
+                    {{ form_widget(form.newColor, {'attr': {'class': 'hidden-form-field'}}) }}
+                    {{ form_widget(form.nameColor, {'attr': {'class': 'hidden-form-field'}}) }}
                     {{ form_widget(form.image, {'attr': {'class': 'hidden-form-field'}}) }}
                     {{ form_widget(form.color, {'attr': {'class': 'hidden-form-field'}}) }}
                     <h4>Sélectionne ta catégorie</h4>
