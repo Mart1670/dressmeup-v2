@@ -41,12 +41,6 @@ function kmeans(points, k, min_diff) {
         found = false;
         // Boucle pour s'assurer que le cluster sélectionné de façon aléatoire n'a pas déjà été sélectionné
         for (var i = 0; i < seen.length; i++ ) {
-            // console.log("début console.log")
-            // console.log("seen[i] = "+seen[i]);
-            // console.log("idx = "+idx);
-            // console.log("seen = "+seen);
-            // console.log("found = "+found);
-            // console.log("fin console.log");
             if (idx === seen[i]) {
             found = true;
             break;
@@ -103,7 +97,6 @@ function kmeans(points, k, min_diff) {
         break;
     }
     }
-    /* console.log(clusters); */
     clusters.sort(function (a, b) {
         return b[1].length - a[1].length;
         /* console.log(a[1].length); */
@@ -127,8 +120,6 @@ function rgbToHex(rgb) {
 function process_image(ctx) {
     // Création d'un tableau qui va recevoir les codes RGB de chaque pixel
     var points = [];
-    // Dessin de l'image active dans le Canvas
-    // ctx.drawImage(img, 0, 0, 200, 200);
     // Récupération des données R, G et B de chaque pixel
     data = ctx.getImageData(50, 50, canvas.width-100, canvas.height-100).data;
     // Boucle sur chaque donnée R, G et B de chaque pixel par pas de 4 (afin de récupérer le RGB de chaque pixel séparément)
@@ -154,52 +145,13 @@ function process_image(ctx) {
 }
 
 function analyze(ctx) {
-    // Récupération du Canvas avec un context 2D
-    // var ctx = document.getElementById('canvas').getContext('2d')
-    // Création de l'objet image dans lequel on va ranger l'image active
-    // img = img_elem;
-    // Déclenchement de la fonction de l'algorithme à la fin du chargement de l'image
-    // img.onload = function() {
-        // Récupération de l'élément DOM affichant l'état du traitement
-        // var results = document.getElementById('results');
-        // Affichage du traitement en cours
-        // results.innerHTML = 'Waiting...';
         // Récupération des données issues du traitement et passage en paramètre de l'image et du canvas
         var colors = process_image(ctx)
         // Récupération des éléments DOM permettant d'afficher les couleurs
-            // , p1 = document.getElementById('color1')
-            // , p2 = document.getElementById('color2')
         var color1 = document.getElementById('color1')
             // , pt2 = document.getElementById('colorName2')
-            // , p3 = document.getElementById('c3');
-        // console.log(hexa1);
-        // let hexa2 = colors[2].substring(1);
         //RÉCUPÉRATION DES NOMS DES COULEURS DANS LA BASE DE DONNÉES POUR AFFICHAGE
         color1.style.backgroundColor = colors[0];
         vetementColor1.value = colors[0];
         newColor.value = colors[0];
-
-        // fetch('/testcolorname/' + hexa2)
-        //     .then(function (header) {
-        //         return header.json();
-        //     })
-        //     .then(function (body) {
-        //         pt2.innerHTML = `
-        //         ${body.colorname}<span
-        //         id="color2"
-        //         class="color-mark" style="background-color:${colors[2]}"></span>
-        //         `
-        //         nameColor2.value = body.colorname;
-        //         vetementColor2.value = colors[2];
-        //     });
-        // console.log(colors);
-        // Affichage des 3 couleurs issues du traitement de l'algorithme
-        // p1.style.backgroundColor = colors[1];
-        // p2.style.backgroundColor = colors[2];
-        // p3.style.backgroundColor = colors[2];
-        // Mise à jour de l'affichage du traitement
-        // results.innerHTML = 'Done';
-    // }
-    // Récupération de l'image active
-    // img.src = img_elem.src;
 }

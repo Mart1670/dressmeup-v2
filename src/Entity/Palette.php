@@ -15,8 +15,8 @@ class Palette
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $name = null;
+    /* #[ORM\Column(length: 255, nullable: true)]
+    private ?string $name = null; */
 
     /* #[ORM\ManyToMany(targetEntity: Color::class, inversedBy: 'palettes')]
     private Collection $color; */
@@ -50,7 +50,7 @@ class Palette
         return $this->id;
     }
 
-    public function getName(): ?string
+    /* public function getName(): ?string
     {
         return $this->name;
     }
@@ -60,7 +60,7 @@ class Palette
         $this->name = $name;
 
         return $this;
-    }
+    } */
 
     /**
      * @return Collection<int, Color>

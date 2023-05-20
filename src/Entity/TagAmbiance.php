@@ -18,8 +18,8 @@ class TagAmbiance
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $categorie = null;
+    /* #[ORM\Column(length: 255, nullable: true)]
+    private ?string $categorie = null; */
 
     #[ORM\ManyToMany(targetEntity: Vetement::class, mappedBy: 'tagAmbiances')]
     private Collection $vetement;
@@ -46,7 +46,7 @@ class TagAmbiance
         return $this;
     }
 
-    public function getCategorie(): ?string
+    /* public function getCategorie(): ?string
     {
         return $this->categorie;
     }
@@ -56,7 +56,7 @@ class TagAmbiance
         $this->categorie = $categorie;
 
         return $this;
-    }
+    } */
 
     /**
      * @return Collection<int, Vetement>

@@ -8,13 +8,13 @@ console.log(color1);
 function hsl (color) {
     var rgb = color.slice(color.indexOf("(") + 1, color.indexOf(")")).split(", ");
     console.log(rgb);
-    // Make r, g, and b fractions of 1
+    // Transformer r, g, et b en fractions de 1
     r = rgb[0] / 255;
     g = rgb[1] / 255;
     b = rgb[2] / 255;
     var hslCode = [];
     
-    // Find greatest and smallest channel values
+    // Déterminer le canal le plus grand et le plus petit
     let cmin = Math.min(r,g,b),
         cmax = Math.max(r,g,b),
         delta = cmax - cmin,
@@ -22,33 +22,33 @@ function hsl (color) {
         s = 0,
         l = 0;
 
-    // Calculate hue
-    // No difference
+    // Calcule de la teinte
+    // Pas de différence
     if (delta == 0)
     h = 0;
-    // Red is max
+    // R est dominant
     else if (cmax == r)
     h = ((g - b) / delta) % 6;
-    // Green is max
+    // G est dominant
     else if (cmax == g)
     h = (b - r) / delta + 2;
-    // Blue is max
+    // B est dominant
     else
     h = (r - g) / delta + 4;
 
     h = Math.round(h * 60);
     
-    // Make negative hues positive behind 360°
+    // Convertir les teintes négative en positive au-delà de 360°
     if (h < 0)
         h += 360;
     
-    // Calculate lightness
+    // Calcul de la luminosité
     l = (cmax + cmin) / 2;
 
-    // Calculate saturation
+    // Calcul de la saturation
     s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
         
-    // Multiply l and s by 100
+    // Multiplication de L et S par 100
     s = +(s * 100).toFixed(1);
     l = +(l * 100).toFixed(1);
 

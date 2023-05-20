@@ -48,8 +48,8 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t<meta charset=\"UTF-8\">
 \t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
 \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    \t<meta name=\"description\" content=\"\">
-\t\t
+    \t<meta name=\"description\" content=\"Dressing virtuel et générateur de tenue au quotidien\">
+\t\t<meta name=“keywords” content=“dressing, vetements, tenues, daltonisme, generateur de tenue, ambiance, humeur, gestion dressing”>
 \t\t<title>
 \t\t\t";
         // line 11
@@ -304,8 +304,8 @@ class __TwigTemplate_45faf026903122ac258938a0b049f30c extends Template
 \t\t<meta charset=\"UTF-8\">
 \t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
 \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    \t<meta name=\"description\" content=\"\">
-\t\t
+    \t<meta name=\"description\" content=\"Dressing virtuel et générateur de tenue au quotidien\">
+\t\t<meta name=“keywords” content=“dressing, vetements, tenues, daltonisme, generateur de tenue, ambiance, humeur, gestion dressing”>
 \t\t<title>
 \t\t\t{% block title %}
 \t\t\t{% endblock %}

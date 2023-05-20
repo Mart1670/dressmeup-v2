@@ -15,8 +15,8 @@ class Vetement
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $name = null;
+    /* #[ORM\Column(length: 255, nullable: true)]
+    private ?string $name = null; */
 
     #[ORM\Column(length: 255)]
     private ?string $type = null;
@@ -58,7 +58,7 @@ class Vetement
         return $this->id;
     }
 
-    public function getName(): ?string
+    /* public function getName(): ?string
     {
         return $this->name;
     }
@@ -68,7 +68,7 @@ class Vetement
         $this->name = $name;
 
         return $this;
-    }
+    } */
 
     public function getType(): ?string
     {
