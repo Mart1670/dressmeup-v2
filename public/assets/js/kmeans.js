@@ -1,5 +1,9 @@
-let newColor = document.getElementById('vetement_form_newColor');
-let vetementColor1 = document.getElementById('vetement_form_color');
+var newColorField1 = document.getElementById('vetement_form_newColor');
+var vetementColor1 = document.getElementById('vetement_form_color');
+var fileField = document.getElementById('vetement_form_image');
+
+var color1 = document.getElementById("color1");
+
 
 function euclidean(p1, p2) {
     var s = 0;
@@ -145,13 +149,14 @@ function process_image(ctx) {
 }
 
 function analyze(ctx) {
-        // Récupération des données issues du traitement et passage en paramètre de l'image et du canvas
-        var colors = process_image(ctx)
-        // Récupération des éléments DOM permettant d'afficher les couleurs
-        var color1 = document.getElementById('color1')
-            // , pt2 = document.getElementById('colorName2')
-        //RÉCUPÉRATION DES NOMS DES COULEURS DANS LA BASE DE DONNÉES POUR AFFICHAGE
-        color1.style.backgroundColor = colors[0];
-        vetementColor1.value = colors[0];
-        newColor.value = colors[0];
+    // Récupération des données issues du traitement et passage en paramètre de l'image et du canvas
+    var colors = process_image(ctx)
+    // Récupération des éléments DOM permettant d'afficher les couleurs
+    var color1 = document.getElementById('color1')
+        // , color2 = document.getElementById('color2')
+    //RÉCUPÉRATION DES NOMS DES COULEURS DANS LA BASE DE DONNÉES POUR AFFICHAGE
+    color1.style.backgroundColor = colors[0];
+    vetementColor1.value = colors[0];
+    newColorField1.value = colors[0];
+    colorNameTrigger(colors[0]);
 }

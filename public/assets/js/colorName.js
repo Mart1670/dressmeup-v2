@@ -1,17 +1,24 @@
-let color1 = document.getElementById("color1");
-let colorName1 = document.querySelector("#colorName1 p");
-let fileField = document.getElementById('vetement_form_image');
-let nameColorField = document.getElementById('vetement_form_nameColor');
-
-console.log(color1);
+var nameColorField1 = document.getElementById('vetement_form_nameColor');
+var colorName1 = document.querySelector("#colorName1 p");
 
 function hsl (color) {
-    var rgb = color.slice(color.indexOf("(") + 1, color.indexOf(")")).split(", ");
-    console.log(rgb);
+    // Conversion hex en RGB
+    let rgb = [];
+    let r = 0, g = 0, b = 0;
+    if (color.length == 4) {
+        r = "0x" + color[1] + color[1];
+        g = "0x" + color[2] + color[2];
+        b = "0x" + color[3] + color[3];
+    } else if (color.length == 7) {
+        r = "0x" + color[1] + color[2];
+        g = "0x" + color[3] + color[4];
+        b = "0x" + color[5] + color[6];
+    }
     // Transformer r, g, et b en fractions de 1
-    r = rgb[0] / 255;
-    g = rgb[1] / 255;
-    b = rgb[2] / 255;
+    r /= 255;
+    g /= 255;
+    b /= 255;
+    console.log(rgb);
     var hslCode = [];
     
     // Déterminer le canal le plus grand et le plus petit
@@ -60,27 +67,17 @@ function hsl (color) {
     return hslCode;
 }
 
-function colorNameTrigger(){
+function colorNameTrigger(color){
     var hsl1 = "";
-    setTimeout(() => {
-        console.log("Delayed for 0.5 second.");
-        /* color1 = document.getElementById("color1"); */
-        console.log(color1);
-        let rgbColor1 = color1.style.backgroundColor;
-        console.log(color1.style.backgroundColor);
-        hsl1 = hsl(rgbColor1);
-        console.log(hsl1);
-        fetch('/hsl/' + hsl1[0] + '/' + hsl1[1] + '/' + hsl1[2])
-            .then(function (header) {
-                return header.json();
-            })
-            .then(function (body) {
-                console.log(colorName1);
-                colorName1.textContent = body.colorName;
-                nameColorField.value = body.colorName;
-        });
-      }, 500);
+    hsl1 = hsl(color);
+    console.log(hsl1);
+    fetch('/hsl/' + hsl1[0] + '/' + hsl1[1] + '/' + hsl1[2])
+        .then(function (header) {
+            return header.json();
+        })
+        .then(function (body) {
+            console.log(colorName1);
+            colorName1.textContent = body.colorName;
+            nameColorField1.value = body.colorName;
+    });
 }
-
-depose.addEventListener("drop", colorNameTrigger);
-fileField.addEventListener('change', colorNameTrigger);
