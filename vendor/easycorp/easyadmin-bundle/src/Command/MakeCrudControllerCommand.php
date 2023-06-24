@@ -27,7 +27,7 @@ class MakeCrudControllerCommand extends Command
     private ClassMaker $classMaker;
     private ManagerRegistry $doctrine;
 
-    public function __construct(string $projectDir, ClassMaker $classMaker, ManagerRegistry $doctrine, string $name = null)
+    public function __construct(string $projectDir, ClassMaker $classMaker, ManagerRegistry $doctrine, ?string $name = null)
     {
         parent::__construct($name);
         $this->projectDir = $projectDir;
@@ -35,7 +35,7 @@ class MakeCrudControllerCommand extends Command
         $this->doctrine = $doctrine;
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setHelp($this->getCommandHelp())

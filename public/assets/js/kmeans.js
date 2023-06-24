@@ -126,6 +126,7 @@ function process_image(ctx) {
     var points = [];
     // Récupération des données R, G et B de chaque pixel
     data = ctx.getImageData(50, 50, canvas.width-100, canvas.height-100).data;
+    console.log(data);
     // Boucle sur chaque donnée R, G et B de chaque pixel par pas de 4 (afin de récupérer le RGB de chaque pixel séparément)
     for (var i = 0, l = data.length; i < l;  i += 4) {
         // Stockage des données R, G et B de chaque pixel dans des variables séparée

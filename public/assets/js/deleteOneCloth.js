@@ -5,16 +5,15 @@ dressingContent = document.getElementById('dressingContent');
 delBtn = document.querySelectorAll('.deleteOneCloth');
 
 function deleteOneCloth(currentId){
-
     type = dressingContent.dataset['type'];
+    style = "Tout";
     id = currentId;
     console.log('/delete/' + type +'/' + id);
-
     fetch('/delete/' + type +'/' + id)
             .then(function (header) {
                 return header;
             })
             .then(
-                loadDressingContent(type)
+                loadDressingContent(type, style)
             );
 }

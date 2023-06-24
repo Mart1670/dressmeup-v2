@@ -22,7 +22,6 @@ class PaletteCrudController extends AbstractCrudController
     {
         return [
             // IdField::new('id'),
-            TextField::new('name'),
             ColorField::new('color1')->showValue(),
             ColorField::new('color2')->showValue(),
             ColorField::new('color3')->showValue(),

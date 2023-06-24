@@ -26,14 +26,19 @@ class HomeController extends AbstractController
         $users = $this->getUser()->getId();
 
         // Récupérer les vêtements Hauts et Bas de l'utilisateur
-        $hauts = $vetementRepository->findDressingContentByAmbiance($users, 'Haut', $ambiance);
+        // $hauts = $vetementRepository->findDressingContentByAmbiance($users, 'Haut', $ambiance);
+        $hauts = $vetementRepository->findDressingContent($users, 'Haut');
         // dd($hauts);
-        $bas = $vetementRepository->findDressingContentByAmbiance($users, 'Bas', $ambiance);
+        
+        // $bas = $vetementRepository->findDressingContentByAmbiance($users, 'Bas', $ambiance);
+        $bas = $vetementRepository->findDressingContent($users, 'Bas');
         // dd($bas);
 
         //Récupérer toutes les palettes stockées en BDD
-        $palettes = $paletteRepository->findPaletteByHumeur($humeur);
-        //$palettes = $paletteRepository->findAll();
+        $palettes = $paletteRepository->findAll();
+
+        //Récupérer toutes les palettes stockées en BDD
+        // $palettes = $paletteRepository->findPaletteByHumeur();
 
         // If the user doesn't have any cloth in his dressing, return an empty tab
         if ($hauts==[]) {

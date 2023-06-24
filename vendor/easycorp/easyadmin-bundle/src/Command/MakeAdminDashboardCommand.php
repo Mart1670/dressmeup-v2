@@ -26,14 +26,14 @@ class MakeAdminDashboardCommand extends Command
     private ClassMaker $classMaker;
     private string $projectDir;
 
-    public function __construct(ClassMaker $classMaker, string $projectDir, string $name = null)
+    public function __construct(ClassMaker $classMaker, string $projectDir, ?string $name = null)
     {
         parent::__construct($name);
         $this->classMaker = $classMaker;
         $this->projectDir = $projectDir;
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setHelp($this->getCommandHelp())

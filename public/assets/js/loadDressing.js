@@ -41,6 +41,7 @@ function addWideCloth(){
 }
 
 function displayDressing(tab){
+    console.log(tab);
     for (i = 0; i < tab.length; i++) {
         // console.log(body.listeVetements[i]['colorName'][0]);
         dressingContent.innerHTML += `

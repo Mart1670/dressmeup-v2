@@ -124,11 +124,11 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                 <div>
                     ";
         // line 43
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), "newColor", [], "any", false, false, false, 43), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 43, $this->source); })()), "newColor", [], "any", false, false, false, 43), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
         echo "
                     ";
         // line 44
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 44, $this->source); })()), "nameColor", [], "any", false, false, false, 44), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 44, $this->source); })()), "nameColor", [], "any", false, false, false, 44), 'widget', ["attr" => ["class" => "hidden-form-field"]]);
         echo "
                     ";
         // line 45
@@ -311,8 +311,8 @@ class __TwigTemplate_7dc30d62494915ee90d5c37babe94305 extends Template
                     </div>
                 </div>
                 <div>
-                    {{ form_widget(form.newColor) }}
-                    {{ form_widget(form.nameColor) }}
+                    {{ form_widget(form.newColor, {'attr': {'class': 'hidden-form-field'}}) }}
+                    {{ form_widget(form.nameColor, {'attr': {'class': 'hidden-form-field'}}) }}
                     {{ form_widget(form.image, {'attr': {'class': 'hidden-form-field'}}) }}
                     {{ form_widget(form.color, {'attr': {'class': 'hidden-form-field'}}) }}
                     <h4>Sélectionne ta catégorie</h4>
