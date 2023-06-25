@@ -55,6 +55,8 @@ window.addEventListener('DOMContentLoaded', () => {
         rgba[1] = g.toString(16);
         rgba[2] = b.toString(16);
 
+        
+
         let hexa = "";
         for (let i = 0; i < rgba.length; i++) {
 

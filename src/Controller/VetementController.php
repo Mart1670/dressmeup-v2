@@ -128,7 +128,7 @@ class VetementController extends AbstractController
         foreach($listColors as $colors){
             if($h >= $colors->gethMin() && $h <= $colors->gethMax() && $s >= $colors->getsMin() && $s <= $colors->getsMax() && $l >= $colors->getlMin() && $l <= $colors->getlMax()){
                 $colorName = $colors->getName();
-                // dd($colorName);
+                //dd($colorName);
             }
         }
 

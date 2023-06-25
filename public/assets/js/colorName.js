@@ -2,6 +2,7 @@ var nameColorField1 = document.getElementById('vetement_form_nameColor');
 var colorName1 = document.querySelector("#colorName1 p");
 
 function hsl (color) {
+    console.log(color);
     // Conversion hex en RGB
     let rgb = [];
     let r = 0, g = 0, b = 0;
